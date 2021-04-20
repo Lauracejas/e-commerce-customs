@@ -11,9 +11,9 @@
         "_id": 2,
         "name": "T-shirt",
         "image": "./asssets/red.JPG",
-        "price": 20,
-        "size": "S",
-        "color": "white"
+        "price": 25,
+        "size": "M",
+        "color": "red"
     },
      {
         "_id": 3,
@@ -21,15 +21,15 @@
         "image": "./asssets/black.jpg",
         "price": 20,
         "size": "S",
-        "color": "white"
+        "color": "black"
     },
     {
         "_id": 4,
         "name": "T-shirt",
         "image": "./asssets/blue.jpg",
-        "price": 20,
-        "size": "S",
-        "color": "white"
+        "price": 30,
+        "size": "L",
+        "color": "blue"
     }
 ]
 

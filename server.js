@@ -1,9 +1,7 @@
 const express = require("express");
 const session = require('express-session');
-// const mongoose = require("mongoose");
 const routes = require("./backend/routes");
-// const config = require("./backend/config");
-// const data = require("./backend/scripts/seedDB")
+
 
 const sequelize = require('./backend/config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -32,13 +30,6 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-
-// const mongodbUrl = data.MONGODB_URI;
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/products", {
-//   useNewUrlParser: true,
-//   useFindAndModify: false,
-//   useCreateIndex: true
-// });
 
 app.use(routes);
 
