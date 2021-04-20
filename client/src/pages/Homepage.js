@@ -7,7 +7,7 @@ const Homepage = () => {
     return (
         <div className="container-fluid main-contain">
             <h1>Homepage</h1>
-            {/* <CardEl /> */}
+            <CardEl />
         
       </div>
             

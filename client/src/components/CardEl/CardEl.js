@@ -1,21 +1,34 @@
-// import React from 'react'
-// import { Card, Button } from 'react-bootstrap';
-// import "./style.css"
+import React, { useState } from 'react'
 
-// const CardEl = () => {
-//   return (
-// <Card style={{ width: '18rem' }}>
-//   <Card.Img variant="top" src="holder.js/100px180" />
-//   <Card.Body>
-//     <Card.Title>T-Shirt Selection</Card.Title>
-//     <Card.Text>
-//       Customize your own t-shirt.
-//     </Card.Text>
-//     <Button variant="primary">T-shirt Icon</Button>
-//     <Button variant="primary">Add to cart</Button>
-//   </Card.Body>
-// </Card>
-//     )
-// }
+import Card from 'react-bootstrap/Card'
 
-// export default CardEl;
+
+import "./style.css"
+
+const CardEl = () => {
+  const white = require('../../assets/white.jpg')
+  console.log(white)
+  // const black = require('../../assets/black.jpg')
+  // const blue = require('../../assets/blue.JPG')
+  // const red = require('../../assets/red.JPG')
+  //
+
+  const [selected, setSelected] = useState(white)
+
+  return (
+    <>
+      <Card style={{ width: '18rem' }}>
+        <Card.Img onClick={() => setSelected(white) } variant="top" src={selected} />
+        <Card.Body>
+          <Card.Title>Card Title</Card.Title>
+          <Card.Text>
+            $60.00
+    </Card.Text>
+
+        </Card.Body>
+      </Card>
+    </>
+  )
+}
+
+export default CardEl;
