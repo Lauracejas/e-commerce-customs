@@ -3,8 +3,8 @@ import "./style.css";
 
 const Dashboard = () => {
     return (
-        <div>
-            
+        <div className="container-fluid main-contain">
+            <h1>Dashboard</h1>
         </div>
     )
 }
