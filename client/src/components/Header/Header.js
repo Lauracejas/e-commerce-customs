@@ -37,6 +37,11 @@ const Header = () => {
                                 Cart
                             </Link>
                         </li>
+                        <li className="nav-item">
+                            <Link to="/signin" className={location.pathname === "/cart" ? "nav-link active" : "nav-link"}>
+                                Sign In
+                            </Link>
+                        </li>
 
                     </ul>
                 </div>
