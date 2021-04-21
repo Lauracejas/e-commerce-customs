@@ -26,7 +26,9 @@ router.post("/", async (req, res)=>{
     const product = await new Product({
       name: req.body.name,
       price: req.body.price,
-      image: req.body.image,
+      size: req.body.size,
+      // image: req.body.image,
+      color: req.body.color,
       countInStock: req.body.countInStock,      
       description: req.body.description,
     });
