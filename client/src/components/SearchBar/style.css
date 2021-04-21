@@ -1,0 +1,12 @@
+.container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.row {
+    margin:5px;
+    padding-top:20px;
+    min-width: 40%;
+}
+
