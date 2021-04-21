@@ -1,12 +1,12 @@
 .main-contain {
-    background-color: aqua;
+
     flex: 1;
     min-height: 100vh;
     
 }
 
 /* Details page */
-.details{
+/* .details{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -41,7 +41,7 @@
 .back-to-result{
     padding: 16px;
 }
-
+ */
 
 
 
