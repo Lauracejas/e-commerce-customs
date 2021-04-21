@@ -1,32 +1,23 @@
-import React, { useState } from 'react'
-
+import React from 'react'
+import { Link } from 'react-router-dom'
 import Card from 'react-bootstrap/Card'
-
-
 import "./style.css"
 
-const CardEl = () => {
-  const white = require('../../assets/white.jpg')
-  console.log(white)
-  // const black = require('../../assets/black.jpg')
-  // const blue = require('../../assets/blue.JPG')
-  // const red = require('../../assets/red.JPG')
-  //
 
-  const [selected, setSelected] = useState(white)
-
+const CardEl = ({product}) => {
   return (
-    <>
-      <Card style={{ width: '18rem' }}>
-        <Card.Img onClick={() => setSelected(white) } variant="top" src={selected} />
+    <>   
+      
+      <Card key={product._id} style={{ width: '18rem' }}>
+        <Link to={'/product/' + product._id}>
+        <Card.Img  variant="top" src={product.image} />
+        </Link>
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            $60.00
-    </Card.Text>
-
+          <Link to={'/product/' + product._id}>{product.name}</Link>
+          <Card.Text>${product.price}</Card.Text>
         </Card.Body>
       </Card>
+        
     </>
   )
 }

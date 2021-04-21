@@ -1,7 +1,18 @@
 const router = require('express').Router();
-const {Products} =  require('../../models/product');
+const Products =  require('../../models/product');
 
-router.post('/api/products/:id', async (req, res) => {
+router.get("/", async (req, res)=>{
+  try{
+    const productList = await Products.findAll();
+    console.log(productList, "here #####");
+    res.json(productList);
+  }catch (err) {
+    console.log("here", err)
+    res.status(400).json(err);
+  }
+})
+
+router.post('/:id', async (req, res) => {
   try {
     const newProject = await Products.find({
       ...req.params.id,
