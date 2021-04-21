@@ -13,7 +13,7 @@ const Menu = ({ open, ...props }) => {
         Products
       </a>
       
-      <Button href="/" tabIndex={tabIndex}>
+      <Button className ="button" href="/" tabIndex={tabIndex}>
         <span aria-hidden="true"></span>
         Customize
         </Button>
