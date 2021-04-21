@@ -8,16 +8,6 @@ const Header = () => {
         <div>
             <nav className="navbar navbar-light bg-light">
                 <div className="container-fluid">
-
-
-
-
-
-
-
-
-
-
                     <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
                         Home "putlogo"
                         </Link>

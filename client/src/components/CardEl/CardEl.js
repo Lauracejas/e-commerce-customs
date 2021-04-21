@@ -1,24 +1,23 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Card from 'react-bootstrap/Card'
 import "./style.css"
-import products from "../../data"
 
 
-
-const CardEl = () => {
+const CardEl = ({product}) => {
   return (
-    <>
-    {
-      products.product.map(data =>
-      <Card key="{products.product._id}" style={{ width: '18rem' }}>
-        <Card.Img  variant="top" src={data.image} />
+    <>   
+      
+      <Card key={product._id} style={{ width: '18rem' }}>
+        <Link to={'/product/' + product._id}>
+        <Card.Img  variant="top" src={product.image} />
+        </Link>
         <Card.Body>
-          <Card.Title>{data.name}</Card.Title>
-          <Card.Text>${data.name}</Card.Text>
+          <Link to={'/product/' + product._id}>{product.name}</Link>
+          <Card.Text>${product.price}</Card.Text>
         </Card.Body>
       </Card>
-        )
-    }
+        
     </>
   )
 }

@@ -1,31 +1,29 @@
-import React, { useEffect } from 'react';
-//import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
 import CardEl from "../components/CardEl/CardEl";
-import { useSelector, useDispatch } from 'react-redux'
-import { listProduct } from '../utils/productAction';
+// import { listProduct } from '../utils/productAction';
 import "./style.css";
+import data from "../data"
 
 const Homepage = () => {
-
-    const productList = useSelector(state => state.productList);
-    const { loading, error} = productList;
-    const dispatch = useDispatch();
+const [productsList, setProductsList] = useState([]);
+    
 
 
     useEffect(() => {
-        dispatch(listProduct());       
+            setProductsList(data.products); 
        
-    }, [dispatch])
+    }, [])
 
-    return loading ? <div>Loading...</div> :
-    error ? <div>{error}</div> :
+    return (  
         <div className="container-fluid main-contain">
             <h1>Homepage</h1>
-            <CardEl />
+           { productsList.length && productsList.map((product) => 
+            <CardEl key={product._id} product={product}/>
+            )
+            }
         
-      </div>
-            
-
+      </div>            
+    )
             
       
     

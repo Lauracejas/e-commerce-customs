@@ -11,6 +11,6 @@ router.use(function(req, res) {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
-router.use("/api/users", userRoute);
+
 
 module.exports = router;
