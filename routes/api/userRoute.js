@@ -11,7 +11,7 @@ router.get("/createadmin", async (req, res) => {
             password: "1234",
             isAdmin: true
         });
-        const newUser = await user.save();
+        const newUser = await User.save();
         res.send(newUser);
     } catch (err) {
         res.send({ msg: err.message })
