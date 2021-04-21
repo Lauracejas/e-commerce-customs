@@ -1,7 +1,7 @@
 import React from 'react';
 import CardEl from "../components/CardEl/CardEl"
 
-import "./style.css";
+
 
 const Homepage = () => {
     return (

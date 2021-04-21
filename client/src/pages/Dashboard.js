@@ -1,11 +1,26 @@
-import React from 'react';
-import "./style.css";
+import React, { useState } from 'react';
+import { Aside, Menu } from '../components';
+// import { ThemeProvider } from 'styled-components';
+// import { GlobalStyles } from './global';
+// import { theme } from './theme';
+
+
+
+
+
 
 const Dashboard = () => {
+  const [open, setOpen] = useState(false);
     return (
-        <div className="container-fluid main-contain">
-            <h1>Dashboard</h1>
-        </div>
+       
+        
+      <>
+      
+      <Aside open={open} setOpen={setOpen} />
+      <Menu open={open} setOpen={setOpen} />
+        
+      </>
+    
     )
 }
 
