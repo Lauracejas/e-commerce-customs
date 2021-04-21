@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StyledAside = styled.button`
   position: absolute;
   top: 20%;
-  left: 2rem;
+  left: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

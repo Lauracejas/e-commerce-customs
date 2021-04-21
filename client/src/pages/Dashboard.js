@@ -1,18 +1,33 @@
-import React, { useState } from 'react';
+import React, {useState, useEffect} from 'react';
 import { Aside, Menu } from '../components';
 import data from '../data'
 import { Link } from 'react-router-dom'
 import "./style.css";
+import { getAllProducts } from "../utils/productAction"
 
-const Dashboard = (props) => {
+
+    
+    
+    
+      
+const Dashboard = () => {
+
   const [open, setOpen] = useState(false);
-  console.log(props.match.params.id)
-  const details = data.product.find(x => x._id === props.match.params.id);
-  return (<div>
-      <Aside open={open} setOpen={setOpen} />
-      <Menu open={open} setOpen={setOpen} />
-        <div className="back-to-result">
-            <Link to="/">Back to result</Link>
+  const [products, setProducts] = useState([]);
+
+  const handleSubmit = () => {
+    getAllProducts().then(results => setProducts(results.data))
+
+  }
+  // console.log(props.match.params.id)
+
+  // const details = data.product.find(x => x._id === props.match.params.id);
+  return (
+  
+  <div>
+
+         {/* <div className="back-to-result">
+            <Link to="/dashboard">Back to result</Link>
         </div>
         <div className="details">
             <div className="details-image">
@@ -41,9 +56,11 @@ const Dashboard = (props) => {
                     <button>Add to cart</button>
                 </li>
             </ul>
-        </div>
+        </div>  */}
+        <Aside open={open} setOpen={setOpen} products={products} />
+       <Menu open={open} setOpen={setOpen} onClick={handleSubmit}/>  
     </div>
     )
-}
-
-export default Dashboard
+  }
+  
+  export default Dashboard
