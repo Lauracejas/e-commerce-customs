@@ -4,16 +4,6 @@ import data from '../data'
 import { Link } from 'react-router-dom'
 import "./style.css";
 
-
-
-
-
-
-
-    
-    
-    
-      
 const Dashboard = (props) => {
   const [open, setOpen] = useState(false);
   console.log(props.match.params.id)
