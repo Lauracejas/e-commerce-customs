@@ -61,6 +61,4 @@ User.init({
 }
 );
 
-// const userModel = mongoose.model("User ", userSchema);
-
 module.exports = User;
