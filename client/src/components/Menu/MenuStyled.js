@@ -20,7 +20,7 @@ transition: transform 0.3s ease-in-out;
 a {
   font-size: 2rem;
   text-transform: uppercase;
-  padding: 2rem 0;
+  padding: 3rem 0;
   font-weight: bold;
   letter-spacing: 0.5rem;
   color: ${({ theme }) => theme.primaryDark};
@@ -32,6 +32,9 @@ a {
   }
   &:hover {
     color: ${({ theme }) => theme.primaryDarkTwo};
+  }
+  .button {
+    background: black;
   }
 }
 `;
