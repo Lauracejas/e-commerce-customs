@@ -6,11 +6,6 @@ import "./style.css";
 import { getAllProducts } from "../utils/productAction"
 
 
-
-
-
-
-
     
     
     
