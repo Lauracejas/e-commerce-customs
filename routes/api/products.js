@@ -10,6 +10,16 @@ router.get("/", async (req, res)=>{
     res.status(400).json(err);
   }
 })
+router.get("/:id", async (req, res)=>{
+  try{
+    const productList = await Products.findByPk(req.params.id);
+    console.log(productList, "here #####");
+    res.json(productList);
+  }catch (err) {
+    console.log("here", err)
+    res.status(400).json(err);
+  }
+})
 
 router.post("/", async (req, res)=>{
   try{
