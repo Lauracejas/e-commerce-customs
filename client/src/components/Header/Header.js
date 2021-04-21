@@ -1,15 +1,30 @@
 import React from 'react';
 import { Link, useLocation } from "react-router-dom";
+import logo from "../../assets/logo.png"
 import "./style.css";
 
 const Header = () => {
     const location = useLocation();
+
+    
     return (
         <div>
-            <nav className="navbar navbar-light bg-light">
+            <nav className="navbar navbar-light bg">
                 <div className="container-fluid">
-                    <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
-                        Home "putlogo"
+
+            
+
+
+
+
+
+
+
+
+                        <Link  to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
+                        <img src={logo} alt='' />
+
+
                         </Link>
                     <ul className="nav justify-content-end">
                         <li className="nav-item">

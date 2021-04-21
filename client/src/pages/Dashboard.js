@@ -1,12 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { Aside, Menu } from '../components';
 import data from '../data'
 import { Link } from 'react-router-dom'
 import "./style.css";
 
+
+
+
+
+
+
+    
+    
+    
+      
 const Dashboard = (props) => {
-    console.log(props.match.params.id)
-    const details = data.product.find(x => x._id === props.match.params.id);
-    return (<div>
+  const [open, setOpen] = useState(false);
+  console.log(props.match.params.id)
+  const details = data.product.find(x => x._id === props.match.params.id);
+  return (<div>
+      <Aside open={open} setOpen={setOpen} />
+      <Menu open={open} setOpen={setOpen} />
         <div className="back-to-result">
             <Link to="/">Back to result</Link>
         </div>
