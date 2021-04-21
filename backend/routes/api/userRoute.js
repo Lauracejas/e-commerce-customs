@@ -18,6 +18,15 @@ router.get("/createadmin", async (req, res) => {
     }
 })
 
+// Checks for logged in session
+router.get("/login", (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect("/");
+        return;
+    }
+    res.render('login');
+})
+
 
 module.exports = router;
 
