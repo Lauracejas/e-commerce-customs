@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
-import { Aside, Menu } from '../components';
-import data from '../data'
-import { Link } from 'react-router-dom'
+// import { Modal } from 'bootstrap';
+import React from 'react';
 import "./style.css";
+import data from '../data';
+import { Link } from 'react-router-dom';
+// import { Aside, Menu } from '../components';
 
 const Dashboard = (props) => {
-  const [open, setOpen] = useState(false);
+//   const [open, setOpen] = useState(false);
   console.log(props.match.params.id)
   const details = data.product.find(x => x._id === props.match.params.id);
-  return (<div>
-      <Aside open={open} setOpen={setOpen} />
-      <Menu open={open} setOpen={setOpen} />
+  return (
+  <div>
+      {/* <Aside open={open} setOpen={setOpen} />
+      <Menu open={open} setOpen={setOpen} /> */}
         <div className="back-to-result">
             <Link to="/">Back to result</Link>
         </div>
@@ -46,4 +48,4 @@ const Dashboard = (props) => {
     )
 }
 
-export default Dashboard
+export default Dashboard;
