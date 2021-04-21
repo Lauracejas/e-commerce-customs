@@ -5,7 +5,7 @@ import "./style.css";
 
 const Dashboard = (props) => {
     console.log(props.match.params.id)
-    const details = data.product.find(x => x._id === props.match.params.id);
+    const details = data.product.find(x => x._id === props.match.params._id);
     return (<div>
         <div className="back-to-result">
             <Link to="/">Back to result</Link>

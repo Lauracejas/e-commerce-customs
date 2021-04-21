@@ -1,10 +1,9 @@
 const router = require('express').Router();
-const Products =  require('../../models/product');
+const Product = require('../../models/product');
 
 router.get("/", async (req, res)=>{
   try{
-    const productList = await Products.findAll();
-    console.log(productList, "here #####");
+    const productList = await Product.findAll();
     res.json(productList);
   }catch (err) {
     console.log("here", err)
@@ -12,31 +11,62 @@ router.get("/", async (req, res)=>{
   }
 })
 
-router.post('/:id', async (req, res) => {
-  try {
-    const newProject = await Products.find({
-      ...req.params.id,
-      user_id: req.session.user_id,
+router.post("/", async (req, res)=>{
+  try{
+    const product = await new Product({
+      name: req.body.name,
+      price: req.body.price,
+      image: req.body.image,
+      countInStock: req.body.countInStock,      
+      description: req.body.description,
     });
+    const newProduct = await product.save();
+    if (!newProduct){
+      res.status(404).json({ message: 'New product Created' });
+      return;
+    }res.status(200).json(newProduct);
+     }catch (err) {
+    res.status(500).json(err);
+  }
+})
 
-    res.status(200).json(newProject);
+router.put('/:id', async (req, res) => {
+  try {
+    const product = await Product.findById(
+      {
+        name: req.body.name,
+        price: req.body.price,
+        image: req.body.image,
+        countInStock: req.body.countInStock,
+        description: req.body.description,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      });     
+      res.status(200).json(product);
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
+router.delete('/:id', async (req, res) => {
+  try {
+    const deleteProduct = await Product.findById({
+      where: {
+        id: req.params.id,
+      },
+    });
+    if (!deleteProduct) {
+      res.status(404).json({ message: 'No product found with this id!' });
+      return;
+    };
+    res.status(200).json(deleteProduct);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
 
-
-
-
-
-// const router = express.Router();
-
-// router.get("/api/products/:id", (req, res) => {
-//     const productId = req.params.id;
-//     const product = data.products.find(x => x._id === productId);
-//     if (poduct)
-//     res.send(product);
-    
-//   })
