@@ -6,6 +6,7 @@
         "price": 20,
         "size": "S",
         "color": "white",
+        "countInStock": 20,
         "description": "This blended t‑shirt brings all the comfort without the high price tag! A soft style anyone would appreciate."
     },
     {
@@ -15,6 +16,7 @@
         "price": 25,
         "size": "M",
         "color": "red",
+        "countInStock": 20,
         "description": "This blended t‑shirt brings all the comfort without the high price tag! A soft style anyone would appreciate."
     },
      {
@@ -24,6 +26,7 @@
         "price": 20,
         "size": "S",
         "color": "black",
+        "countInStock": 20,
         "description": "This blended t‑shirt brings all the comfort without the high price tag! A soft style anyone would appreciate."
     },
     {
@@ -33,6 +36,7 @@
         "price": 30,
         "size": "L",
         "color": "blue",
+        "countInStock": 20,
         "description": "This blended t‑shirt brings all the comfort without the high price tag! A soft style anyone would appreciate."
     },
     {
@@ -42,6 +46,7 @@
         "price": 30,
         "size": "L",
         "color": "blue",
+        "countInStock": 20,
         "description": "This blended t‑shirt brings all the comfort without the high price tag! A soft style anyone would appreciate."
     },
     {
@@ -51,6 +56,7 @@
         "price": 30,
         "size": "L",
         "color": "blue",
+        "countInStock": 20,
         "description": "This blended t‑shirt brings all the comfort without the high price tag! A soft style anyone would appreciate."
     },
     {
@@ -60,6 +66,7 @@
         "price": 30,
         "size": "L",
         "color": "blue",
+        "countInStock": 20,
         "description": "This blended t‑shirt brings all the comfort without the high price tag! A soft style anyone would appreciate."
     },
     {
@@ -69,6 +76,7 @@
         "price": 25,
         "size": "S",
         "color": "yellow",
+        "countInStock": 20,
         "description": "This blended t‑shirt brings all the comfort without the high price tag! A soft style anyone would appreciate."
     },
 ]
