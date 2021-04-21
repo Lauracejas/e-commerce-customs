@@ -3,9 +3,9 @@ import "./style.css";
 
 const Footer = () => {
     return (
-        <div>
-            
-        </div>
+        <Footer>
+            <p id="not-dark" className="Copy">2021 © Copyright. All Rights Reserved</p>
+        </Footer>
     )
 }
 

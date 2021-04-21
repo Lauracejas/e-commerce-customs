@@ -1,32 +1,24 @@
-import React, { useState } from 'react'
-
+import React from 'react'
 import Card from 'react-bootstrap/Card'
-
-
 import "./style.css"
+import products from "../../data"
+
+
 
 const CardEl = () => {
-  const white = require('../../assets/white.jpg')
-  console.log(white)
-  // const black = require('../../assets/black.jpg')
-  // const blue = require('../../assets/blue.JPG')
-  // const red = require('../../assets/red.JPG')
-  //
-
-  const [selected, setSelected] = useState(white)
-
   return (
     <>
-      <Card style={{ width: '18rem' }}>
-        <Card.Img onClick={() => setSelected(white) } variant="top" src={selected} />
+    {
+      products.product.map(data =>
+      <Card key="{products.product._id}" style={{ width: '18rem' }}>
+        <Card.Img  variant="top" src={data.image} />
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            $60.00
-    </Card.Text>
-
+          <Card.Title>{data.name}</Card.Title>
+          <Card.Text>${data.name}</Card.Text>
         </Card.Body>
       </Card>
+        )
+    }
     </>
   )
 }
