@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 // import Footer from "./components/Footer/Footer"
 import Header from "./components/Header/Header"
@@ -11,11 +11,18 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from './components/Theme/Theme';
 import Profile from './pages/Profile';
 import ProductPage from './pages/ProductPage';
-import SigninScreen from './pages/SigninPage';
-import RegisterScreen from './pages/RegisterPage';
+import SigninPage from './pages/SigninPage';
+import RegisterPage from './pages/RegisterPage';
 
 
 const App = () => {
+  const [user, setUser] = useState({});
+
+  const handleSignin = (data) => {
+    const loggedInUser = {};
+    setUser(loggedInUser);
+  }
+
   return (
     <Router>      
 
@@ -29,8 +36,12 @@ const App = () => {
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/cart" component={Cart} />
         <Route exact path="/product/:id" component={ProductPage} />
-        <Route exact path="/signin" component={SigninScreen} />
-        <Route exact path="/register" component={RegisterScreen} />
+        <Route 
+          exact 
+          path="/signin" 
+          render={(props) => <SigninPage {...props} handleSignin={handleSignin} />} 
+        />
+        <Route exact path="/register" component={RegisterPage} />
         
         {/* <Footer /> */}
         </ThemeProvider>
