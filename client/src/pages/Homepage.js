@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import SearchBar from "../components/SearchBar/SearchBar";
 import Banner from '../components/Banner/Banner';
 import HotCards from '../components/HotCards/HotCards';
-import { getAllProducts } from "../utils/productAction"
+import { getAllProducts } from "../utils/API"
 import { Link } from 'react-router-dom'
 // import { getProduct } from "../utils/productAction";
 
