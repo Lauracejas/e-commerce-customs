@@ -14,6 +14,22 @@ router.get("/", withAuth, async (req, res)=>{
     }
   })
 
+router.get("/signin", withAuth, async (req, res)=>{    
+  try{
+      const sessUserId = req.session.user_id;
+      if(sessUserId) {
+      const user = await User.findById(req.session.user_id);
+      res.json(user);
+      }
+      else {
+        res.status(400).json({message: "Please sign in."})
+      }
+    }catch (err) {
+      console.log("here", err)
+      res.status(400).json(err);
+    }
+  })
+
   router.post("/", async (req, res) => {
     try {
         const user = new User({
