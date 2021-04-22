@@ -1,38 +1,63 @@
 import React, { useState, useEffect } from 'react';
-
-// import CardEl from "../components/CardEl/CardEl";
+import { useParams } from "react-router";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import SearchBar from "../components/SearchBar/SearchBar";
 import Banner from '../components/Banner/Banner';
 import HotCards from '../components/HotCards/HotCards';
+import { getAllProducts } from "../utils/productAction"
+import { Link } from 'react-router-dom'
+// import { getProduct } from "../utils/productAction";
 
-import CardEl from "../components/CardEl/CardEl";
-// import { listProduct } from '../utils/productAction';
+
 import "./style.css";
-import data from "../data"
 
-const Homepage = () => {
-const [productsList, setProductsList] = useState([]);
+
+const Homepage = (props) => {
+    const {id} = useParams();
+    const [products, setProducts] = useState({});
     
 
 
     useEffect(() => {
-            setProductsList(data.products); 
-       
+        
+        getAllProducts(id)
+        .then(res => setProducts(res.data))
+        .catch(err => console.log(err));
+        
+        
     }, [])
+    
+    console.log(products)
+ 
 
     return (  
         <div className="container-fluid main-contain">
             <SearchBar />
-            <h1>Homepage</h1>
             <Banner />
-            <HotCards />
+           
+
+            { products.length && products.map((product) => 
+            <HotCards key={product._id} product={product}/>
+            )
+            }
+
+            {/* <HotCards 
+            key={products._id}
+            product={products[1]}
+            /> */}
+          
+           
+       
+            
+            
+            
+            
+            
         
             
 
-           { productsList.length && productsList.map((product) => 
-            <CardEl key={product._id} product={product}/>
-            )
-            }
+           
         
         </div>            
     )

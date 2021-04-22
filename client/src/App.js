@@ -9,7 +9,7 @@ import { GlobalStyles } from './components/Global/Global';
 import { ThemeProvider } from 'styled-components';
 
 import { theme } from './components/Theme/Theme';
-import Dashboard from './pages/Dashboard';
+import Profile from './pages/Profile';
 import ProductPage from './pages/ProductPage';
 
 
@@ -27,7 +27,7 @@ const App = () => {
        
         <Route exact path="/" component={Homepage} />
         {/* <Route exact path="/products/:_id" component={ProductScreen} /> */}
-        <Route exact path="/dashboard" component={Dashboard} />
+        <Route exact path="/profile" component={Profile} />
         <Route exact path="/cart" component={Cart} />
         <Route exact path="/product/:id" component={ProductPage} />
         
