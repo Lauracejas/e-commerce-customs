@@ -7,11 +7,12 @@ import FormControl from 'react-bootstrap/FormControl';
 
 
 
-const SignUpModal = () => {
+const CreateAccount = () => {
+    
     return (
         <Modal.Dialog>
             <Modal.Header closeButton>
-                <Modal.Title>Sign Up</Modal.Title>
+                <Modal.Title>Create your Account</Modal.Title>
             </Modal.Header>
 
             <Modal.Body>
@@ -47,25 +48,8 @@ const SignUpModal = () => {
                 <InputGroup.Checkbox/>
                 Admin
             </Modal.Footer>
-        </Modal.Dialog>
-        
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        </Modal.Dialog>   
     )
 }
 
-export default SignUpModal
+export default CreateAccount

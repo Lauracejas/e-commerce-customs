@@ -5,11 +5,7 @@ import { Link } from 'react-router-dom'
 import "./style.css";
 import { getAllProducts } from "../utils/productAction"
 
-
     
-    
-    
-      
 const Dashboard = () => {
 
   const [open, setOpen] = useState(false);

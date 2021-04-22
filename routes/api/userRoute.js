@@ -1,9 +1,10 @@
 const express = require('express');
 const User =  require('../../models/user');
+const withAuth = require('../../utils/auth');
 
 const router = express.Router();
 
-router.get("/", async (req, res)=>{
+router.get("/", withAuth, async (req, res)=>{
     try{
       const user = await User.findAll();
       res.json(user);
@@ -13,7 +14,28 @@ router.get("/", async (req, res)=>{
     }
   })
 
-router.post("/", async (req, res) => {
+// router.post("/signin", async (req, res) => {
+//     try {
+//         const signinUser = await User.findOne({           
+//             email: req.body.email,
+//             password: req.body.password,
+                    
+//         });
+//         if (signinUser){
+//           res.send({
+//             _id: signinUser._id,
+//             name: signinUser.name,
+//             email: signinUser.email,
+//             isAdmin: signinUser.isAdmin  
+//           })
+//         } else {
+//           res.status(400).send({ msg: "Invalid Email or Password" })
+//         }
+//     } catch (err) {
+//         res.status(400).send({ msg: "Invalid Email or Password" })
+//     }
+// })
+router.post("/", withAuth, async (req, res) => {
     try {
         const user = new User({
             name: req.body.name,
@@ -24,7 +46,7 @@ router.post("/", async (req, res) => {
         const newUser = await user.save();
         res.send(newUser);
     } catch (err) {
-        res.send({ msg: err.message })
+        res.status(400).send({ msg: "Invalid Email or Password" })
     }
 })
 

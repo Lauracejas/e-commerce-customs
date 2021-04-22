@@ -11,6 +11,10 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from './components/Theme/Theme';
 import Dashboard from './pages/Dashboard';
 import ProductPage from './pages/ProductPage';
+import SigninScreen from './pages/SigninPage';
+import RegisterScreen from './pages/RegisterPage';
+
+
 
 
 
@@ -30,6 +34,8 @@ const App = () => {
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/cart" component={Cart} />
         <Route exact path="/product/:id" component={ProductPage} />
+        <Route exact path="/signin" component={SigninScreen} />
+        <Route exact path="/register" component={RegisterScreen} />
         
         {/* <Footer /> */}
         </ThemeProvider>
