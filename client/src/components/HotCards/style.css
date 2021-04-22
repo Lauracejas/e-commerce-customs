@@ -12,6 +12,11 @@
     row-gap:20px;
     
 }
+
+/* .col {
+    display: flex;
+    flex-wrap: wrap;
+} */
 /* .card {
     row-gap: 20%;
 }    */

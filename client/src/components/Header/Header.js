@@ -31,8 +31,8 @@ const Header = () => {
                     </Link>
                     <ul className="nav justify-content-end">
                         <li className="nav-item">
-                            <Link to="/dashboard" className={location.pathname === "/dashboard" ? "nav-link active" : "nav-link"}>
-                                Dashboard
+                            <Link to="/profile" className={location.pathname === "/dashboard" ? "nav-link active" : "nav-link"}>
+                                Your Profile
                             </Link>
                         </li>
                         <li className="nav-item">
