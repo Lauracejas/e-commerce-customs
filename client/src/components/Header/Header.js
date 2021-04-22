@@ -5,7 +5,19 @@ import "./style.css";
 
 const Header = () => {
     const location = useLocation();
-
+    
+    // async function logout() {
+    //     const response = await fetch('/api/users/logout', {
+    //       method: 'post',
+    //       headers: { 'Content-Type': 'application/json' }
+    //     });
+      
+    //     if (response.ok) {
+    //       document.location.replace('/');
+    //     } else {
+    //       alert(response.statusText);
+    //     }
+    //   }
 
     return (
         <div>
@@ -26,6 +38,11 @@ const Header = () => {
                         <li className="nav-item">
                             <Link to="/cart" className={location.pathname === "/cart" ? "nav-link active" : "nav-link"}>
                                 Cart
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/signin" className={location.pathname === "/cart" ? "nav-link active" : "nav-link"}>
+                                Logout
                             </Link>
                         </li>
                         <li className="nav-item">

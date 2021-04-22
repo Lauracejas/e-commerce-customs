@@ -1,5 +1,6 @@
 import axios from "axios";
-const { PRODUCT_LIST_REQUEST, PRODUCT_LIST_SUCCESS, PRODUCT_LIST_FAIL } = require("./actions");
+// const { PRODUCT_LIST_REQUEST, PRODUCT_LIST_SUCCESS, PRODUCT_LIST_FAIL } = require("./actions");
+// const { USER_SIGNIN_REQUEST, USER_SIGNIN_SUCCESS, USER_SIGNIN_FAIL } = require("./actions");
 
 // const listProduct = () => async (dispatch) => {
 //     try {
@@ -16,6 +17,8 @@ const getProduct = (id) => {
 const getAllProducts = () => {
     return axios.get(`/api/products/`)
 }
-
-export {getAllProducts, getProduct}
+const getUsers = () => {
+    return axios.get(`/api/users/signin`)
+}
+export {getAllProducts, getProduct, getUsers}
 
