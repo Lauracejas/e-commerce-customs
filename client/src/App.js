@@ -15,19 +15,14 @@ import SigninScreen from './pages/SigninPage';
 import RegisterScreen from './pages/RegisterPage';
 
 
-
-
-
 const App = () => {
   return (
-    <Router>
-      
+    <Router>      
 
       <div>
         <ThemeProvider theme={theme}>
           <GlobalStyles />
-        <Header />
-       
+        <Header />       
        
         <Route exact path="/" component={Homepage} />
         {/* <Route exact path="/products/:_id" component={ProductScreen} /> */}

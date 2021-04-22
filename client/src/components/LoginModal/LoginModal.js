@@ -4,21 +4,42 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import InputGroup from 'react-bootstrap/InputGroup'
 import FormControl from 'react-bootstrap/FormControl'
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
+// import axios from "axios";
 // import SignUpModal from './SignUpModal/SignUpModal';
 
 const LoginModal = () => {
     const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+    const [password, setPassword] = useState();
 
     const handleSubmit = e => {
         e.preventDefault();
         console.log("email is " + email);
         console.log("password is " + password);
-      };
+              
+
+
+    //     if (email && password) {
+    //         // Send a POST request to the API endpoint
+    //         const response = await axios("/api/users/signin", {
+    //             method: "POST",
+    //             body: JSON.stringify({ email, password }),
+    //             headers: { "Content-Type": "application/json" },
+    //         });
+
+    //         if (response.ok) {
+    //             // If successful, redirect the browser to the profile page
+    //             document.location.replace("/");
+    //         } else {
+    //             alert(response.statusText);
+    //         }
+    //     }
+
+    };
+
     return (
         <Modal.Dialog onSubmit={handleSubmit}>
-            <Modal.Header closeButton>
+            <Modal.Header >
                 <Modal.Title>Welcome Guest!</Modal.Title>
             </Modal.Header>
 
@@ -26,6 +47,8 @@ const LoginModal = () => {
                 <p><strong>E-mail</strong></p>
                 <InputGroup size={"md"} className="mb-3">
                     <FormControl
+                        className="email-login"
+                        type="email"
                         placeholder="email"
                         aria-label="Recipient's username"
                         aria-describedby="basic-addon2"
@@ -35,20 +58,25 @@ const LoginModal = () => {
                 <p><strong>Password</strong></p>
                 <InputGroup size={"md"} className="mb-3">
                     <FormControl
+                        className="password-login"
+                        type="password"
                         placeholder="Password"
                         aria-label="Recipient's password"
                         aria-describedby="basic-addon2"
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </InputGroup>
-                <Button variant="warning">Login</Button>
+                <Button
+                    onSubmit={handleSubmit}
+                    variant="warning"
+                >Login</Button>
 
             </Modal.Body>
 
             <Modal.Footer>
                 <p>Are you new in reVamped?</p>
-                <Link to="/register"><Button variant="success">Create your account</Button></Link>
-                {/* <Button variant="success">Create your account</Button> */}
+                <Link to="/register"><Button  variant="primary">Create your account</Button></Link>
+
             </Modal.Footer>
         </Modal.Dialog>
     )
