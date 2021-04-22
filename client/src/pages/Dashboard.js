@@ -3,7 +3,7 @@ import { Aside, Menu } from '../components';
 import data from '../data'
 import { Link } from 'react-router-dom'
 import "./style.css";
-import { getAllProducts } from "../utils/productAction"
+import { getAllProducts } from "../utils/API"
 
     
 const Dashboard = () => {

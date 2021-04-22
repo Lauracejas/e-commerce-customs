@@ -47,7 +47,7 @@ const LoginModal = () => {
 
             <Modal.Footer>
                 <p>Are you new in reVamped?</p>
-                <Link to="/register" className="button full-width">Create your account</Link>
+                <Link to="/register"><Button variant="success">Create your account</Button></Link>
                 {/* <Button variant="success">Create your account</Button> */}
             </Modal.Footer>
         </Modal.Dialog>

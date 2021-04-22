@@ -44,7 +44,7 @@ const CreateAccount = () => {
             </Modal.Body>
 
             <Modal.Footer>
-                <Button variant="warning">Sign Up</Button>
+                <Button variant="warning">Create my Account</Button>
                 <InputGroup.Checkbox/>
                 Admin
             </Modal.Footer>

@@ -6,7 +6,7 @@ import Banner from '../components/Banner/Banner';
 import HotCards from '../components/HotCards/HotCards';
 
 import CardEl from "../components/CardEl/CardEl";
-// import { listProduct } from '../utils/productAction';
+// import { listProduct } from '../utils/API';
 import "./style.css";
 import data from "../data"
 
