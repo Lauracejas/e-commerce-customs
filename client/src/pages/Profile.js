@@ -4,13 +4,14 @@ import data from '../data'
 import { Link } from 'react-router-dom'
 import "./style.css";
 import { getAllProducts } from "../utils/productAction"
+import HotCards from '../components/HotCards/HotCards';
 
 
     
     
     
       
-const Dashboard = () => {
+const Profile = () => {
 
   const [open, setOpen] = useState(false);
   const [products, setProducts] = useState([]);
@@ -59,8 +60,9 @@ const Dashboard = () => {
         </div>  */}
         <Aside open={open} setOpen={setOpen} products={products} />
        <Menu open={open} setOpen={setOpen} onClick={handleSubmit}/>  
+       
     </div>
     )
   }
   
-  export default Dashboard
+  export default Profile
