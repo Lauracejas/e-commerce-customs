@@ -21,10 +21,14 @@ Product.init(
     },
     size: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
     color: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    countInStock: {
+      type: DataTypes.INTEGER,
     },
     user_id: {
       type: DataTypes.INTEGER,
