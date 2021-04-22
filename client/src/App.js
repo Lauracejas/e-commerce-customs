@@ -17,10 +17,16 @@ import RegisterPage from './pages/RegisterPage';
 
 const App = () => {
   const [user, setUser] = useState({});
+  const [createAccount, setCreateAccount] = useState({});
 
   const handleSignin = (data) => {
     const loggedInUser = {};
     setUser(loggedInUser);
+  }
+
+  const handleCreateAccount = (data) => {
+    const accountUser = {};
+    setCreateAccount(accountUser);
   }
 
   return (
@@ -41,7 +47,11 @@ const App = () => {
           path="/signin" 
           render={(props) => <SigninPage {...props} handleSignin={handleSignin} />} 
         />
-        <Route exact path="/register" component={RegisterPage} />
+        <Route
+         exact path="/register" 
+         component={RegisterPage} 
+         render={(props) => <SigninPage {...props} handleSignin={handleCreateAccount} />}
+         />
         
         {/* <Footer /> */}
         </ThemeProvider>
