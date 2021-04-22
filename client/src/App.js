@@ -11,25 +11,26 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from './components/Theme/Theme';
 import Profile from './pages/Profile';
 import ProductPage from './pages/ProductPage';
-
+import SigninScreen from './pages/SigninPage';
+import RegisterScreen from './pages/RegisterPage';
 
 
 const App = () => {
   return (
-    <Router>
-      
+    <Router>      
 
       <div>
         <ThemeProvider theme={theme}>
           <GlobalStyles />
-        <Header />
-       
+        <Header />       
        
         <Route exact path="/" component={Homepage} />
         {/* <Route exact path="/products/:_id" component={ProductScreen} /> */}
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/cart" component={Cart} />
         <Route exact path="/product/:id" component={ProductPage} />
+        <Route exact path="/signin" component={SigninScreen} />
+        <Route exact path="/register" component={RegisterScreen} />
         
         {/* <Footer /> */}
         </ThemeProvider>

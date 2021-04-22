@@ -6,9 +6,6 @@ import "./style.css";
 import { getAllProducts } from "../utils/productAction"
 import HotCards from '../components/HotCards/HotCards';
 
-
-    
-    
     
       
 const Profile = () => {
