@@ -16,5 +16,6 @@ const getProduct = (id) => {
 const getAllProducts = () => {
     return axios.get(`/api/products/`)
 }
+
 export {getAllProducts, getProduct}
 
