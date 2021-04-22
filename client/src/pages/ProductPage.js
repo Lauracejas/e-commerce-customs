@@ -1,5 +1,5 @@
 import { useParams } from "react-router";
-import { getProduct } from "../utils/productAction";
+import { getProduct } from "../utils/API";
 import React, {useEffect} from "react"
 import HotCards from "../components/HotCards/HotCards";
 
