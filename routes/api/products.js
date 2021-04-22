@@ -12,7 +12,7 @@ router.get("/", async (req, res)=>{
 })
 router.get("/:id", async (req, res)=>{
   try{
-    const productList = await Products.findByPk(req.params.id);
+    const productList = await Product.findByPk(req.params.id);
     console.log(productList, "here #####");
     res.json(productList);
   }catch (err) {

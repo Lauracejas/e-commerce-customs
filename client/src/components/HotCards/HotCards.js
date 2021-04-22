@@ -9,33 +9,29 @@ import Card from 'react-bootstrap/Card';
 
 const HotCards = ({product}) => {
     return (
-        //--------------------------First Hot Card----------------------
-        <Container fluid>
-            <Row className="cardrow">
-                    <Card key={product._id} style={{ width: '11rem' }}>
-                    <Link to={'/product/' + product._id}>
-                        <Card.Img variant="top" src={product.image} />
-                        </Link>
-                        <Card.Body>
-                            <Card.Title>
-                            <Link to={'/product/' + product._id}>{product.name}</Link>
-                            </Card.Title>
-                            <Card.Text>
-                            ${product.price}
-                            
-                            </Card.Text>
-                        
-                        </Card.Body>
-                    </Card>
-                
-                   
-
-                 
-
-                   
-            </Row>
-         </Container>
         
+        <Card key={product._id} style={{ width: '11rem' }}>
+        <Link to={'/product/' + product._id}>
+            <Card.Img variant="top" src={product.image} />
+            </Link>
+            <Card.Body>
+                <Card.Title>
+                <Link to={{
+                    pathname: `/product/${product._id}`,
+                    state: {
+                        id: product._id
+                    }
+                    }}>{product.name}</Link>
+                </Card.Title>
+                <Card.Text>
+                {product.color}
+                </Card.Text>
+                <Card.Text>
+                ${product.price}
+                </Card.Text>
+            </Card.Body>
+        </Card>
+                
     )
 }
 
