@@ -17,16 +17,16 @@ import RegisterPage from './pages/RegisterPage';
 
 const App = () => {
   const [user, setUser] = useState({});
-  const [createAccount, setCreateAccount] = useState({});
+
 
   const handleSignin = (data) => {
     const loggedInUser = {};
-    setUser(loggedInUser);
+    setUser(data);
   }
 
   const handleCreateAccount = (data) => {
     const accountUser = {};
-    setCreateAccount(accountUser);
+    setUser(data);
   }
 
   return (
@@ -45,12 +45,11 @@ const App = () => {
         <Route 
           exact 
           path="/signin" 
-          render={(props) => <SigninPage {...props} handleSignin={handleSignin} />} 
+          render={(props) => <SigninPage {...props} user={user} handleSignin={handleSignin} />} 
         />
         <Route
          exact path="/register" 
-         component={RegisterPage} 
-         render={(props) => <SigninPage {...props} handleSignin={handleCreateAccount} />}
+         render={(props) => <RegisterPage {...props} user={user} handleCreateAccount={handleCreateAccount} />}
          />
         
         {/* <Footer /> */}

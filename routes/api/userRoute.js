@@ -37,10 +37,14 @@ router.get("/signin",  async (req, res)=>{
             isAdmin: req.body.isAdmin || false           
         });
         const newUser = await user.save();
-        res.send(newUser);
+        console.log(newUser);
+        const userJson =JSON.parse(JSON.stringify(newUser));
+        delete userJson.password;
+
+        res.json(userJson);
     } catch (err) {
       console.log(err);
-        res.status(400).send({ msg: "Invalid Email or Password" })
+        res.status(400).json({ msg: "Invalid Email or Password" })
     }
 })
 
@@ -67,14 +71,16 @@ router.get("/signin",  async (req, res)=>{
           .json({ message: "Incorrect email or password, please try again" });
         return;
       }
-  
       req.session.save(() => {
         req.session.user_id = userData.id;
+        req.session.email = userData.email;
         req.session.logged_in = true;
-  
+        
         res.json({ user: userData, message: "You are now logged in!" });
+        
       });
     } catch (err) {
+      console.log(err);
       res.status(400).json(err);
     }
   });
