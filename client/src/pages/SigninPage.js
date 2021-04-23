@@ -18,20 +18,13 @@ const SigninPage = (props) => {
         console.log("email is " + email);
         console.log("password is " + password);
               
-        if (email && password) {
-            // Send a POST request to the API endpoint
-            const response = await axios("/api/users/signin", {
-                method: "POST",
-                body: JSON.stringify({ email, password }),
-                headers: { "Content-Type": "application/json" },
-            });
-
-            if (response.ok) {
-                
-            } else {
-                alert(response.statusText);
-            }
-        }
+        axios.post("/api/users/signin", {
+            email: email,
+            password: password,
+        }).then((response) => {
+            if (response.data.message);
+            console.log(response);
+        });
 
     };
 

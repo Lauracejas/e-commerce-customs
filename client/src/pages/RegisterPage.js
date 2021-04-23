@@ -4,12 +4,12 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import InputGroup from 'react-bootstrap/InputGroup'
 import FormControl from 'react-bootstrap/FormControl';
-import { Link } from "react-router-dom"
+import { Link, Redirect } from "react-router-dom"
 import axios from "axios"
 
 
 
-const CreateAccount = () => {
+const CreateAccount = (props) => {
     const [usernameAccount, setUsernameAccount] = useState();
     const [emailAccount, setEmailAccount] = useState();
     const [passwordAccount, setPasswordAccount] = useState();
@@ -26,30 +26,18 @@ const CreateAccount = () => {
             email: emailAccount,
             password: passwordAccount,
         }).then((response) => {
-            if (response.data.message);
+            if (response.data);
             console.log(response);
+            props.handleCreateAccount(response.data);
         });
-
-
-        // e.preventDefault();
-        // console.log("username is " + username);
-        // console.log("email is " + email);
-        // console.log("password is " + password);
-        // if (password && email && username) {
-        //     const response = await axios("/api/users/", {
-        //         method: "POST",
-        //         body: JSON.stringify({ username, email, password }),
-        //         headers: { "Content-Type": "application/json" },
-        //     });
-        //     if (response.ok) {
-        //         document.location.replace('/');
-        //     } else {
-        //         alert('You have to signup first');
-        //     }
-        // }
     };
 
    
+    if (props.user && props.user.email) {
+        return (
+            <Redirect to="/"/>
+        )
+    }
 
     return (
         <Modal.Dialog >
@@ -59,6 +47,7 @@ const CreateAccount = () => {
           alignItems: "center",
         }}>
             <Modal.Title >Create your Account</Modal.Title>
+       
         </Modal.Header>
 
         <Modal.Body className="text-left">
@@ -93,14 +82,15 @@ const CreateAccount = () => {
                     onChange={(e) => setPasswordAccount(e.target.value)}
                 />
             </InputGroup>
+            {/* <Link to={`/?redirect=${redirect}`}>Create my Account</Link> */}
+           
+            <Button onClick={handleSubmit}                
+                variant="warning"
+            >Create my Account</Button>
+           
         
 
         </Modal.Body>
-            <Link to="/" >
-            <Button className="mb-4" onClick={handleSubmit}                
-                variant="warning"
-            >Create my Account</Button>
-            </Link>
 
         <Modal.Footer>
             <p>Already have an account?</p>

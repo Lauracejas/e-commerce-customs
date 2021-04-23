@@ -9,10 +9,6 @@ import Row from "react-bootstrap/Row"
 import "./style.css"
 import styled from "styled-components"
 
-
-
-
-
 const ProductPage = (props) => {
 
     const Link = ({ className, children }) => (
