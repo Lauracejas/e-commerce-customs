@@ -49,7 +49,7 @@ const App = () => {
         />
         <Route
          exact path="/register" 
-       
+         component={RegisterPage} 
          render={(props) => <RegisterPage {...props} handleSignin={handleCreateAccount} />}
          />
         
