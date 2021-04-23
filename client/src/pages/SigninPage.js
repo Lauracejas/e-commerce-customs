@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "./style.css";
 import Modal from 'react-bootstrap/Modal';
+import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import InputGroup from 'react-bootstrap/InputGroup'
 import FormControl from 'react-bootstrap/FormControl'
@@ -17,30 +18,35 @@ const SigninPage = (props) => {
         console.log("email is " + email);
         console.log("password is " + password);
               
-        if (email && password) {
-            // Send a POST request to the API endpoint
-            const response = await axios("/api/users/signin", {
-                method: "POST",
-                body: JSON.stringify({ email, password }),
-                headers: { "Content-Type": "application/json" },
-            });
-
-            if (response.ok) {
-                
-            } else {
-                alert(response.statusText);
-            }
-        }
+        axios.post("/api/users/signin", {
+            email: email,
+            password: password,
+        }).then((response) => {
+            if (response.data.message);
+            console.log(response);
+        });
 
     };
 
     return (
-        <Modal.Dialog >
-            <Modal.Header closeButton>
-                <Modal.Title>Welcome Guest!</Modal.Title>
+        <Modal.Dialog 
+        >
+            <Modal.Header
+            closeButton 
+            style={{
+                display: "inline-block",
+                
+                justifyContent: "center",
+                alignItems: "center",
+            }}
+           
+            
+            >
+             
+                <Modal.Title >Welcome Guest!</Modal.Title>
             </Modal.Header>
 
-            <Modal.Body>
+            <Modal.Body className="text-left">
                 <p><strong>E-mail</strong></p>
                 <InputGroup size={"md"} className="mb-3">
                     <FormControl
@@ -63,11 +69,19 @@ const SigninPage = (props) => {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </InputGroup>
+
+            <Row style={{
+                marginBottom:"20px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}>
+
                 <Button
                     onClick={handleSubmit}
                     variant="warning"
                 >Login</Button>
-
+            </Row>
             </Modal.Body>
 
             <Modal.Footer>

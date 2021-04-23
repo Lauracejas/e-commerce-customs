@@ -44,4 +44,10 @@ export const GlobalStyles = createGlobalStyle`
     min-height: 100vh;
     
 }
+// .card {
+//   width:200px
+// }
+// .cardProduct {
+//   width:600px
+// }
 `
