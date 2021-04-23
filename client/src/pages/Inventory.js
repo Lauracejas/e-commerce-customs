@@ -15,8 +15,6 @@ const Inventory = () => {
 
        }, [])
        
-       console.log(products);
-
   return (
     <div className="container-fluid main-contain">
       <SearchBar />
@@ -26,6 +24,7 @@ const Inventory = () => {
           <tr>
             <th>Image</th>
             <th>Product</th>
+            <th>Description</th>
             <th>Price</th>
             <th>Quantity</th>
           </tr>
