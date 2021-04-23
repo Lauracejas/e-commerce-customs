@@ -52,12 +52,16 @@ const CreateAccount = () => {
    
 
     return (
-        <Modal.Dialog>
-        <Modal.Header >
-            <Modal.Title>Create your Account</Modal.Title>
+        <Modal.Dialog >
+        <Modal.Header style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}>
+            <Modal.Title >Create your Account</Modal.Title>
         </Modal.Header>
 
-        <Modal.Body>
+        <Modal.Body className="text-left">
             <p><strong>Create Username</strong></p>
          
             <InputGroup size={"md"} className="mb-3">
@@ -89,14 +93,14 @@ const CreateAccount = () => {
                     onChange={(e) => setPasswordAccount(e.target.value)}
                 />
             </InputGroup>
-            <Link to="/" >
-            <Button onClick={handleSubmit}                
-                variant="warning"
-            >Create my Account</Button>
-            </Link>
         
 
         </Modal.Body>
+            <Link to="/" >
+            <Button className="mb-4" onClick={handleSubmit}                
+                variant="warning"
+            >Create my Account</Button>
+            </Link>
 
         <Modal.Footer>
             <p>Already have an account?</p>

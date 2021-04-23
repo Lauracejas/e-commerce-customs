@@ -49,8 +49,8 @@ const App = () => {
         />
         <Route
          exact path="/register" 
-         component={RegisterPage} 
-         render={(props) => <SigninPage {...props} handleSignin={handleCreateAccount} />}
+       
+         render={(props) => <RegisterPage {...props} handleSignin={handleCreateAccount} />}
          />
         
         {/* <Footer /> */}
