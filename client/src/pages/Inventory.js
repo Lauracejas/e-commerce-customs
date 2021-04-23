@@ -7,13 +7,15 @@ import { getAllProducts, getProduct } from "../utils/API";
 
 const Inventory = () => {
   const [products, setProducts] = useState([]);
+      
+        useEffect(() => {
+         getAllProducts()
+         .then(res => setProducts(res.data))
+         .catch(err => console.log(err));
 
-  useEffect(() => {
-    getAllProducts()
-      .then(product => {
-        console.log(product.data);
-      })
-  }, []);
+       }, [])
+       
+       console.log(products);
 
   return (
     <div className="container-fluid main-contain">
@@ -29,7 +31,7 @@ const Inventory = () => {
           </tr>
         </thead>
         <tbody>
-          ${products.map(product => <TableRow prop={product} />)}
+          {products.map(product => <TableRow prop={product} />)}
         </tbody>
       </Table>
     </div>
