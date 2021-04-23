@@ -17,7 +17,8 @@ const Homepage = () => {
 
        }, [])
        console.log(products)
- 
+
+  
 
     return (  
         <div className="container-fluid main-contain">
@@ -27,7 +28,7 @@ const Homepage = () => {
             <Row className="apiFlex">
 
             { products.length && products.map((product) => 
-            <HotCards key={product._id} product={product}/>
+            <HotCards  key={product._id} product={product}/>
             )
             }
             </Row>
