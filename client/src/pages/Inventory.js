@@ -31,7 +31,7 @@ const Inventory = () => {
           </tr>
         </thead>
         <tbody>
-          {products.map(product => <TableRow prop={product} />)}
+          {products.map(product => <TableRow key={product._id} product={product} />)}
         </tbody>
       </Table>
     </div>

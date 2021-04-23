@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TableRow = (product) => {
+const TableRow = ({product}) => {
   return (
     <tr>
       <td><img src={product.image} /></td>
