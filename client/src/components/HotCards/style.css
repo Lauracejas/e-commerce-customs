@@ -1,4 +1,4 @@
-.cardrow{
+/* .cardrow{
     margin:5px;
     padding:30px;
     display:grid;
@@ -7,38 +7,10 @@
     grid-template-rows: 25%;
     grid-template-areas: 
         "card1 card2 card3 card4";
-    /* background-color: crimson; */
+   
     column-gap: 35px;
     row-gap:20px;
     
-}
-
-/* .col {
-    display: flex;
-    flex-wrap: wrap;
-} */
-/* .card {
-    row-gap: 20%;
-}    */
-/* .card1 {
-     justify-self: center;
-     row-gap: 10px;
-     
-}
-.card2 {
-     justify-self: center;
-     row-gap: 10px;
-     
-}
-.card3 {
-    justify-self: center;
-    row-gap: 10px;
-    
-}
-.card4 {
-    justify-self: center;
-    row-gap: 10px;
-    
 } */
 
-
+ 
