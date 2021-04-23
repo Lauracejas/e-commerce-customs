@@ -4,13 +4,9 @@ import React, { useEffect, useState } from "react"
 import Row from "react-bootstrap/Row"
 import HotCards from "../components/HotCards/HotCards";
 
-
-
-
-
 const ProductPage = (props) => {
     const [product, setProduct] = useState({});
-    const [products, setProducts] = useState([]);
+   
     useEffect(() => {
         getProduct(props.location.state.id)
             .then(product => {
