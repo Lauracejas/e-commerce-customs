@@ -20,5 +20,9 @@ const getAllProducts = () => {
 const getUsers = () => {
     return axios.get(`/api/users/signin`)
 }
-export {getAllProducts, getProduct, getUsers}
+const postUsers = () => {
+    return axios.post(`/api/users/`)
+}
+
+export {getAllProducts, getProduct, getUsers, postUsers}
 

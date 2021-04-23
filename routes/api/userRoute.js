@@ -1,10 +1,11 @@
-const express = require('express');
+// const express = require('express');
+const router = require('express').Router();
 const User =  require('../../models/user');
-const withAuth = require('../../utils/auth');
+// const withAuth = require('../../utils/auth');
 
-const router = express.Router();
+// const router = express.Router();
 
-router.get("/", withAuth, async (req, res)=>{
+router.get("/",  async (req, res)=>{
     try{
       const user = await User.findAll();
       res.json(user);
@@ -14,7 +15,7 @@ router.get("/", withAuth, async (req, res)=>{
     }
   })
 
-router.get("/signin", withAuth, async (req, res)=>{    
+router.get("/signin",  async (req, res)=>{    
   try{
       if(req.session.user_id) { 
       res.send({logged_in: true, user_id: req.session.user_id});
@@ -30,14 +31,15 @@ router.get("/signin", withAuth, async (req, res)=>{
   router.post("/", async (req, res) => {
     try {
         const user = new User({
-            name: req.body.name,
+            name: req.body.username,
             email: req.body.email,
             password: req.body.password,
-            isAdmin: req.body.isAdmin           
+            isAdmin: req.body.isAdmin || false           
         });
         const newUser = await user.save();
         res.send(newUser);
     } catch (err) {
+      console.log(err);
         res.status(400).send({ msg: "Invalid Email or Password" })
     }
 })
