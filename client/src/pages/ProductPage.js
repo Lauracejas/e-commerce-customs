@@ -8,6 +8,7 @@ import HotCards from "../components/HotCards/HotCards";
 
 
 
+
 const ProductPage = (props) => {
     const [product, setProduct] = useState({});
     const [products, setProducts] = useState([]);
@@ -24,7 +25,6 @@ const ProductPage = (props) => {
         <>
         <div className="container-fluid main-contain">
             <Row className="apiFlex">
-
             <HotCards product={product} />
             </Row>
 
