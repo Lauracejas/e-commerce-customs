@@ -35,7 +35,7 @@ const SigninPage = (props) => {
     };
 
     return (
-        <Modal.Dialog onSubmit={handleSubmit}>
+        <Modal.Dialog >
             <Modal.Header closeButton>
                 <Modal.Title>Welcome Guest!</Modal.Title>
             </Modal.Header>
@@ -64,7 +64,7 @@ const SigninPage = (props) => {
                     />
                 </InputGroup>
                 <Button
-                    onSubmit={handleSubmit}
+                    onClick={handleSubmit}
                     variant="warning"
                 >Login</Button>
 
