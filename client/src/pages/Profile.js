@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { Aside, Menu } from '../components';
-import data from '../data'
-import { Link } from 'react-router-dom'
+// import data from '../data'
+// import { Link } from 'react-router-dom'
+// import HotCards from '../components/HotCards/HotCards';
 import "./style.css";
 import { getAllProducts } from "../utils/API"
-import HotCards from '../components/HotCards/HotCards';
 
     
       

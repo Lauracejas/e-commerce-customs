@@ -27,6 +27,9 @@ Product.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    description: {
+      type: DataTypes.STRING,
+    },
     countInStock: {
       type: DataTypes.INTEGER,
     },

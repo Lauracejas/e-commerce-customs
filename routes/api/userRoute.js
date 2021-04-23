@@ -16,13 +16,10 @@ router.get("/", withAuth, async (req, res)=>{
 
 router.get("/signin", withAuth, async (req, res)=>{    
   try{
-      const sessUserId = req.session.user_id;
-      if(sessUserId) {
-      const user = await User.findById(req.session.user_id);
-      res.json(user);
-      }
-      else {
-        res.status(400).json({message: "Please sign in."})
+      if(req.session.user_id) { 
+      res.send({logged_in: true, user_id: req.session.user_id});
+      }  else {
+        res.send({logged_in: false});
       }
     }catch (err) {
       console.log("here", err)
@@ -47,7 +44,8 @@ router.get("/signin", withAuth, async (req, res)=>{
 
   router.post("/signin", async (req, res) => {
     try {
-      const userData = await User.findOne({ where: {
+      const userData = await User.findOne({
+         where: {
          email: req.body.email,
         
         } });
