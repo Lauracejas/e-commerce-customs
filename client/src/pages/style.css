@@ -8,9 +8,95 @@
     column-gap: 35px;
     row-gap:20px;
 }
-.card {
-    background-color: blue;
-}
 
+.thumbnail{
+    margin-right: 20px;
+  }
 
+  tr {
+    margin: 0 0 1rem 0;
+  }
+    
+  tr:nth-child(odd) {
+    background:#00233A;
+    color: white;
+  }
+  
+      td {
+          /* Behave  like a "row" */
+          border: none;
+          border-bottom: 1px solid #eee;
+          position: relative;
+          padding-left: 50%;
+      }
 
+      td:before {
+          /* Now like a table header */
+          position: absolute;
+          /* Top/left values mimic padding */
+          top: 0;
+          left: 6px;
+          width: 45%;
+          padding-right: 10px;
+          white-space: nowrap;
+      }
+   
+      @media only screen and (max-width: 480px) {
+      
+		
+		table, thead, tbody, th, td, tr {
+			display: block;
+            border:0px;
+            color: white;
+		}
+
+		
+		thead tr {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+    tr {
+      margin: 0 0 1rem 0;
+    }
+      
+    tr:nth-child(odd) {
+      background: #00233A;
+      color:white;
+    }
+    
+		td {
+		
+			border: none;
+			/* border-bottom: 5px solid #eee; */
+			position: relative;
+			padding-left: 50%;
+		}
+
+		td:before {
+
+			position: absolute;
+		
+			top: 1;
+			left: 15px;
+			width: 45%;
+			padding-right: 10px;
+			white-space: nowrap;
+		}
+
+		/*
+		Label the data
+    You could also use a data-* attribute and content for this. That way "bloats" the HTML, this way means you need to keep HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
+		*/
+		/* td:nth-of-type(1):before { 
+            content: "Product";
+             background-color: black;
+             margin:20px 
+             padding
+            }
+		td:nth-of-type(2):before { content: "Quantity"; }
+		td:nth-of-type(3):before { content: "Price"; }
+		td:nth-of-type(4):before { content: "Total"; } */
+		
+	}

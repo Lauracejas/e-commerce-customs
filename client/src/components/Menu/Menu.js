@@ -12,15 +12,20 @@ const Menu = ({ open, ...props }) => {
         <span aria-hidden="true"></span>
         Products
       </a>
+      <a href="/cart" tabIndex={tabIndex}>
+        <span aria-hidden="true"></span>
+        Cart
+      </a>
+      <a href="/profile" tabIndex={tabIndex}>
+        <span aria-hidden="true"></span>
+        Profile
+      </a>
       
-      <Button className ="button" href="/" tabIndex={tabIndex}>
+      {/* <Button className ="button" href="/" tabIndex={tabIndex}>
         <span aria-hidden="true"></span>
         Customize
-        </Button>
-        <Button href="/" tabIndex={tabIndex}>
-        <span aria-hidden="true"></span>
-        Customize
-        </Button>
+        </Button> */}
+       
     </StyledMenu>
   )
 }

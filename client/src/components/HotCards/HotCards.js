@@ -1,5 +1,6 @@
 import React from 'react';
 import "./style.css";
+
 import { Link } from 'react-router-dom'
 
 
@@ -15,10 +16,24 @@ const HotCards = ({product}) => {
 
 
             <Card key={product._id}
-             style={{ height: '11rem' }}
+             style={{ 
+                height: '250px',
+                width: "200px",
+                padding: '5px'
+             }}
              >
             <Link to={'/product/' + product._id}>
-                <Card.Img variant="top" src={product.image} />
+                <Card.Img 
+                 className="card-img-top-hotcard"
+                 variant="top"
+                 // src={product.image} 
+                 style={{ 
+                //   
+                   minHeight: "100px",
+                   
+                 }}
+                
+                />
                 </Link>
                 <Card.Body>
                     <Card.Title>

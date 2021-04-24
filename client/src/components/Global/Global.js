@@ -10,8 +10,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   body {
     
-    justify-content: center;
-    align-items: center;
+    
     background: ${({ theme }) => theme.primaryDark};
     color: ${({ theme }) => theme.primaryLight};
    
@@ -23,31 +22,15 @@ export const GlobalStyles = createGlobalStyle`
     text-align: center;
     text-transform: uppercase;
   }
-  img {
-    border-radius: 5px;
-    height: auto;
-    width: 10rem;
-  }
-  div {
-    text-align: center;
-  }
-  small {
-    display: block;
-  }
+ . row {
+   margin-top: 0px;
+ }
+ 
+  
   a {
     color: ${({ theme }) => theme.primaryHover};
     text-decoration: none;
   }
-  .main-contain {
-  
-    flex: 1;
-    min-height: 100vh;
-    
-}
-// .card {
-//   width:200px
-// }
-// .cardProduct {
-//   width:600px
-// }
+
+
 `
