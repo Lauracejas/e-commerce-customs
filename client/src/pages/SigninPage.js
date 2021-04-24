@@ -5,11 +5,13 @@ import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import InputGroup from 'react-bootstrap/InputGroup'
 import FormControl from 'react-bootstrap/FormControl'
-import { Link } from "react-router-dom"
+import { Link, Redirect } from "react-router-dom"
 import axios from "axios";
+
 // import SignUpModal from './SignUpModal/SignUpModal';
 
 const SigninPage = (props) => {
+    console.log(props)
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
 
@@ -22,15 +24,23 @@ const SigninPage = (props) => {
             email: email,
             password: password,
         }).then((response) => {
-            if (response.data.message);
+            if (response.data);
             console.log(response);
+            props.handleSignin(response.data);
         });
 
     };
 
+    if (props.userLog.user && props.userLog.user.password) {
+        return (
+            <Redirect to="/profile"/>
+        )
+    }
+
     return (
-        <Modal.Dialog 
-        >
+        <>
+        <Modal.Dialog >
+        
             <Modal.Header
             closeButton 
             style={{
@@ -38,8 +48,7 @@ const SigninPage = (props) => {
                 
                 justifyContent: "center",
                 alignItems: "center",
-            }}
-           
+            }}         
             
             >
              
@@ -90,6 +99,7 @@ const SigninPage = (props) => {
 
             </Modal.Footer>
         </Modal.Dialog>
+        </>
     )
 }
 
