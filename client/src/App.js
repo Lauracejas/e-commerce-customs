@@ -20,10 +20,7 @@ const App = () => {
   const [user, setUser] = useState({});
   const [userLog, setUserLog] = useState({});
   const [userLogout, setUserLogout] = useState({});
-<<<<<<< HEAD
   
-=======
->>>>>>> main
 
 
   const handleSignin = (data) => {
