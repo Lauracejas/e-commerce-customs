@@ -44,7 +44,10 @@ const App = () => {
       <div>
         <ThemeProvider theme={theme}>
           <GlobalStyles />
-        <Header userLogout={userLogout} handleLogout={handleLogout} />  
+        <Header 
+        userLogout={userLogout}
+         handleLogout={handleLogout} 
+         />  
           
        
         <Route exact path="/" component={Homepage} />
