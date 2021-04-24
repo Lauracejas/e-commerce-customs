@@ -3,28 +3,26 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/logo.png"
 import "./style.css";
 import axios from "axios"
+// import User from '../../../../models/user';
 
-const Header = (data) => {
+const Header = (props) => {
     const location = useLocation();
-    console.log(data);
+    console.log(props); 
 
-    const [isLoggedIn, setIsLoggedIn] = useState({});
-
-    const  isLog = (data) => {
-        
-        setIsLoggedIn(data);
-    }
+    
+    const [logged_in, setLogged_in] = useState({});
+    
 
     const handleSubmit = async e => {
         e.preventDefault();              
-        axios.post("/api/users/logout", {          
+        axios.post("/api/users/logout", { 
+            logged_in: logged_in, 
         }).then((response) => {
             if (response.data);
-            console.log(response); 
-            data.handleLogout(response.data);          
+            console.log(response.data);          
         });
     };   
-    
+    // console.log(props.userLog.user.name)
     
 
     return (
@@ -39,13 +37,21 @@ const Header = (data) => {
                     </Link>
                     <ul className="nav justify-content-end">
                         <li className="nav-item">
-                            <Link to="/profile" className={location.pathname === "/dashboard" ? "nav-link active" : "nav-link"}>
-                                Your Profile
+                            <Link to="/inventory" className={location.pathname === "/inventory" ? "nav-link active" : "nav-link"}>
+                                Inventory
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/inventory" className={location.pathname === "/inventory" ? "nav-link active" : "nav-link"}>
-                                Inventory
+                        {
+
+                        }    <Link to="/profile" className={location.pathname === "/dashboard" ? "nav-link active" : "nav-link"}>
+                              {function(props){
+                                  if(logged_in) {
+                                      return (props.userLog.user.nane)}
+                                  }
+
+                              }
+                           
                             </Link>
                         </li>
                         <li className="nav-item">
@@ -53,15 +59,15 @@ const Header = (data) => {
                                 Cart
                             </Link>
                         </li>
-                        {(function(data) {
-                        if (isLoggedIn){
-                            <li className="nav-item">
-                                <Link to="/signin" onClick={handleSubmit} className={location.pathname === "/cart" ? "nav-link active" : "nav-link"}>
+                        {(function(props) {
+                        if (!logged_in){
+                           return <li className="nav-item">
+                                <Link to="/signin" onChange={(e) => setLogged_in(e.target.value)} onClick={handleSubmit} className={location.pathname === "/cart" ? "nav-link active" : "nav-link"}>
                                     Logout
                                 </Link>
                             </li>
                         } else {
-                            <li className="nav-item">
+                           return <li className="nav-item">
                                 <Link to="/signin" className={location.pathname === "/cart" ? "nav-link active" : "nav-link"}>
                                     Sign In
                                 </Link>
