@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, useLocation } from "react-router-dom";
-import logo from "../../assets/logo.png"
 import "./style.css";
 
 const Header = () => {
@@ -25,7 +24,7 @@ const Header = () => {
                 <div className="container-fluid">
 
                     <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
-                        <img src={logo} alt='' />
+                        <img alt='' />
 
 
                     </Link>

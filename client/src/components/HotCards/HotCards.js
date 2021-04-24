@@ -11,9 +11,6 @@ const HotCards = ({product}) => {
   
     return (
        
-
-
-
             <Card key={product._id}
              style={{ height: '11rem' }}
              >
@@ -37,6 +34,12 @@ const HotCards = ({product}) => {
                     </Card.Text>
                 </Card.Body>
             </Card>
+
+
+       
+
+
+
                     
        
     )

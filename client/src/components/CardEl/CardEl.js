@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Card from 'react-bootstrap/Card'
-import "./styles.css"
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Card from 'react-bootstrap/Card';
+import "./styles.css";
 
 
 const CardEl = ({product}) => {

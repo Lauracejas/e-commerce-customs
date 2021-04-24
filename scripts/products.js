@@ -2,7 +2,7 @@
  const productData = [{
         "_id": 1,
         "name": "T-shirt",
-        "image": "../client/src/assets/white.jpg",
+        "image": "../client/public/images/white.jpg",
         "price": 20,
         "size": "S",
         "color": "white",
@@ -12,7 +12,7 @@
     {
         "_id": 2,
         "name": "T-shirt",
-        "image": "../client/src/assets/red.JPG",
+        "image": "../client/public/images/red.jpg",
         "price": 25,
         "size": "M",
         "color": "red",
@@ -22,7 +22,7 @@
      {
         "_id": 3,
         "name": "T-shirt",
-        "image": "../client/src/assets/black.jpg",
+        "image": "../client/public/images/black.jpg",
         "price": 20,
         "size": "S",
         "color": "black",
@@ -32,7 +32,7 @@
     {
         "_id": 4,
         "name": "T-shirt",
-        "image": "../client/src/assets/blue.jpg",
+        "image": "../client/public/images/blue.jpg",
         "price": 30,
         "size": "L",
         "color": "blue",
@@ -42,7 +42,7 @@
     {
         "_id": 5,
         "name": "T-shirt",
-        "image": "../client/src/assets/blue.jpg",
+        "image": "../client/public/images/blue.jpg",
         "price": 30,
         "size": "L",
         "color": "blue",
@@ -52,7 +52,7 @@
     {
         "_id": 6,
         "name": "T-shirt",
-        "image": "../client/src/assets/blue.jpg",
+        "image": "../client/public/images/blue.jpg",
         "price": 30,
         "size": "L",
         "color": "blue",
@@ -62,7 +62,7 @@
     {
         "_id": 7,
         "name": "T-shirt",
-        "image": "../client/src/assets/blue.jpg",
+        "image": "../client/public/images/blue.jpg",
         "price": 30,
         "size": "L",
         "color": "blue",
@@ -72,7 +72,7 @@
     {
         "_id": 8,
         "name": "T-shirt",
-        "image": "../client/src/assets/yellow.jpg",
+        "image": "../client/public/images/yellow.jpg",
         "price": 25,
         "size": "S",
         "color": "yellow",
