@@ -33,21 +33,25 @@ const CreateAccount = (props) => {
         });
     };
 
+   
     if (props.user && props.user.email) {
         return (
             <Redirect to="/profile"/>
         )
-    }      
-    
-       return (<>
-        
-        
-        <Modal.Dialog>
-        <Modal.Header >
-            <Modal.Title>Create your Account</Modal.Title>
+    }
+
+    return (
+        <Modal.Dialog >
+        <Modal.Header style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}>
+            <Modal.Title >Create your Account</Modal.Title>
+       
         </Modal.Header>
 
-        <Modal.Body>
+        <Modal.Body className="text-left">
             <p><strong>Create Username</strong></p>
          
             <InputGroup size={"md"} className="mb-3">
@@ -98,7 +102,7 @@ const CreateAccount = (props) => {
             Admin */}
         </Modal.Footer>
     </Modal.Dialog>
-    </>
+    
     )
 }
 

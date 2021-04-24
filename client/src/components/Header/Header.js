@@ -44,6 +44,11 @@ const Header = (data) => {
                             </Link>
                         </li>
                         <li className="nav-item">
+                            <Link to="/inventory" className={location.pathname === "/inventory" ? "nav-link active" : "nav-link"}>
+                                Inventory
+                            </Link>
+                        </li>
+                        <li className="nav-item">
                             <Link to="/cart" className={location.pathname === "/cart" ? "nav-link active" : "nav-link"}>
                                 Cart
                             </Link>

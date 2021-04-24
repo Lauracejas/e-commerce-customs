@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "./style.css";
 import Modal from 'react-bootstrap/Modal';
+import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import InputGroup from 'react-bootstrap/InputGroup'
 import FormControl from 'react-bootstrap/FormControl'
@@ -36,13 +37,25 @@ const SigninPage = (props) => {
         )
     }
 
-    return (<>
-       
+    return (
+        <>
         <Modal.Dialog >
-            <Modal.Header >
-                <Modal.Title>Welcome Guest!</Modal.Title>
+        
+            <Modal.Header
+            closeButton 
+            style={{
+                display: "inline-block",
+                
+                justifyContent: "center",
+                alignItems: "center",
+            }}         
+            
+            >
+             
+                <Modal.Title >Welcome Guest!</Modal.Title>
             </Modal.Header>
-            <Modal.Body>
+
+            <Modal.Body className="text-left">
                 <p><strong>E-mail</strong></p>
                 <InputGroup size={"md"} className="mb-3">
                     <FormControl
@@ -65,13 +78,19 @@ const SigninPage = (props) => {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </InputGroup>
-               
+
+            <Row style={{
+                marginBottom:"20px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}>
+
                 <Button
                     onClick={handleSubmit}
                     variant="warning"
                 >Login</Button>
-              
-
+            </Row>
             </Modal.Body>
 
             <Modal.Footer>

@@ -5,6 +5,7 @@ import Header from "./components/Header/Header"
 import Homepage from "./pages/Homepage"
 // import ProductScreen from "./pages/Dashboard"
 import Cart from "./pages/Cart"
+import Inventory from "./pages/Inventory";
 import { GlobalStyles } from './components/Global/Global';
 import { ThemeProvider } from 'styled-components';
 
@@ -54,6 +55,7 @@ const App = () => {
         {/* <Route exact path="/products/:_id" component={ProductScreen} /> */}
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/cart" component={Cart} />
+        <Route exact path="/inventory" component={Inventory} />
         <Route exact path="/product/:id" component={ProductPage} />
         <Route 
           exact path="/signin" 
