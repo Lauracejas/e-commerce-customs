@@ -7,23 +7,23 @@ import axios from "axios"
 
 const Header = (props) => {
     const location = useLocation();
-    console.log(props); 
+    console.log(props);
 
-    
+
     const [logged_in, setLogged_in] = useState({});
-    
+
 
     const handleSubmit = async e => {
-        e.preventDefault();              
-        axios.post("/api/users/logout", { 
-            logged_in: logged_in, 
+        e.preventDefault();
+        axios.post("/api/users/logout", {
+            logged_in: logged_in,
         }).then((response) => {
             if (response.data);
-            console.log(response.data);          
+            console.log(response.data);
         });
-    };   
+    };
     // console.log(props.userLog.user.name)
-    
+
 
     return (
         <div>
@@ -42,16 +42,17 @@ const Header = (props) => {
                             </Link>
                         </li>
                         <li className="nav-item">
-                        {
+                            {
 
-                        }    <Link to="/profile" className={location.pathname === "/dashboard" ? "nav-link active" : "nav-link"}>
-                              {function(props){
-                                  if(logged_in) {
-                                      return (props.userLog.user.nane)}
-                                  }
+                            }    <Link to="/profile" className={location.pathname === "/dashboard" ? "nav-link active" : "nav-link"}>
+                                {function (props) {
+                                    if (logged_in) {
+                                        return (props.userLog.user.nane)
+                                    }
+                                }
 
-                              }
-                           
+                                }
+
                             </Link>
                         </li>
                         <li className="nav-item">
@@ -59,21 +60,20 @@ const Header = (props) => {
                                 Cart
                             </Link>
                         </li>
-                        {(function(props) {
-                        if (!logged_in){
-                           return <li className="nav-item">
+                        {props.userLog?.user  ? 
+                            <li className="nav-item">
                                 <Link to="/signin" onChange={(e) => setLogged_in(e.target.value)} onClick={handleSubmit} className={location.pathname === "/cart" ? "nav-link active" : "nav-link"}>
                                     Logout
                                 </Link>
                             </li>
-                        } else {
-                           return <li className="nav-item">
+                            :
+                            <li className="nav-item">
                                 <Link to="/signin" className={location.pathname === "/cart" ? "nav-link active" : "nav-link"}>
                                     Sign In
                                 </Link>
                             </li>
                         }
-                        }) ()}
+                      
 
 
 
