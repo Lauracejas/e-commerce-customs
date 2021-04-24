@@ -23,7 +23,7 @@ const Profile = () => {
   return (
   
   <div>
-
+       <p>Your cart is empty</p>
          {/* <div className="back-to-result">
             <Link to="/dashboard">Back to result</Link>
         </div>

@@ -17,17 +17,26 @@ import RegisterPage from './pages/RegisterPage';
 
 const App = () => {
   const [user, setUser] = useState({});
+  const [userLog, setUserLog] = useState({});
+  const [userLogout, setUserLogout] = useState({});
 
 
   const handleSignin = (data) => {
-    const loggedInUser = {};
-    setUser(data);
+    // const loggedInUser = {};
+    setUserLog(data);
   }
 
   const handleCreateAccount = (data) => {
-    const accountUser = {};
+    // const accountUser = {};
     setUser(data);
   }
+
+  const handleLogout = (data) => {
+    // const accountUser = {};
+    setUserLogout(data);
+  }
+
+ 
 
   return (
     <Router>      
@@ -35,7 +44,8 @@ const App = () => {
       <div>
         <ThemeProvider theme={theme}>
           <GlobalStyles />
-        <Header />       
+        <Header userLogout={userLogout} handleLogout={handleLogout} />  
+          
        
         <Route exact path="/" component={Homepage} />
         {/* <Route exact path="/products/:_id" component={ProductScreen} /> */}
@@ -43,9 +53,8 @@ const App = () => {
         <Route exact path="/cart" component={Cart} />
         <Route exact path="/product/:id" component={ProductPage} />
         <Route 
-          exact 
-          path="/signin" 
-          render={(props) => <SigninPage {...props} user={user} handleSignin={handleSignin} />} 
+          exact path="/signin" 
+          render={(props) => <SigninPage {...props} userLog={userLog} handleSignin={handleSignin} />} 
         />
         <Route
          exact path="/register" 

@@ -8,13 +8,11 @@ import { Link, Redirect } from "react-router-dom"
 import axios from "axios"
 
 
-
 const CreateAccount = (props) => {
     const [usernameAccount, setUsernameAccount] = useState();
     const [emailAccount, setEmailAccount] = useState();
     const [passwordAccount, setPasswordAccount] = useState();
 
-    // axios.defaults.withCredentials = true;
     const handleSubmit = async (e) => {
         e.preventDefault()
         console.log("username is " + usernameAccount);
@@ -26,18 +24,24 @@ const CreateAccount = (props) => {
             email: emailAccount,
             password: passwordAccount,
         }).then((response) => {
-            if (response.data);
-            console.log(response);
-            props.handleCreateAccount(response.data);
+            if (response.data) {
+                console.log(response);
+                props.handleCreateAccount(response.data);
+            } else if(response.data) {
+                alert("You now have an account")
+            }
         });
     };
 
     if (props.user && props.user.email) {
         return (
-            <Redirect to="/"/>
+            <Redirect to="/profile"/>
         )
-    }
-       return (
+    }      
+    
+       return (<>
+        
+        
         <Modal.Dialog>
         <Modal.Header >
             <Modal.Title>Create your Account</Modal.Title>
@@ -94,6 +98,7 @@ const CreateAccount = (props) => {
             Admin */}
         </Modal.Footer>
     </Modal.Dialog>
+    </>
     )
 }
 

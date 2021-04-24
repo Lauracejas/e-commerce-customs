@@ -2,22 +2,22 @@ import React from 'react';
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/logo.png"
 import "./style.css";
+import axios from "axios"
 
-const Header = () => {
+const Header = (data) => {
     const location = useLocation();
-    
-    // async function logout() {
-    //     const response = await fetch('/api/users/logout', {
-    //       method: 'post',
-    //       headers: { 'Content-Type': 'application/json' }
-    //     });
-      
-    //     if (response.ok) {
-    //       document.location.replace('/');
-    //     } else {
-    //       alert(response.statusText);
-    //     }
-    //   }
+    console.log(data);
+
+    const handleSubmit = async e => {
+        e.preventDefault();              
+        axios.post("/api/users/logout", {          
+        }).then((response) => {
+            if (response.data);
+            console.log(response); 
+            data.handleLogout(response.data);          
+        });
+    };        
+
 
     return (
         <div>
@@ -40,8 +40,9 @@ const Header = () => {
                                 Cart
                             </Link>
                         </li>
+
                         <li className="nav-item">
-                            <Link to="/signin" className={location.pathname === "/cart" ? "nav-link active" : "nav-link"}>
+                            <Link to="/signin" onClick={handleSubmit} className={location.pathname === "/cart" ? "nav-link active" : "nav-link"}>
                                 Logout
                             </Link>
                         </li>
