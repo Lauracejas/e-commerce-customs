@@ -32,8 +32,7 @@ const Header = (props) => {
 
                     <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
                         <img src={logo} alt='' />
-
-
+                      
                     </Link>
                     <ul className="nav justify-content-end">
                         <li className="nav-item">
@@ -42,16 +41,11 @@ const Header = (props) => {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            {
+                               <Link to="/profile" className={location.pathname === "/dashboard" ? "nav-link active" : "nav-link"}>
+                               {props.userLog?.user  ?  
+                         <p>{props.userLog?.user.name } </p> : <p>profile</p>
+                           }
 
-                            }    <Link to="/profile" className={location.pathname === "/dashboard" ? "nav-link active" : "nav-link"}>
-                                {function (props) {
-                                    if (logged_in) {
-                                        return (props.userLog.user.nane)
-                                    }
-                                }
-
-                                }
 
                             </Link>
                         </li>
