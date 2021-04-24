@@ -43,8 +43,8 @@ const Header = (props) => {
                         <li className="nav-item">
                                <Link to="/profile" className={location.pathname === "/dashboard" ? "nav-link active" : "nav-link"}>
                                {props.userLog?.user  ?  
-                         <p>{props.userLog?.user.name } </p> : <p>profile</p>
-                           }
+                         <p>{props.userLog?.user.name } </p> : <p>{props.user?.name }</p>
+                           } 
 
 
                             </Link>
@@ -66,11 +66,8 @@ const Header = (props) => {
                                     Sign In
                                 </Link>
                             </li>
-                        }
-                      
-
-
-
+                        } 
+                       
                     </ul>
                 </div>
             </nav>
