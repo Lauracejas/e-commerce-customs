@@ -5,14 +5,14 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 background: ${({ theme }) => theme.primaryLight};
-transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
+transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
 height: 100vh;
 text-align: left;
 padding: 5rem;
 position: absolute;
 
-top: 5;
-left: 0;
+top: 1;
+right: 0;
 transition: transform 0.3s ease-in-out;
 @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 100%;

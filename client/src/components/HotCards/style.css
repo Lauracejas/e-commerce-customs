@@ -12,5 +12,9 @@
     row-gap:20px;
     
 } */
-
+.card-img-top-hotcard {
+    background-image: url(https://via.placeholder.com/150);
+    /* height: 500px; */
+    
+    }
  
