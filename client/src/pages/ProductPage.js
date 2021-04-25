@@ -48,18 +48,11 @@ const ProductPage = (props) => {
 
     return (
         <>
-<<<<<<< HEAD
-        <div className="container-fluid main-contain">
-            <Row className="apiFlex">
-            <HotCards product={product} />
-            </Row>
-=======
         <div className="container-fluid ">
             
             <div className="row pt-0 mt-0">
 
             <div className="col-md-4">
->>>>>>> d61aa288785424673ad2ffc444c0e1976fea1aa6
 
             </div>
             <div className="col-md-8 mt-4" >

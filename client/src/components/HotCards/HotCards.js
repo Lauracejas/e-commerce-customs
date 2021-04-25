@@ -1,11 +1,11 @@
 import React from 'react';
 import "./style.css";
-
 import { Link } from 'react-router-dom'
-
-
 import Card from 'react-bootstrap/Card';
-// import Image from '../assets/white.jpg';
+// import ProductData from '../../scripts/product';
+// import productData from '../../../../scripts/products';
+// import Shirts from '../../../../scripts/products';
+
 
 const HotCards = ({product}) => {
 
@@ -23,9 +23,10 @@ const HotCards = ({product}) => {
                 <Card.Img 
                  className="card-img-top-hotcard"
                  variant="top"
-                 // src={product.image} 
+                 src={product._id}
+                //  src={process.env.PUBLIC_URL + "/images/black.jpg"} 
                  style={{ 
-                //   
+                
                    minHeight: "100px",
                    
                  }}

@@ -27,7 +27,7 @@ router.post("/", async (req, res)=>{
       name: req.body.name,
       price: req.body.price,
       size: req.body.size,
-      image: req.body.image,
+      // image: req.body.image,
       color: req.body.color,
       countInStock: req.body.countInStock,      
       description: req.body.description,
