@@ -1,18 +1,19 @@
 
 import { getProduct } from "../utils/API";
 import { getAllProducts } from "../utils/API";
-import { RightAside, RightMenu } from '../components';
-import CardCart from "../components/CardCart/CardCart"
 import React, { useEffect, useState } from "react"
-import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
+// import { RightAside, RightMenu } from '../components';
+// import CardCart from "../components/CardCart/CardCart"
+// import Row from "react-bootstrap/Row"
+// import Col from "react-bootstrap/Col"
 // import HotCards from "../components/HotCards/HotCards";
 import "./style.css"
 import styled from "styled-components"
 
 const Cart = (props) => {
-
-    const [open, setOpen] = useState(false);
+    // const [open, setOpen] = useState(false);
+   
+    console.log(props)
     const [products, setProducts] = useState([]);
 
 
@@ -32,14 +33,14 @@ const Cart = (props) => {
     const [product, setProduct] = useState({});
 
     useEffect(() => {
-        getProduct()
+        getProduct(props)
             .then(product => {
-                console.log(product.data);
-                // setProduct(product.data);
+                console.log(props.history);
+                 setProduct(product.data);
             }
             )
     }, [])
-    console.log(product)
+    // console.log(product)
 
     const handleSubmit = () => {
         getAllProducts().then(results => setProducts(results.data))
