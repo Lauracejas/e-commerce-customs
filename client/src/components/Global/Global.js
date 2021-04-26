@@ -4,14 +4,15 @@ export const GlobalStyles = createGlobalStyle`
   html, body {
     margin: 0;
     padding: 0;
+    position: relative;
+    min-height: 100vh;
   }
   *, *::after, *::before {
     box-sizing: border-box;
   }
   body {
     
-    justify-content: center;
-    align-items: center;
+   
     background: ${({ theme }) => theme.primaryDark};
     color: ${({ theme }) => theme.primaryLight};
    
@@ -23,31 +24,22 @@ export const GlobalStyles = createGlobalStyle`
     text-align: center;
     text-transform: uppercase;
   }
-  img {
-    border-radius: 5px;
-    height: auto;
-    width: 10rem;
-  }
-  div {
-    text-align: center;
-  }
-  small {
-    display: block;
-  }
+ 
+ .footer {
+  padding-top: 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #00233A;
+  text-align: center;
+}
+ 
+  
   a {
     color: ${({ theme }) => theme.primaryHover};
     text-decoration: none;
   }
-  .main-contain {
-  
-    flex: 1;
-    min-height: 100vh;
-    
-}
-// .card {
-//   width:200px
-// }
-// .cardProduct {
-//   width:600px
-// }
+
+
 `

@@ -33,6 +33,11 @@ Product.init(
     countInStock: {
       type: DataTypes.INTEGER,
     },
+    
+    image: {
+     type: DataTypes.STRING,
+     allowNull: false,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -40,6 +45,7 @@ Product.init(
         key: 'id',
       },
     },
+    
   },
   {
     sequelize,

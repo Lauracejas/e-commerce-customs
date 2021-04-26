@@ -8,10 +8,10 @@ background: ${({ theme }) => theme.primaryLight};
 transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
 height: 100vh;
 text-align: left;
-padding: 2rem;
+padding: 5rem;
 position: absolute;
 
-top: 2;
+top: 5;
 left: 0;
 transition: transform 0.3s ease-in-out;
 @media (max-width: ${({ theme }) => theme.mobile}) {
