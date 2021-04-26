@@ -2,6 +2,7 @@
 import { getProduct } from "../utils/API";
 import { getAllProducts } from "../utils/API";
 import React, { useEffect, useState } from "react"
+import {Link} from "react-router-dom"
 // import { RightAside, RightMenu } from '../components';
 // import CardCart from "../components/CardCart/CardCart"
 // import Row from "react-bootstrap/Row"
@@ -12,20 +13,16 @@ import styled from "styled-components"
 
 const Cart = (props) => {
     // const [open, setOpen] = useState(false);
-   
+
     console.log(props)
     const [products, setProducts] = useState([]);
-
-
 
     const Link = ({ classNameName, children }) => (
         <div classNameName={classNameName}>
             {children}
         </div>
     );
-    const StyledLink = styled(Link)`
-    
-    
+    const StyledLink = styled(Link)` 
     color: palevioletred;
     font-weight: bold;
     `;
@@ -35,8 +32,8 @@ const Cart = (props) => {
     useEffect(() => {
         getProduct(props)
             .then(product => {
-                console.log(props.history);
-                 setProduct(product.data);
+                console.log(props);
+                setProduct(product.data);
             }
             )
     }, [])
@@ -58,7 +55,7 @@ const Cart = (props) => {
                     <thead>
                         <tr>
                             <th>Product</th>
-                            
+
                             <th>Quantity</th>
                             <th className="text-center">Price</th>
                             <th className="text-center">Total</th>
@@ -77,7 +74,7 @@ const Cart = (props) => {
                                     </div>
                                 </div>
                             </td>
-                            
+
                             <td className="col-xs-1 col-xs-1" >
                                 <input type="email" className="form-control" id="exampleInputEmail1" value="3"></input>
                             </td>
@@ -100,7 +97,7 @@ const Cart = (props) => {
                                     </div>
                                 </div>
                             </td>
-                            
+
                             <td className="col-sm-1 col-md-1" >
                                 <input type="email" className="form-control" id="exampleInputEmail1" value="3"></input>
                             </td>
@@ -123,7 +120,7 @@ const Cart = (props) => {
                                     </div>
                                 </div>
                             </td>
-                            
+
                             <td className="col-sm-1 col-md-1" >
                                 <input type="email" className="form-control" id="exampleInputEmail1" value="3"></input>
                             </td>
@@ -162,9 +159,11 @@ const Cart = (props) => {
                             <td>   </td>
                             <td>   </td>
                             <td>
+                                <a href="/">
                                 <button type="button" className="btn btn-success">
                                     <span className="fa fa-shopping-cart"></span> Continue Shopping
-</button></td>
+                                </button></a>
+                            </td>
                             <td>
                                 <button type="button" className="btn btn-success">
                                     Checkout <span className="fa fa-play"></span>

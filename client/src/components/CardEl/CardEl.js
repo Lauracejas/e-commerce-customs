@@ -9,14 +9,14 @@ const CardEl = ({product}) => {
   console.log(product)
   return (
     <>   
-      <div key={product._id} class="card">
-  <img src="https://via.placeholder.com/150" class="card-img-top " alt="" />
-  <div class="card-body">
-    <h5 class="card-title">{product.name}</h5>
-    <p class="card-text">Price: ${product.price}</p>
-    <p class="card-text">Size: {product.size}</p>
-    <p class="card-text">Color: {product.color}</p>
-    <p class="card-text">Description: {product.description}</p>
+      <div key={product._id} className="card">
+  <img src="https://via.placeholder.com/150" className="card-img-top " alt="" />
+  <div className="card-body">
+    <h5 className="card-title">{product.name}</h5>
+    <p className="card-text">Price: ${product.price}</p>
+    <p className="card-text">Size: {product.size}</p>
+    <p className="card-text">Color: {product.color}</p>
+    <p className="card-text">Description: {product.description}</p>
     <Link to={{
                         pathname: `/cart/`,
                         state: {
@@ -38,7 +38,7 @@ const CardEl = ({product}) => {
              >
             
                 <Card.Img 
-                className="card-img-top-card"
+                classNameName="card-img-top-card"
                 variant="top"
                 style={{ 
                     // width: '780px',
