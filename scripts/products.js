@@ -1,89 +1,160 @@
-//  import Image from '../client/public/images/';
-// import White from '../client/public/images/white.jpg';
 
 
  const productData = [{
+     //------------- Men's Dress Shirts---------------
         _id: 1,
-        name: "T-shirt",
-        image: "../client/public/images/white.jpg",
-        price: 20,
-        size: "S",
-        color: "white",
+        name: "Alex Vando Mens Dress Shirts Wrinkle Free Regular Fit Stretch Bamboo Men Shirt",
+        image: '/images/m.dress.shirts/black.jpeg',
+        price: 25,
+        size: "L",
+        color: "black",
         countInStock: 20,
-        description: "This blended t‑shirt brings all the comfort without the high price tag! A soft style anyone would appreciate."
+        description: "The material is comfortable, breathable and not see through. It has a little spandex mix in so it stretches some which allows for some moving room"
     },
     {
         _id: 2,
-        name: "T-shirt",
-        image: "../client/public/images/red.jpg",
+        name: "Beninos Men's Slim Fit Solid Point Collar Button Down Dress Shirts",
+        image: '/images/m.dress.shirts/blue.jpg',
         price: 25,
         size: "M",
-        color: "red",
+        color: "light blue",
         countInStock: 20,
-        description: "This blended t‑shirt brings all the comfort without the high price tag! A soft style anyone would appreciate."
+        description: "DESIGN: Perfect fit, one chest pocket, turn down collar, this long sleeve button down dress shirt characterized by plaid pattern on collar, sleeves and front, modern and stylish"
     },
      {
         _id: 3,
-        name: "T-shirt",
-        image: "../client/public/images/black.jpg",
+        name: "Alimens & Gentle French Cuff Regular Fit Dress Shirts (Cufflink Included)",
+        image: '/images/m.dress.shirts/cyan.jpg',
         price: 20,
-        size: "S",
-        color: "black",
+        size: "M",
+        color: "cyan",
         countInStock: 20,
-        description: "This blended t‑shirt brings all the comfort without the high price tag! A soft style anyone would appreciate."
+        description: "OCCASIONS: This stylish mens button down shirts can be worn tucked or untucked pairing, are perfect for Party, Business, Work, Holiday, Travel, Casual, or Daily Life/ you can match with Flat Front, Chino Pants, Jeans, Cargo Pants."
     },
     {
         _id: 4,
-        name: "T-shirt",
-        image: "../client/public/images/blue.jpg",
+        name: "Cloudstyle Mens Paisley Shirt Long Sleeve Dress Shirt Button Down Casual Regular Fit",
+        image: '/images/m.dress.shirts/purple.jpeg',
         price: 30,
         size: "L",
-        color: "blue",
+        color: "purple",
         countInStock: 20,
-        description: "This blended t‑shirt brings all the comfort without the high price tag! A soft style anyone would appreciate."
+        description: "SIZE: Size are US standard size, please choose your size according to our size chart (Not the Amazon Size Chart) and if you have big belley and wide shoulders, we recommend you to go up one size."
     },
     {
         _id: 5,
-        name: "T-shirt",
-        image: "../client/public/images/blue.jpg",
+        name: "Alex Vando Mens Dress Shirts Regular Fit Long Sleeve Men Shirt",
+        image: '/images/m.dress.shirts/red.jpg',
         price: 30,
         size: "L",
-        color: "blue",
+        color: "red",
         countInStock: 20,
-        description: "This blended t‑shirt brings all the comfort without the high price tag! A soft style anyone would appreciate."
+        description: "FABRIC: Wicking cotton fabric helps evaporate moisture, offers you great hand feel, skin friendly, very comfortable to wear."
     },
     {
         _id: 6,
-        name: "T-shirt",
-        image: "../client/public/images/blue.jpg",
+        name: "Jack Martin - Club/Penny Collar - Blue Bengal Stripe Slim Fit Shirt. Mens 1920s Blinders Gang Shirts",
+        image: '/images/m.dress.shirts/redstripe.jpg',
         price: 30,
         size: "L",
-        color: "blue",
+        color: "white",
         countInStock: 20,
-        description: "This blended t‑shirt brings all the comfort without the high price tag! A soft style anyone would appreciate."
+        description: "GUARANTEE: Suitable for hand and machine wash at 30 degrees, hold up well after washing. Kindly wash it before wearing."
     },
     {
         _id: 7,
-        name: "T-shirt",
-        image: "../client/public/images/blue.jpg",
+        name: "Alimens & Gentle French Cuff Regular Fit Dress Shirts (Cufflink Included)",
+        image: '/images/m.dress.shirts/white.jpeg',
         price: 30,
         size: "L",
-        color: "blue",
+        color: "white",
         countInStock: 20,
-        description: "This blended t‑shirt brings all the comfort without the high price tag! A soft style anyone would appreciate."
+        description: "US STANDARD SIZE: Our dress shirts are made based on USA standard size. This business shirt is regular fit cut."
     },
     {
+        //------------------------Men's Pant--------------------------------
+
         _id: 8,
-        name: "T-shirt",
-        image: "../client/public/images/yellow.jpg",
+        name: "Men's Pants",
+        image: "/images/m.pants/bluestripe.jpg",
+        price: 30,
+        size: "L",
+        color: "navy",
+        countInStock: 20,
+        description: "d"
+    },
+    {
+        _id: 9,
+        name: "Men's Pants",
+        image: "/images/m.pants/class.jpeg",
         price: 25,
         size: "S",
-        color: "yellow",
+        color: "grey",
         countInStock: 20,
-        description: "This blended t‑shirt brings all the comfort without the high price tag! A soft style anyone would appreciate."
+        description: "d"
     },
+    {
+        _id: 10,
+        name: "Men's Pants",
+        image: "/images/m.pants/grey.jpg",
+        price: 25,
+        size: "S",
+        color: "grey",
+        countInStock: 20,
+        description: "d"
+    },
+    {
+        _id: 11,
+        name: "Men's Pants",
+        image: "/images/m.pants/navy.jpg",
+        price: 25,
+        size: "S",
+        color: "blue",
+        countInStock: 20,
+        description: "d"
+    },
+    {
+        _id: 12,
+        name: "Men's Pants",
+        image: "/images/m.pants/red.jpg",
+        price: 25,
+        size: "L",
+        color: "Red",
+        countInStock: 20,
+        description: "d"
+    },
+    {
+        _id: 13,
+        name: "Men's Pants",
+        image: "/images/m.pants/style.jpeg",
+        price: 25,
+        size: "L",
+        color: "Grey",
+        countInStock: 20,
+        description: "d"
+    },
+    {
+        _id: 14,
+        name: "Men's Pants",
+        image: "/images/m.pants/tan.png",
+        price: 25,
+        size: "L",
+        color: "Tan",
+        countInStock: 20,
+        description: "d"
+    },
+    //---------------Men's Shoes------------
+    {
+        _id: 15,
+        name: "Men's Shoes",
+        image: "/images/m.shoes/black.jpg",
+        price: 25,
+        size: "L",
+        color: "Black",
+        countInStock: 20,
+        description: "d"
+    },
+    
 ]
 
-
 module.exports = productData;
-// export default Shirts;
