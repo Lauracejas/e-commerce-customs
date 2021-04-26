@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { Aside, Menu } from '../components';
 // import data from '../data'
-import { Link } from 'react-router-dom'
+
 // import HotCards from '../components/HotCards/HotCards';
 import "./style.css";
 import { getProduct } from "../utils/API"

@@ -1,4 +1,9 @@
 .bg {
     background-color: #00233A;
+    text-transform: uppercase;
     
+}
+.nav-link {
+    color: #16C0F0;
+
 }

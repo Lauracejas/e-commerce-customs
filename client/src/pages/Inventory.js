@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Row from "react-bootstrap/Row";
+
 import Table from "react-bootstrap/Table";
 import SearchBar from "../components/SearchBar/SearchBar";
 // import TableRow from "../components/TableRow";
-import { getAllProducts, getProduct } from "../utils/API";
+import { getAllProducts } from "../utils/API";
 
 const Inventory = () => {
   const [products, setProducts] = useState([]);

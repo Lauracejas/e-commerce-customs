@@ -4,6 +4,7 @@ import SearchBar from "../components/SearchBar/SearchBar";
 import Banner from '../components/Banner/Banner';
 import HotCards from '../components/HotCards/HotCards';
 import { getAllProducts } from "../utils/API"
+
 import "./style.css";
 
 

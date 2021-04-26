@@ -43,17 +43,16 @@ const SigninPage = (props) => {
         
             <Modal.Header
             closeButton 
-            style={{
-                display: "inline-block",
-                
-                justifyContent: "center",
-                alignItems: "center",
-            }}         
-            
+                style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "#00233A"
+                  }} 
             >
              
                 <Modal.Title >Welcome Guest!</Modal.Title>
-            </Modal.Header>
+            </Modal.Header >
 
             <Modal.Body className="text-left">
                 <p><strong>E-mail</strong></p>
@@ -99,6 +98,7 @@ const SigninPage = (props) => {
 
             </Modal.Footer>
         </Modal.Dialog>
+            <Row style={{margin: "25px"}}/>
         </>
     )
 }
