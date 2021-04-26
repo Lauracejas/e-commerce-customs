@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
-import logo from "../../assets/logo.png"
 import "./style.css";
 import axios from "axios"
+import logo from "../../public/images/logo.png"
 // import User from '../../../../models/user';
 
 const Header = (props) => {
