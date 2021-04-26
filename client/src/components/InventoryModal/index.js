@@ -7,7 +7,7 @@ import FormControl from 'react-bootstrap/FormControl';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-const InventoryModal = ({ product, show }) => {
+const InventoryModal = ({ product, show, handleClose }) => {
   const [name, setName] = useState();
   const [price, setPrice] = useState();
   const [size, setSize] = useState();
@@ -40,11 +40,12 @@ const InventoryModal = ({ product, show }) => {
       .then(res => {
         if (res.data.message);
         console.log(res);
+        handleClose();
       });
   }
 
   return (
-    <Modal.Dialog className={showHideModal}>
+    <Modal className={showHideModal} show={show} onHide={handleClose}>
       <Modal.Header
         closeButton
         style={{
@@ -145,7 +146,7 @@ const InventoryModal = ({ product, show }) => {
         <Link to="/register"><Button variant="primary">Create your account</Button></Link>
 
       </Modal.Footer>
-    </Modal.Dialog>
+    </Modal>
   );
 }
 

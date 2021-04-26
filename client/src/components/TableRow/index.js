@@ -1,18 +1,13 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import { getProduct } from '../../utils/API';
-import InventoryModal from '../InventoryModal';
 
-const TableRow = ({product, setProduct}) => {
-  const [showModal, setShow] = useState();
-  const handleClose = () => setShow(false);
+const TableRow = ({product, setProduct, setShow}) => {
+
   const handleShow = () => setShow(true);
-  
-
 
   return (
     <tr>
-      {/* <InventoryModal product={product} show={showModal} /> */}
       <td><img src={product.image} alt={product.name} /></td>
       <td>{product.name}</td>
       <td>{product.description}</td>

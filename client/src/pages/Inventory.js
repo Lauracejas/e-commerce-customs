@@ -10,9 +10,7 @@ import { getAllProducts, getProduct } from "../utils/API";
 const Inventory = () => {
   const [products, setProducts] = useState([]);
   const [product, setProduct] = useState({});
-  const [showModal, setShow] = useState();
-
-  const handleShow = () => setShow(true);
+  const [showModal, setShow] = useState(false);
 
   useEffect(() => {
     getAllProducts()
@@ -21,9 +19,12 @@ const Inventory = () => {
 
   }, [])
 
+  const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false);
+
   return (
     <div className="container-fluid main-contain">
-      <InventoryModal product={product} show={showModal} />
+      {showModal && <InventoryModal product={product} show={showModal} handleClose={handleClose}  />}
       <SearchBar />
       <Button onClick={() => handleShow()}>Add Item</Button>
 
@@ -38,7 +39,7 @@ const Inventory = () => {
           </tr>
         </thead>
         <tbody>
-          {products.map(product => <TableRow key={product._id} product={product} setProduct={setProduct}/>)}
+          {products.map(product => <TableRow key={product._id} product={product} setProduct={setProduct} setShow={setShow}/>)}
         </tbody>
       </Table>
 
