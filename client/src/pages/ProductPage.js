@@ -7,12 +7,11 @@ import { Aside, Menu } from '../components';
 import CardEl from "../components/CardEl/CardEl"
 import React, { useEffect, useState } from "react"
 import Row from "react-bootstrap/Row"
-import HotCards from "../components/HotCards/HotCards";
+
 import "./style.css"
 import styled from "styled-components"
 
 const ProductPage = (props) => {
-    console.log(props)
     const [open, setOpen] = useState(false);
     const [products, setProducts] = useState([]);
 
@@ -25,7 +24,7 @@ const ProductPage = (props) => {
     
     
     max-width: 600px;
-    color: palevioletred;
+    color: white;
     font-weight: bold;
     `;
 

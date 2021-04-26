@@ -6,7 +6,7 @@ flex-direction: column;
 justify-content: center;
 background: ${({ theme }) => theme.primaryLight};
 transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
-height: 100vh;
+height: 160vh;
 text-align: left;
 padding: 5rem;
 position: absolute;
@@ -18,9 +18,9 @@ transition: transform 0.3s ease-in-out;
     width: 100%;
   }
 a {
-  font-size: 2rem;
+  font-size: 3rem;
   text-transform: uppercase;
-  padding: 3rem 0;
+  padding: 2rem 0;
   font-weight: bold;
   letter-spacing: 0.5rem;
   color: ${({ theme }) => theme.primaryDark};

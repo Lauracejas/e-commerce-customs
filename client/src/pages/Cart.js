@@ -1,6 +1,6 @@
 
 import { getProduct } from "../utils/API";
-import { getAllProducts } from "../utils/API";
+
 import React, { useEffect, useState } from "react"
 // import {Link} from "react-router-dom"
 // import { RightAside, RightMenu } from '../components';
@@ -9,24 +9,14 @@ import Row from "react-bootstrap/Row"
 // import Col from "react-bootstrap/Col"
 // import HotCards from "../components/HotCards/HotCards";
 import "./style.css"
-import styled from "styled-components"
+
 import Checkout from "../components/Checkout/index"
 
 const Cart = (props) => {
-    // const [open, setOpen] = useState(false);
-   
-    console.log(props)
-    const [products, setProducts] = useState([]);
+    
 
-    const Link = ({ classNameName, children }) => (
-        <div classNameName={classNameName}>
-            {children}
-        </div>
-    );
-    const StyledLink = styled(Link)` 
-    color: palevioletred;
-    font-weight: bold;
-    `;
+    console.log(props)
+  
 
     const [product, setProduct] = useState({});
 
@@ -41,10 +31,10 @@ const Cart = (props) => {
     }, [])
     // console.log(product)
 
-    const handleSubmit = () => {
-        getAllProducts().then(results => setProducts(results.data))
+    // const handleSubmit = () => {
+    //     getAllProducts().then(results => setProducts(results.data))
 
-    }
+    // }
 
     return (
 
