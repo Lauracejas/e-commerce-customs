@@ -5,11 +5,12 @@ import React, { useEffect, useState } from "react"
 import {Link} from "react-router-dom"
 // import { RightAside, RightMenu } from '../components';
 // import CardCart from "../components/CardCart/CardCart"
-// import Row from "react-bootstrap/Row"
+import Row from "react-bootstrap/Row"
 // import Col from "react-bootstrap/Col"
 // import HotCards from "../components/HotCards/HotCards";
 import "./style.css"
 import styled from "styled-components"
+import Checkout from "../components/Checkout/index"
 
 const Cart = (props) => {
     // const [open, setOpen] = useState(false);
@@ -172,20 +173,17 @@ const Cart = (props) => {
                     </tbody>
                 </table>
             </div>
+            <div className="container-fluid co">
+            <Checkout />
+            <Row style={{margin: "10px"}}/>
+        </div>
         </div>
 
+/* <RightAside open={open} setOpen={setOpen} products={products} />
+    <RightMenu open={open} setOpen={setOpen} onClick={handleSubmit} /> */
 
-    )
+)
 }
 
 export default Cart
 
-{/* <RightAside open={open} setOpen={setOpen} products={products} />
-    <RightMenu open={open} setOpen={setOpen} onClick={handleSubmit} /> */}
-{/* <div classNameName="container">
-<div classNameName="row">
-
-    <CardCart
-        product={product} />
-</div>
-</div> */}

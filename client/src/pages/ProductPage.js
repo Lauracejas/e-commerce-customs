@@ -7,7 +7,7 @@ import { Aside, Menu } from '../components';
 import CardEl from "../components/CardEl/CardEl"
 import React, { useEffect, useState } from "react"
 import Row from "react-bootstrap/Row"
-// import HotCards from "../components/HotCards/HotCards";
+import HotCards from "../components/HotCards/HotCards";
 import "./style.css"
 import styled from "styled-components"
 
@@ -68,7 +68,7 @@ const ProductPage = (props) => {
             <Aside open={open} setOpen={setOpen} products={product} />
             <Menu open={open} setOpen={setOpen} onClick={handleSubmit}/>  
             </div>
-               
+            <Row style={{margin: "35px"}}/>
         </div>
             
 

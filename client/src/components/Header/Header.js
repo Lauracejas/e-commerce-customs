@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
-import logo from "../../assets/logo.png"
 import "./style.css";
 import axios from "axios"
+import logo from "../../Assets/logo.png"
 // import User from '../../../../models/user';
 
 const Header = (props) => {
@@ -27,14 +27,16 @@ const Header = (props) => {
 
     return (
         <div>
-            <nav className="navbar navbar-light bg">
-                <div className="container-fluid">
+            <nav className="navbar  bg">
+                <div className="container-fluid align-items-center">
+                <ul className="nav justify-content-center">
 
                     <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
                         <img src={logo} alt='' />
                       
                     </Link>
-                    <ul className="nav justify-content-end">
+                </ul>
+                    <ul className="nav justify-content-center">
                         <li className="nav-item">
                             <Link to="/inventory" className={location.pathname === "/inventory" ? "nav-link active" : "nav-link"}>
                                 Inventory
