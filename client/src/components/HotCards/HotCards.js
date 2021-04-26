@@ -18,7 +18,8 @@ import Card from 'react-bootstrap/Card';
 
 
 
-
+// import Card from 'react-bootstrap/Card';
+// import Image from '../assets/white.jpg';
 
 const HotCards = ({product}) => {
 
