@@ -4,13 +4,15 @@ export const GlobalStyles = createGlobalStyle`
   html, body {
     margin: 0;
     padding: 0;
+    position: relative;
+    min-height: 100vh;
   }
   *, *::after, *::before {
     box-sizing: border-box;
   }
   body {
     
-    
+   
     background: ${({ theme }) => theme.primaryDark};
     color: ${({ theme }) => theme.primaryLight};
    
@@ -22,9 +24,16 @@ export const GlobalStyles = createGlobalStyle`
     text-align: center;
     text-transform: uppercase;
   }
- . row {
-   margin-top: 0px;
- }
+ 
+ .footer {
+  padding-top: 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #00233A;
+  text-align: center;
+}
  
   
   a {
