@@ -9,7 +9,7 @@
         size: "L",
         color: "Black",
         countInStock: 20,
-        description: "The material is comfortable, breathable and not see through. It has a little spandex mix in so it stretches some which allows for some moving room"
+        description: "The material is comfortable, breathable and not see through. It has a little spandex mix in so it stretches some which allows for some moving room."
     },
     {
         _id: 2,
@@ -19,7 +19,7 @@
         size: "M",
         color: "Light Blue",
         countInStock: 20,
-        description: "DESIGN: Perfect fit, one chest pocket, turn down collar, this long sleeve button down dress shirt characterized by plaid pattern on collar, sleeves and front, modern and stylish"
+        description: "DESIGN: Perfect fit, one chest pocket, turn down collar, this long sleeve button down dress shirt characterized by plaid pattern on collar, sleeves and front, modern and stylish."
     },
      {
         _id: 3,
@@ -72,7 +72,7 @@
         description: "US STANDARD SIZE: Our dress shirts are made based on USA standard size. This business shirt is regular fit cut."
     },
     {
-        //------------------------Men's Pant--------------------------------
+        //------------------------Men's Pants--------------------------------
 
         _id: 8,
         name: "Men's Expandable Waist Classic-Fit Flat-Front Dress Pants",
@@ -143,17 +143,78 @@
         countInStock: 20,
         description: "Eased Fit Through Seat and Thigh, Sits at Waist With a Straight Leg.No Wrinkle Men's Khaki Pants With Stretch for Performance."
     },
-    //---------------Men's Shoes------------
+    //-------------------------------Men's Shoes------------------------------
     {
         _id: 15,
         name: "Bruno Marc Men's Formal Leather Lined Dress Shoes",
         image: "/images/m.shoes/black.jpg",
-        price: 40,
+        price: 70,
         size: "L",
         color: "Black",
         countInStock: 20,
         description: "Breathable leather linings and leather-covered cushioned latex footbed for all-day comfort."
     },
+    {
+        _id: 16,
+        name: "MERRYLAND Men's Casual Lace Up Oxford Shoes",
+        image: "/images/m.shoes/blue.jpg",
+        price: 65,
+        size: "M",
+        color: "Blue-Grey",
+        countInStock: 20,
+        description: "Soft footbed and comfortable lining for additional support and comfort."
+    },
+    {
+        _id: 17,
+        name: "DREAM PAIRS Bruno Marc Moda Italy Men's Prince Classic Modern Dress Shoes",
+        image: "/images/m.shoes/brown.jpg",
+        price: 40,
+        size: "L",
+        color: "Brown",
+        countInStock: 20,
+        description: "Made of carefully selected leather, it is breathable and comfortable to wear, and the folding resistance of leather which could keep the elegant shoe shape."
+    },
+    {
+        _id: 18,
+        name: "FRASOICUS Men’s Dress Shoes with Genuine Leather in Classic Brogue Elastic Band Oxford Formal Shoes for Men",
+        image: "/images/m.shoes/classy.jpg",
+        price: 45,
+        size: "M",
+        color: "Black",
+        countInStock: 20,
+        description: "The Inside and outside of this shoe has a hidden elastic band design, it is more fashionable and easier to wear."
+    },
+    {
+        _id: 19,
+        name: "FRASOICUS Men’s Dress Shoes with Genuine Leather in Classic Brogue Elastic Band Oxford Formal Shoes for Men",
+        image: "/images/m.shoes/cowboy.jpg",
+        price: 55,
+        size: "M",
+        color: "Brown",
+        countInStock: 20,
+        description: "Made of carefully selected leather, it is breathable and comfortable to wear, and the folding resistance of leather which could keep the elegant shoe shape."
+    },
+    {
+        _id: 20,
+        name: "ALIPASINM Men’s Dress Shoes with Genuine Leather in Cap-Toe Classic Formal Style Shoes for Men",
+        image: "/images/m.shoes/fly.jpg",
+        price: 30,
+        size: "L",
+        color: "Black",
+        countInStock: 20,
+        description: "Hand-painted leather men shoes, has elegant color and good quality. Has High-density rubber soles which are more flexible."
+    },
+    {
+        _id: 21,
+        name: "STACY ADAMS Men's Pierce Moe-Toe Slip-on Penny Loafer",
+        image: "/images/m.shoes/old.jpg",
+        price: 45,
+        size: "L",
+        color: "Burgandy",
+        countInStock: 20,
+        description: "CLASSIC STYLE: Smooth leather apron toe penny loafer featuring braided loops and classic strap."
+    },
+    //-------------------------Mens Shorts-----------------------------------
     
 ]
 
