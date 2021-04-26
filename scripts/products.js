@@ -215,7 +215,78 @@
         description: "CLASSIC STYLE: Smooth leather apron toe penny loafer featuring braided loops and classic strap."
     },
     //-------------------------Mens Shorts-----------------------------------
-    
+    {
+        _id: 22,
+        name: "Men's Classic-Fit 9-12 Short",
+        image: "/images/m.shorts/black.jpg",
+        price: 45,
+        size: "L",
+        color: "Black",
+        countInStock: 20,
+        description: "A no-nonsense basic flat-front short that's clean-cut and versatile enough for the weekend, vacation, or any day."
+    },
+    {
+        _id: 23,
+        name: "Dockers Men's Perfect Short",
+        image: "/images/m.shorts/blue.jpg",
+        price: 20,
+        size: "M",
+        color: "Blue",
+        countInStock: 20,
+        description: "Sits at waist, roomy fit through seat and thigh.Features twill, stretch for performance."
+    },
+    {
+        _id: 24,
+        name: "Eddie Bauer Men's Guide Summer Pro Shorts",
+        image: "/images/m.shorts/bubbles.jpg",
+        price: 15,
+        size: "M",
+        color: "Blue",
+        countInStock: 20,
+        description: "Available in Regular and Tall sizes. Active Fit: An athletic fit. Close to the body without restricting mobility. Average inseam: 12 inches."
+    },
+    {
+        _id: 25,
+        name: "HUK Men's Next Level 10.5, Quick-Drying Performance Fishing Shorts with UPF 30+ Sun Protection",
+        image: "/images/m.shorts/green.jpg",
+        price: 60,
+        size: "L",
+        color: "Green",
+        countInStock: 20,
+        description: "Huk Uniting anglers through performance-engineered, technical gear designed to fuel your passion and pursuit no matter when, where or how you fish."
+    },
+    {
+        _id: 26,
+        name: "LEE Men's Dungarees New Belted Wyoming Outdoor Short",
+        image: "/images/m.shorts/orange.jpg",
+        price: 45,
+        size: "L",
+        color: "Orange",
+        countInStock: 20,
+        description: "Loose fit. With a loose fit through the shorts, these outdoor shorts sit at the waist for natural comfort."
+    },
+    {
+        _id: 27,
+        name: "Eddie Bauer Men's Guide Pro Shorts",
+        image: "/images/m.shorts/tan.jpg",
+        price: 45,
+        size: "M",
+        color: "Tan",
+        countInStock: 20,
+        description: "Material: 94% nylon/6% spandex. Care: Machine wash cold, delicate, with like colors. Do not bleach."
+    },
+    {
+        _id: 28,
+        name: "PS Paul Smith Men's Shorts",
+        image: "/images/m.shorts/white.jpg",
+        price: 30,
+        size: "L",
+        color: "White",
+        countInStock: 20,
+        description: "Shell: 100% cotton.Fabric: Mid-weight, non-stretch weave.Wash cold."
+    },
+
+    //------------------------Mens Sneakers---------------------------------
 ]
 
 module.exports = productData;
