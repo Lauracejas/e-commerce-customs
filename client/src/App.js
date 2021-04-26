@@ -60,9 +60,14 @@ const App = () => {
         {/* <Route exact path="/products/:_id" component={ProductScreen} /> */}
         <Route exact path="/profile" component={Profile} />
         <Route
+<<<<<<< HEAD
          exact path="/cart" 
          component={Cart} 
          render={(props) => <SigninPage {...props}  />}/>
+=======
+         exact path="/cart" component={Cart} 
+         render={(props) => <Cart {...props}  />}/>
+>>>>>>> 9cfec47194b8a907b4b552ec377e391e8249b6f2
         <Route exact path="/inventory" component={Inventory} />
         <Route exact path="/product/:id" component={ProductPage} />
         <Route 
