@@ -58,7 +58,7 @@ const Header = (props) => {
                         </li>
                         {props.userLog?.user  ? 
                             <li className="nav-item">
-                                <Link to="/signin" onChange={(e) => setLogged_in(e.target.value)} onClick={handleSubmit} className={location.pathname === "/cart" ? "nav-link active" : "nav-link"}>
+                                <Link to="/logout"   className={location.pathname === "/cart" ? "nav-link active" : "nav-link"}>
                                     Logout
                                 </Link>
                             </li>
