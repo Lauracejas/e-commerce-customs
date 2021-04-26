@@ -20,6 +20,7 @@ const App = () => {
   const [user, setUser] = useState({});
   const [userLog, setUserLog] = useState({});
   const [userLogout, setUserLogout] = useState({});
+  
 
 
   const handleSignin = (data) => {
@@ -37,7 +38,6 @@ const App = () => {
     setUserLogout(data);
   }
 
- 
 
   return (
     <Router>      
@@ -46,9 +46,14 @@ const App = () => {
         <ThemeProvider theme={theme}>
           <GlobalStyles />
         <Header 
-        userLogout={userLogout}
+         userLog={userLog} 
+         userLogout={userLogout} 
+         user={user}
          handleLogout={handleLogout} 
-         />  
+             
+         ></Header>       
+         
+      
           
        
         <Route exact path="/" component={Homepage} />
