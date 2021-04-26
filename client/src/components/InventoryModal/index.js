@@ -29,7 +29,7 @@ const InventoryModal = ({ product, show, handleClose }) => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    axios.put("/api/products/addUpdate", {
+    axios.put(`/api/products/${product._id}`, {
       name: name,
       price: price,
       size: size,
@@ -67,6 +67,7 @@ const InventoryModal = ({ product, show, handleClose }) => {
             placeholder="Product name"
             aria-label="Name of product"
             aria-describedby="basic-addon2"
+            value={name}
             onChange={(e) => setName(e.target.value)}
           />
         </InputGroup>
@@ -78,6 +79,7 @@ const InventoryModal = ({ product, show, handleClose }) => {
             placeholder="Product price"
             aria-label="Price of product"
             aria-describedby="basic-addon2"
+            value={price}
             onChange={(e) => setPrice(e.target.value)}
           />
         </InputGroup>
@@ -89,6 +91,7 @@ const InventoryModal = ({ product, show, handleClose }) => {
             placeholder="Product size"
             aria-label="Size of product"
             aria-describedby="basic-addon2"
+            value={size}
             onChange={(e) => setSize(e.target.value)}
           />
         </InputGroup>
@@ -100,6 +103,7 @@ const InventoryModal = ({ product, show, handleClose }) => {
             placeholder="Product color"
             aria-label="Color of product"
             aria-describedby="basic-addon2"
+            value={color}
             onChange={(e) => setColor(e.target.value)}
           />
         </InputGroup>
@@ -111,6 +115,7 @@ const InventoryModal = ({ product, show, handleClose }) => {
             placeholder="Product in stock"
             aria-label="Stock of product"
             aria-describedby="basic-addon2"
+            value={count}
             onChange={(e) => setCount(e.target.value)}
           />
         </InputGroup>
@@ -122,6 +127,7 @@ const InventoryModal = ({ product, show, handleClose }) => {
             placeholder="Product description"
             aria-label="Description of product"
             aria-describedby="basic-addon2"
+            value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
         </InputGroup>
