@@ -8,19 +8,25 @@ import Col from 'react-bootstrap/Col';
 import "./style.css";
 
 
-const SearchBar = () => {
+const SearchBar = ({searchProduct}) => {
+
+
     return (
     <Container>
         <Row>
             <Col>
                 <InputGroup size={"md"} className="mb-3">
                     <FormControl
+                    onChange={searchProduct}
                     placeholder="Search"
                     aria-label="Recipient's username"
                     aria-describedby="basic-addon2"
                     />
                     <InputGroup.Append>
-                    <Button variant="warning">Search</Button>
+                    <Button 
+                    onClick={(e) => searchProduct(e) }
+                    variant="warning"
+                    >Search</Button>
                     </InputGroup.Append>
                 </InputGroup>
             </Col>
