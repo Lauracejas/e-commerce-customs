@@ -10,7 +10,7 @@ const CardEl = ({product}) => {
   console.log(product)
   return (
     <>   
-      <div key={product._id} className="card">
+      <div key={product._id} className="card" style={{backgroundColor: "#00233A"}}>
   <img src={product.image} className="card-img-top " alt="" />
   <div className="card-body">
     <h5 className="card-title">{product.name}</h5>

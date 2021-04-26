@@ -28,7 +28,7 @@ const HotCards = ({product}) => {
        
             <Card key={product._id}
              style={{ 
-                height: '250px',
+                height: '300px',
                 width: "200px",
                 padding: '5px',
                 backgroundColor: "#00233A"
@@ -42,8 +42,8 @@ const HotCards = ({product}) => {
                     src={product.image}
                     //  src={process.env.PUBLIC_URL + "/images/black.jpg"} 
                     style={{ 
-                    
-                    minHeight: "100px",
+                    maxWidth: "150px",
+                    maxHeight: "150px",
                     
                     }}
                     
@@ -55,13 +55,24 @@ const HotCards = ({product}) => {
                         state: {
                             id: product._id
                         }
-                        }}>{product.name}</Link>
+                        }}>
+                            <p style={{ 
+                    marginTop: "10px",
+                    fontSize: "10px",
+                    maxHeight: "90px"
+                    
+                    }}>{product.name}</p>
+                            </Link>
                     </Card.Title>
-                    {/* <Card.Text>
-                    {product.color}
-                    </Card.Text> */}
-                    <Card.Text>
-                    {product.price}
+                   
+                    <Card.Text >
+                    <p style={{ 
+                    marginTop: "0px",
+                    fontSize: "19px",
+                    textAlign: "center",
+                    backgroundColor: "white"
+                    
+                    }}>${product.price}</p>
                     </Card.Text>
                     {/* <Card.Text>
                     {product.size}
@@ -69,9 +80,7 @@ const HotCards = ({product}) => {
                     {/* <Card.Text>
                     {product.countInStock}
                     </Card.Text> */}
-                    <Card.Text>
-                    {product.description}
-                    </Card.Text>
+                    
                 </Card.Body>
             </Card>
 
