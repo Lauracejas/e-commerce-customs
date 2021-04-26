@@ -14,67 +14,25 @@ const Header = (props) => {
     const [logged_in, setLogged_in] = useState({});
 
 
+
     const handleSubmit = async e => {
+        console.log("coming up");
         e.preventDefault();
         axios.post("/api/users/logout", {
             logged_in: logged_in,
         }).then((response) => {
-            if (response.data);
-            console.log(response.data);
+            props.setUserLog({});
+            props.setUser({});
+            console.log(response);
+            console.log(props);
+            console.log(logged_in);
         });
     };
-    console.log(props.userLog.user)
+    console.log(props.user);
 
 
     return (
-        // <div>
-        //     <nav className="navbar  bg">
-        //         <div className="container-fluid align-items-center">
-        //         <ul className="row  p-0 m-3" style={{marginRight: "80px"}}>
-
-        //             <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
-        //                 <img src={logo} alt='' />
-
-        //             </Link>
-        //         </ul>
-        //             <ul className="nav ">
-        //                 <li className="nav-item col-3 w-100">
-        //                     <Link to="/inventory" className={location.pathname === "/inventory" ? "nav-link active" : "nav-link"}>
-        //                         Inventory
-        //                     </Link>
-        //                 </li>
-        //                 <li className="nav-item col-3">
-        //                        <Link to="/profile" className={location.pathname === "/dashboard" ? "nav-link active" : "nav-link"}> 
-        //                        {props.userLog?.user  ?  
-        //                  <p>{props.userLog?.user.name } </p> : <p>{props.user?.name }</p>
-        //                    } 
-
-
-        //                     </Link>
-        //                 </li>
-        //                 <li className="nav-item col-3">
-        //                     <Link to="/cart" className={location.pathname === "/cart" ? "nav-link active" : "nav-link"}>
-        //                         Cart
-        //                     </Link>
-        //                 </li>
-        //                 {props.userLog?.user  ? 
-        //                     <li className="nav-item col-3">
-        //                         <Link to="/signin" onChange={(e) => setLogged_in(e.target.value)} onClick={handleSubmit} className={location.pathname === "/cart" ? "nav-link active" : "nav-link"}>
-        //                             Logout
-        //                         </Link>
-        //                     </li>
-        //                     :
-        //                     <li className="nav-item">
-        //                         <Link to="/signin" className={location.pathname === "/cart" ? "nav-link active" : "nav-link"}>
-        //                             Sign In
-        //                         </Link>
-        //                     </li>
-        //                 } 
-
-        //             </ul>
-        //         </div>
-        //     </nav>
-        // </div>
+        // 
         <Navbar collapseOnSelect expand="lg"  className="bg" >
             <Navbar.Brand >
                 <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
@@ -114,9 +72,9 @@ const Header = (props) => {
                            </Link>
 
                     </Nav.Link>
-                    {props.userLog?.user ?
+                    {props.userLog?.user || props.user.name ?
                         <Nav.Link >
-                            <Link style={{color: "#16C0F0"}} to="/signin" onChange={(e) => setLogged_in(e.target.value)} onClick={handleSubmit} className={location.pathname === "/cart" ? "nav-link active" : "nav-link"}>
+                            <Link style={{color: "#16C0F0"}} to="/signin"  onClick={handleSubmit} className={location.pathname === "/cart" ? "nav-link active" : "nav-link"}>
                                 Logout
                                </Link>
                         </Nav.Link>
@@ -144,6 +102,9 @@ const Header = (props) => {
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
+                      
+                       
+           
     )
 }
 

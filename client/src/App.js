@@ -47,8 +47,10 @@ const App = () => {
           <GlobalStyles />
         <Header 
          userLog={userLog} 
+         setUserLog={setUserLog}
          userLogout={userLogout} 
          user={user}
+         setUser={setUser}
          handleLogout={handleLogout} 
              
          ></Header>   

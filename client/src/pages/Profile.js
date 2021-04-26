@@ -1,17 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import { Aside, Menu } from '../components';
-// import data from '../data'
-
-// import HotCards from '../components/HotCards/HotCards';
 import "./style.css";
 import { getProduct } from "../utils/API"
 import { getAllProducts } from "../utils/API"
 import Row from "react-bootstrap/Row"
-
-// import Product from '../../../models/product';
-
     
-      
 const Profile = () => {
 
   const [open, setOpen] = useState(false);
@@ -45,7 +38,7 @@ const Profile = () => {
             </div>
             <div className="col-md-4 mt-4" >
                 
-            <h1>Hello</h1>
+            
                  
                 </div>
       <Aside open={open} setOpen={setOpen} products={products} />

@@ -103,8 +103,11 @@ router.put('/:id', async (req, res) => {
 });
 
 router.post("/logout", (req, res) => {
-  if (req.session.logged_in) {
+  console.log("logging out");
+  console.log(req.session);
+  if (req.session) {
     req.session.destroy(() => {
+      // res.redirect("/");
       res.status(204).end();
     });
   } else {

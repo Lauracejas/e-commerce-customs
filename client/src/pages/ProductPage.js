@@ -58,9 +58,7 @@ const ProductPage = (props) => {
             <div className="col-md-8 mt-4" >
                 
                     <StyledLink>
-
-                        <CardEl 
-                        
+                        <CardEl                         
                             product={product} />
                     </StyledLink>
                 </div>

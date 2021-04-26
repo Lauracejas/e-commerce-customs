@@ -1,7 +1,6 @@
 import React from 'react';
 
-import Logo from "../../Assets/logo.png"
-
+import Logo from "../../logo.png"
 import "./style.css";
 
 
