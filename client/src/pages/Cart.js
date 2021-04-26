@@ -14,7 +14,7 @@ import Checkout from "../components/Checkout/index"
 
 const Cart = (props) => {
     // const [open, setOpen] = useState(false);
-
+   
     console.log(props)
     const [products, setProducts] = useState([]);
 
@@ -33,8 +33,9 @@ const Cart = (props) => {
     useEffect(() => {
         getProduct(props)
             .then(product => {
-                console.log(props);
-                setProduct(product.data);
+                console.log(props.history);
+                 setProduct(product.data);
+               
             }
             )
     }, [])

@@ -1,7 +1,7 @@
 import React from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
-import Logo from "../../Assets/logo.png"
+import Logo from "../../../src/assets/logo.png"
 import "./style.css";
 
 
