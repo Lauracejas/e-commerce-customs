@@ -37,7 +37,7 @@ const Header = (props) => {
                 <ul className="nav justify-content-center">
 
                     <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
-                        {/* <img src={logo} alt='' /> */}
+                        <img src={logo} alt='' />
                       
                     </Link>
                 </ul>
@@ -63,7 +63,7 @@ const Header = (props) => {
                         </li>
                         {props.userLog?.user || props.user.name ? 
                             <li className="nav-item">
-                                <Link to="/logout"   className={location.pathname === "/cart" ? "nav-link active" : "nav-link"}>
+                                <Link to="/logout"   onClick={handleSubmit} className={location.pathname === "/cart" ? "nav-link active" : "nav-link"}>
                                     Logout
                                 </Link>
                                 {/* onChange={(e) => setLogged_in(e.target.value)} */}
