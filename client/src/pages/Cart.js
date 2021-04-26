@@ -2,7 +2,7 @@
 import { getProduct } from "../utils/API";
 import { getAllProducts } from "../utils/API";
 import React, { useEffect, useState } from "react"
-import {Link} from "react-router-dom"
+// import {Link} from "react-router-dom"
 // import { RightAside, RightMenu } from '../components';
 // import CardCart from "../components/CardCart/CardCart"
 import Row from "react-bootstrap/Row"
