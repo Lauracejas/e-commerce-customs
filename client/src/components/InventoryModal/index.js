@@ -24,7 +24,7 @@ const InventoryModal = ({ product, show, handleClose }) => {
     setSize(product.size);
     setColor(product.color);
     setDescription(product.description);
-    setCount(product.count);
+    setCount(product.countInStock);
   });
 
   const handleSubmit = async e => {
@@ -43,6 +43,9 @@ const InventoryModal = ({ product, show, handleClose }) => {
         handleClose();
       });
   }
+  // const handleDelete = async () => {
+  //   axios.delete(`/api/products/${product._id}`);
+  // }
 
   return (
     <Modal className={showHideModal} show={show} onHide={handleClose}>
@@ -144,6 +147,10 @@ const InventoryModal = ({ product, show, handleClose }) => {
             onClick={handleSubmit}
             variant="warning"
           >Update Product</Button>
+          {/* <Button
+            onClick={handleDelete}
+            variant="danger"
+          >Delete Item</Button> */}
         </Row>
       </Modal.Body>
 

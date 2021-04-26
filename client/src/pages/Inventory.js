@@ -26,7 +26,10 @@ const Inventory = () => {
     <div className="container-fluid main-contain">
       {showModal && <InventoryModal product={product} show={showModal} handleClose={handleClose}  />}
       <SearchBar />
-      <Button onClick={() => handleShow()}>Add Item</Button>
+      <Button onClick={() => {
+        setProduct({})
+        handleShow()
+      }}>Add Item</Button>
 
       <Table striped bordered hover>
         <thead>
