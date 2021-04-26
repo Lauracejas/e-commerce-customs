@@ -19,7 +19,8 @@ const HotCards = ({product}) => {
              style={{ 
                 height: '250px',
                 width: "200px",
-                padding: '5px'
+                padding: '5px',
+                backgroundColor: "#00233A"
              }}
              >
             <Link to={'/product/' + product._id}>

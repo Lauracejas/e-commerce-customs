@@ -29,21 +29,23 @@ const Header = (data) => {
 
     return (
         <div>
-            <nav className="navbar navbar-light bg">
-                <div className="container-fluid">
+            <nav className="navbar  bg">
+                <div className="container-fluid align-items-center">
+                <ul className="nav justify-content-center">
 
                     <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
-                        <img src={logo} alt='' />
+                        <img className="logo-img" src={logo} alt='' />
 
 
                     </Link>
-                    <ul className="nav justify-content-end">
+                </ul>
+                    <ul className="nav justify-content-center">
                         <li className="nav-item">
                             <Link to="/profile" className={location.pathname === "/dashboard" ? "nav-link active" : "nav-link"}>
                                 Your Profile
                             </Link>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item ">
                             <Link to="/inventory" className={location.pathname === "/inventory" ? "nav-link active" : "nav-link"}>
                                 Inventory
                             </Link>

@@ -67,7 +67,7 @@ const ProductPage = (props) => {
             <Aside open={open} setOpen={setOpen} products={product} />
             <Menu open={open} setOpen={setOpen} onClick={handleSubmit}/>  
             </div>
-               
+            <Row style={{margin: "35px"}}/>
         </div>
             
 

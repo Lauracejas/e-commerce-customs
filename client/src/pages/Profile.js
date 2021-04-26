@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom'
 import "./style.css";
 import { getProduct } from "../utils/API"
 import { getAllProducts } from "../utils/API"
-import Container from 'react-bootstrap/esm/Container';
+import Row from "react-bootstrap/Row"
+
 // import Product from '../../../models/product';
 
     
@@ -32,9 +33,28 @@ const Profile = () => {
   }
   console.log(products)
   return (
-  
-  <div>
-       <p>Your cart is empty</p>
+      
+      <div>
+
+<div className="container-fluid ">
+            
+            <div className="row pt-0 mt-0">
+
+            <div className="col-md-4">
+
+            </div>
+            <div className="col-md-4 mt-4" >
+                
+            <h1>Hello</h1>
+                 
+                </div>
+      <Aside open={open} setOpen={setOpen} products={products} />
+     <Menu open={open} setOpen={setOpen} onClick={handleSubmit}/>  
+             
+            </div>
+            <Row style={{margin: "35px"}}/>
+        </div>
+     
          {/* <div className="back-to-result">
             <Link to="/dashboard">Back to result</Link>
         </div>
@@ -66,8 +86,6 @@ const Profile = () => {
                 </li>
             </ul>
         </div>  */}
-        <Aside open={open} setOpen={setOpen} products={products} />
-       <Menu open={open} setOpen={setOpen} onClick={handleSubmit}/>  
        
     </div>
     )
