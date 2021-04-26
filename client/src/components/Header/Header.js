@@ -13,16 +13,21 @@ const Header = (props) => {
     const [logged_in, setLogged_in] = useState({});
 
 
+
     const handleSubmit = async e => {
+        console.log("coming up");
         e.preventDefault();
         axios.post("/api/users/logout", {
             logged_in: logged_in,
         }).then((response) => {
-            if (response.data);
-            console.log(response.data);
+            props.setUserLog({});
+            props.setUser({});
+            console.log(response);
+            console.log(props);
+            console.log(logged_in);
         });
     };
-    // console.log(props.userLog.user.name)
+    console.log(props.user);
 
 
     return (
@@ -56,11 +61,13 @@ const Header = (props) => {
                                 Cart
                             </Link>
                         </li>
-                        {props.userLog?.user  ? 
+                        {props.userLog?.user || props.user.name ? 
                             <li className="nav-item">
                                 <Link to="/logout"   className={location.pathname === "/cart" ? "nav-link active" : "nav-link"}>
                                     Logout
                                 </Link>
+                                {/* onChange={(e) => setLogged_in(e.target.value)} */}
+                                {/* onClick={handleSubmit} */}
                             </li>
                             :
                             <li className="nav-item">
