@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
 import "./style.css";
 import axios from "axios"
-import logo from "../../public/images/logo.png"
+import logo from "../../Assets/logo.png"
 // import User from '../../../../models/user';
 
 const Header = (props) => {
