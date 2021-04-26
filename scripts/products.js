@@ -564,7 +564,7 @@
         size: "M",
         color: "Grey",
         countInStock: 20,
-        description: "Material] 65% Cotton,35% Polyester.Only The Waist is Stretchy.",
+        description: "Material 65% Cotton,35% Polyester.Only The Waist is Stretchy.",
     },
     {
         _id: 56,
@@ -578,7 +578,79 @@
     },
 
     //-----------------------Women Shoes------------------------------
+    {
+        _id: 57,
+        name: "CentroPoint Women's Fashion Block Boots",
+        image: "/images/w.shoes/black.jpg",
+        price: 55,
+        size: "M",
+        color: "Black",
+        countInStock: 20,
+        description: "All-Day Comfort: Lightly padded soft insole provides adequate support.",
+    },
+    {
+        _id: 58,
+        name: "",
+        image: "/images/w.shoes/blue.jpg",
+        price: 65,
+        size: "M",
+        color: "Blue",
+        countInStock: 20,
+        description: "A must-have in your closet. Suitable for many occasions including daily wear, office, holiday, prom, party, etc.",
+    },
+    {
+        _id: 59,
+        name: "Women's Retro Leather Classic Oxford",
+        image: "/images/w.shoes/leather.jpg",
+        price: 80,
+        size: "M",
+        color: "Brown",
+        countInStock: 20,
+        description: "All day Comfort. Oil resistant. Warm and Classic look. Good for all year round. ",
+    },
+    {
+        _id: 60,
+        name: "Steve Madden Women's Donddi Sandal",
+        image: "/images/w.shoes/sandal.jpg",
+        price: 75,
+        size: "M",
+        color: "Brown",
+        countInStock: 20,
+        description: "Genuine Leather, Fashionable. Looks great fits true to size.",
+    },
+    {
+        _id: 61,
+        name: "Steve Madden 1460 Original Lace-Up Boot",
+        image: "/images/w.shoes/stomp.jpg",
+        price: 55,
+        size: "M",
+        color: "Brown",
+        countInStock: 20,
+        description: "Made with all the classic SM DNA, including grooved sides, heel-loop and TAN stitching",
+    },
+    {
+        _id: 62,
+        name: "Collective Women's Aria Leather Ankle Boot",
+        image: "/images/w.shoes/suade.jpg",
+        price: 99,
+        size: "M",
+        color: "Pink",
+        countInStock: 20,
+        description: "Suede upper and faux suede lining with faux leather sock.Padded insole with 6mm memory foam",
+    },
+    {
+        _id: 63,
+        name: "Women's Cloudfoam Pure Running Shoe",
+        image: "/images/w.shoes/white.jpg",
+        price: 45,
+        size: "M",
+        color: "White",
+        countInStock: 20,
+        description: "Platform measures approximately 0-3 inches.Cloudfoam memory sockliner and textile lining",
+    },
 
+
+    //-------------------------Women Sneakers----------------------
     
 
 ]   
