@@ -1,10 +1,24 @@
 import React from 'react';
 import "./style.css";
-
 import { Link } from 'react-router-dom'
-
-
 import Card from 'react-bootstrap/Card';
+// import ProductData from '../../scripts/product';
+// import productData from '../../../../scripts/products';
+// import product from '../../../../scripts/products';
+// import data from '../../data';
+
+// import White from '../../images/white.jpg';
+
+// import Red from './images/red.jpg';
+// import Black from './images/black.jpg';
+// import Orange from './images/red.jpg';
+// import Blue from './images/red.jpg';
+// import Yellow from './images/yellow.jpg';
+
+
+
+
+// import Card from 'react-bootstrap/Card';
 // import Image from '../assets/white.jpg';
 
 const HotCards = ({product}) => {
@@ -16,23 +30,25 @@ const HotCards = ({product}) => {
              style={{ 
                 height: '250px',
                 width: "200px",
-                padding: '5px'
+                padding: '5px',
+                backgroundColor: "#00233A"
              }}
              >
-            <Link to={'/product/' + product._id}>
-                <Card.Img 
-                 className="card-img-top-hotcard"
-                 variant="top"
-                 // src={product.image} 
-                 style={{ 
-                //   
-                   minHeight: "100px",
-                   
-                 }}
-                
-                />
-                </Link>
                 <Card.Body>
+                    <Link to={'/product/' + product._id}>
+                    <Card.Img 
+                    className="card-img-top-hotcard"
+                    variant="top"
+                    src={product.image}
+                    //  src={process.env.PUBLIC_URL + "/images/black.jpg"} 
+                    style={{ 
+                    
+                    minHeight: "100px",
+                    
+                    }}
+                    
+                    />
+                    </Link>
                     <Card.Title>
                     <Link to={{
                         pathname: `/product/${product._id}`,
@@ -41,11 +57,20 @@ const HotCards = ({product}) => {
                         }
                         }}>{product.name}</Link>
                     </Card.Title>
-                    <Card.Text>
+                    {/* <Card.Text>
                     {product.color}
-                    </Card.Text>
+                    </Card.Text> */}
                     <Card.Text>
-                    ${product.price}
+                    {product.price}
+                    </Card.Text>
+                    {/* <Card.Text>
+                    {product.size}
+                    </Card.Text> */}
+                    {/* <Card.Text>
+                    {product.countInStock}
+                    </Card.Text> */}
+                    <Card.Text>
+                    {product.description}
                     </Card.Text>
                 </Card.Body>
             </Card>

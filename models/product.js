@@ -33,19 +33,10 @@ Product.init(
     countInStock: {
       type: DataTypes.INTEGER,
     },
-    image: {
-      type: {
-        type: DataTypes.STRING,
-      },
-      name: {
-        type: DataTypes.STRING,
-      },
-      data: {
-        type: DataTypes.BLOB("long"),
-      },
     
-
-
+    image: {
+     type: DataTypes.STRING,
+     allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,

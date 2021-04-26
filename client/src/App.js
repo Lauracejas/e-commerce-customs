@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Route } from "react-router-dom";
-// import Footer from "./components/Footer/Footer"
-import Header from "./components/Header/Header";
-import Homepage from "./pages/Homepage";
+import Footer from "./components/Footer/Footer"
+import Header from "./components/Header/Header"
+import Homepage from "./pages/Homepage"
 // import ProductScreen from "./pages/Dashboard"
 import Cart from "./pages/Cart"
 import Inventory from "./pages/Inventory";
@@ -42,7 +42,7 @@ const App = () => {
   return (
     <Router>      
 
-      <div>
+      <div className="main-wrapper">
         <ThemeProvider theme={theme}>
           <GlobalStyles />
         <Header 
@@ -51,15 +51,14 @@ const App = () => {
          user={user}
          handleLogout={handleLogout} 
              
-         ></Header>       
-         
-      
-          
-       
+         ></Header>   
         <Route exact path="/" component={Homepage} />
         {/* <Route exact path="/products/:_id" component={ProductScreen} /> */}
         <Route exact path="/profile" component={Profile} />
-        <Route exact path="/cart" component={Cart} />
+        <Route
+         exact path="/cart" component={Cart} 
+         render={(props) => <Cart {...props}  />}/>         
+         
         <Route exact path="/inventory" component={Inventory} />
         <Route exact path="/product/:id" component={ProductPage} />
         <Route 
@@ -71,7 +70,7 @@ const App = () => {
          render={(props) => <RegisterPage {...props} user={user} handleCreateAccount={handleCreateAccount} />}
          />
         
-        {/* <Footer /> */}
+        <Footer />
         </ThemeProvider>
       </div>
       

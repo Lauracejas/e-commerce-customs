@@ -12,6 +12,7 @@ import "./style.css"
 import styled from "styled-components"
 
 const ProductPage = (props) => {
+    console.log(props)
     const [open, setOpen] = useState(false);
     const [products, setProducts] = useState([]);
 
@@ -74,7 +75,7 @@ const ProductPage = (props) => {
             <Aside open={open} setOpen={setOpen} products={product} />
             <Menu open={open} setOpen={setOpen} onClick={handleSubmit}/>  
             </div>
-               
+            <Row style={{margin: "35px"}}/>
         </div>
             
 

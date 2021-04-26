@@ -21,7 +21,7 @@ const Homepage = () => {
   
 
     return (  
-        <div className="container-fluid main-contain">
+        <div className="container-fluid ">
             <SearchBar />
             <Banner />
            
@@ -32,6 +32,7 @@ const Homepage = () => {
             )
             }
             </Row>
+            <Row style={{margin: "35px"}}/>
         </div>            
     )
 }
