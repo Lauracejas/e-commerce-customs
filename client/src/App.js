@@ -51,17 +51,14 @@ const App = () => {
          user={user}
          handleLogout={handleLogout} 
              
-         ></Header>       
-         
-      
-          
-       
+         ></Header>   
         <Route exact path="/" component={Homepage} />
         {/* <Route exact path="/products/:_id" component={ProductScreen} /> */}
         <Route exact path="/profile" component={Profile} />
         <Route
          exact path="/cart" component={Cart} 
-         render={(props) => <Cart {...props}  />}/>
+         render={(props) => <Cart {...props}  />}/>         
+         
         <Route exact path="/inventory" component={Inventory} />
         <Route exact path="/product/:id" component={ProductPage} />
         <Route 
