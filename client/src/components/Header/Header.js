@@ -63,7 +63,7 @@ const Header = (props) => {
                         </li>
                         {props.userLog?.user || props.user.name ? 
                             <li className="nav-item">
-                                <Link to="/signin"  onClick={handleSubmit} className={location.pathname === "/cart" ? "nav-link active" : "nav-link"}>
+                                <Link to="/logout"   className={location.pathname === "/cart" ? "nav-link active" : "nav-link"}>
                                     Logout
                                 </Link>
                                 {/* onChange={(e) => setLogged_in(e.target.value)} */}
