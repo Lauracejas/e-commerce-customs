@@ -37,7 +37,7 @@ const CreateAccount = (props) => {
    
     if (props.user && props.user.email) {
         return (
-            <Redirect to="/profile"/>
+            <Redirect to="/"/>
         )
     }
 

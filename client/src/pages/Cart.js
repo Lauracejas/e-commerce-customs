@@ -1,34 +1,15 @@
-
 import { getProduct } from "../utils/API";
-
-import React, { useEffect, useState } from "react"
-// import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 import Row from "react-bootstrap/Row"
 import "./style.css"
+import axios from 'axios'
+import CartItem from "../components/CartItem";
 
-import Checkout from "../components/Checkout/index"
+//import Checkout from "../components/Checkout/index"
 
-const Cart = (props) => {    
-
-    console.log(props)
-  
-
-    const [product, setProduct] = useState({});
-
-    useEffect(() => {
-        getProduct(props)
-            .then(product => {
-                console.log(props.history);
-                 setProduct(product.data);
-               
-            }
-            )
-    }, [])
-    // console.log(product)
-
-    const handleSubmit = () => {
-        getProduct().then(results => setProduct(results.data))
-
+const Cart = (props) => {
+    const handleDelete = async (id) => {
+        props.removeFromCart(id);
     }
 
     return (
@@ -36,15 +17,73 @@ const Cart = (props) => {
         <div className="contianer mt-5 ">
 
             <div className="container-fluid co">
-            <Checkout 
-             onChange={(e) => handleSubmit(e.target.value)}
-             product={product}
-             />
-            <Row style={{margin: "10px"}}/>
-        </div>
+                <div className="container">
+
+                    <div className="col-xs-12 col-md-10 col-md-offset-1">
+                        <table className="table table-responsive ">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th> </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {props.products.map(product => <CartItem product={product} removeFromCart={props.removeFromCart} />)}
+                                {!props.products.length && 
+                                    <tr>
+                                            <td colSpan="3">
+                                                <h1>No Products in Cart</h1>
+                                            </td>
+                                    </tr>
+                                }
+                                {!!props.products.length &&
+                                    <>
+                                        <tr>
+                                            <td>   </td>
+                                            <td><h5>Subtotal</h5></td>
+                                            <td className="text-right"><h5><strong>$999.99</strong></h5></td>
+                                        </tr>
+                                        <tr>
+                                            <td>   </td>
+                                            <td><h5>Estimated shipping</h5></td>
+                                            <td className="text-right"><h5><strong>$9.999.99</strong></h5></td>
+                                        </tr>
+                                        <tr>
+                                            <td>   </td>
+                                            <td><h3>Total</h3></td>
+                                            <td className="text-right"><h3><strong>$9.999.99</strong></h3></td>
+                                        </tr>
+                                        <tr>
+                                            <td>   </td>
+                                            <td>
+                                                <Link to="/">
+                                                    <button type="button" className="btn btn-success">
+                                                        <span className="fa fa-shopping-cart"></span> Continue Shopping
+                                                    </button>
+                                                </Link>
+                                            </td>
+                                            <td>
+
+                                                <button type="button" className="btn btn-warning">
+                                                    Proceed to Checkout <span className="fa fa-play"></span>
+                                                </button>
+
+                                            </td>
+                                        </tr>
+                                    </>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+                <Row style={{ margin: "10px" }} />
+            </div>
         </div>
 
-)
+    )
 }
 
 export default Cart

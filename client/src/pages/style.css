@@ -10,3 +10,89 @@
 }
 
 
+/***************************************************/
+.co{
+    margin-bottom: 90px;
+    margin-top: 20px;
+    
+}
+.thumbnail{
+    margin-right: 20px;
+}
+
+
+    
+tr:nth-child(odd) {
+background:#00233A;
+color: white;
+}
+
+td {
+margin-top: 5px;
+
+    border: none;
+
+    position: relative;
+    padding-left: 50%;
+}
+
+    td:before {
+
+        position: absolute;
+
+        top: 0;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    @media only screen and (max-width: 580px) {
+    
+    
+    table, thead, tbody, th, td, tr {
+        display: block;
+        border:0px;
+        color: white;
+    }
+
+    
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+tr {
+    margin: 0 0 1rem 0;
+}
+    
+tr:nth-child(odd) {
+    background: #00233A;
+    color:white;
+}
+
+td {
+
+    border: none;
+
+    position: relative;
+    padding-left: 50%;
+}
+
+td:before {
+
+    position: absolute;
+
+    top: 1;
+    left: 15px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+.co{
+    margin-bottom: 60px;
+    
+}
+
+}

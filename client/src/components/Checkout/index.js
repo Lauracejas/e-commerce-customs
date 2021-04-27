@@ -2,17 +2,16 @@ import React from 'react'
 import "../Checkout/styles.css"
 import {Link} from "react-router-dom"
 
-const Checkout = () => {
-    
+const Checkout = ({setProduct}) => {
+    console.log(setProduct)
     return (
         <div className="container">
 
-            <div className="col-xs-12 col-md-10 col-md-offset-1">
+            <div className="col-xs-12 col-md-10 col-md-offset-1" onChange={setProduct}>
                 <table className="table table-responsive ">
                     <thead>
                         <tr>
-                            <th>Product</th>
-                            
+                            <th>Product</th>                            
                             <th>Quantity</th>
                             <th className="text-center">Price</th>
                             <th className="text-center">Total</th>

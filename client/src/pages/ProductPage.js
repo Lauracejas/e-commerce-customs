@@ -8,12 +8,15 @@ import CardEl from "../components/CardEl/CardEl"
 import React, { useEffect, useState } from "react"
 import Row from "react-bootstrap/Row"
 
-import "./style.css"
-import styled from "styled-components"
+import "./style.css";
+import styled from "styled-components";
+import { useParams } from "react-router-dom";
 
 const ProductPage = (props) => {
     const [open, setOpen] = useState(false);
     const [products, setProducts] = useState([]);
+    const [product, setProduct] = useState({});
+    const { id } = useParams();
 
     const Link = ({ className, children }) => (
         <div className={className}>
@@ -21,17 +24,13 @@ const ProductPage = (props) => {
         </div>
     );
     const StyledLink = styled(Link)`
-    
-    
     max-width: 600px;
     color: white;
     font-weight: bold;
     `;
-
-    const [product, setProduct] = useState({});
-
+   
     useEffect(() => {
-        getProduct(props.location.state.id)
+        getProduct(id)
             .then(product => {
                 console.log(product.data);
                 setProduct(product.data);
@@ -59,6 +58,8 @@ const ProductPage = (props) => {
 
                         <StyledLink>
                             <CardEl
+                                addToCart={props.addToCart}
+                                cart={props.cart}
                                 product={product} />
                         </StyledLink>
                     </div>

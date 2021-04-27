@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer"
 import Header from "./components/Header/Header"
@@ -14,6 +14,7 @@ import Profile from './pages/Profile';
 import ProductPage from './pages/ProductPage';
 import SigninPage from './pages/SigninPage';
 import RegisterPage from './pages/RegisterPage';
+import { getProduct } from './utils/API';
 
 
 const App = () => {
@@ -21,8 +22,34 @@ const App = () => {
   const [userLog, setUserLog] = useState({});
   const [userLogout, setUserLogout] = useState({});
   const [products, setProducts] = useState({})
-  
+  const [cart, setCart] = useState([]);
 
+  useEffect(() => {
+    const cart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
+    setCart(cart);
+    console.log(cart);
+  },[]);
+
+  useEffect(() => {
+    console.log(cart);
+  }, [cart]);
+
+  const addToCart = async (id) => {
+    const { data } = await getProduct(id);
+    const exists = cart.find(product => product._id === data._id);
+    if (exists) return console.log('Product Already in Cart'); // TODO: Add Modal
+    const cartData = ([...cart, data]);
+    const products = JSON.stringify(cartData);
+    localStorage.setItem("shoppingCart", products);
+    setCart(cartData);
+  }
+
+  const removeFromCart = (id) => {
+    const cartData = cart.filter(product => product._id !== id);
+    const products = JSON.stringify(cartData);
+    localStorage.setItem("shoppingCart", products);
+    setCart(cartData);
+  }
 
   const handleSignin = (data) => {
     // const loggedInUser = {};
@@ -64,11 +91,14 @@ const App = () => {
         {/* <Route exact path="/products/:_id" component={ProductScreen} /> */}
         <Route exact path="/profile" component={Profile} />
         <Route
-         exact path="/cart" component={Cart} 
-         render={(props) => <Cart {...props} products={products} handleProduct={handleProduct}/>}/>         
-         
+          exact path="/cart"
+          render={(props) => <Cart {...props} products={cart} removeFromCart={removeFromCart} handleProduct={handleProduct}/>}
+         />         
         <Route exact path="/inventory" component={Inventory} />
-        <Route exact path="/product/:id" component={ProductPage} />
+        <Route 
+          exact path="/product/:id" 
+          render={(props) => <ProductPage {...props} cart={cart} addToCart={addToCart} />} 
+        />
         <Route 
           exact path="/signin" 
           render={(props) => <SigninPage {...props} userLog={userLog} handleSignin={handleSignin} />} 

@@ -46,17 +46,6 @@ const Header = (props) => {
             <Navbar.Collapse id="responsive-navbar-nav " >
                 <Nav className="mr-auto">
 
-                    <Nav.Link >
-                        <Link to="/profile" className={location.pathname === "/dashboard" ? "nav-link active" : "nav-link"}>
-                            {props.userLog?.user ?
-                                <p>{props.userLog?.user.name} </p> : <p>{props.user?.name}</p>
-                            }
-
-
-                        </Link>
-
-                    </Nav.Link>
-
 
                 </Nav>
                 <Nav>
