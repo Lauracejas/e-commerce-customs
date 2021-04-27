@@ -47,38 +47,6 @@ const Profile = () => {
             </div>
             <Row style={{margin: "35px"}}/>
         </div>
-     
-         {/* <div className="back-to-result">
-            <Link to="/dashboard">Back to result</Link>
-        </div>
-        <div className="details">
-            <div className="details-image">
-                <img src={details.image} alt="product"></img>
-            </div>
-            <div className="details-info">
-                <ul>
-                    <h4>{details.name}</h4>
-                    <li><b>Price: $ {details.price}</b></li>
-                </ul>
-
-            </div>
-        </div>
-        <div className="action-details">
-            <ul>
-                <li>Price: {details.price}</li>
-                <li>Status: {details.status}</li>
-                <li>Qty: <select>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                </select>
-                </li>
-                <li>
-                    <button>Add to cart</button>
-                </li>
-            </ul>
-        </div>  */}
        
     </div>
     )

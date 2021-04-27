@@ -20,6 +20,7 @@ const App = () => {
   const [user, setUser] = useState({});
   const [userLog, setUserLog] = useState({});
   const [userLogout, setUserLogout] = useState({});
+  const [products, setProducts] = useState({})
   
 
 
@@ -36,6 +37,11 @@ const App = () => {
   const handleLogout = (data) => {
     // const accountUser = {};
     setUserLogout(data);
+  }
+
+  const handleProduct = (data) => {
+    // const loggedInUser = {};
+    setProducts(data);
   }
 
 
@@ -59,7 +65,7 @@ const App = () => {
         <Route exact path="/profile" component={Profile} />
         <Route
          exact path="/cart" component={Cart} 
-         render={(props) => <Cart {...props}  />}/>         
+         render={(props) => <Cart {...props} products={products} handleProduct={handleProduct}/>}/>         
          
         <Route exact path="/inventory" component={Inventory} />
         <Route exact path="/product/:id" component={ProductPage} />

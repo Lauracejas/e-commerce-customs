@@ -1,11 +1,11 @@
 import React from 'react'
 import "../Checkout/styles.css"
+import {Link} from "react-router-dom"
 
 const Checkout = () => {
+    
     return (
         <div className="container">
-
-
 
             <div className="col-xs-12 col-md-10 col-md-offset-1">
                 <table className="table table-responsive ">
@@ -116,13 +116,17 @@ const Checkout = () => {
                             <td>   </td>
                             <td>   </td>
                             <td>
+                            <Link to="/">
                                 <button type="button" className="btn btn-success">
                                     <span className="fa fa-shopping-cart"></span> Continue Shopping
-</button></td>
+                            </button></Link></td>
                             <td>
-                                <button type="button" className="btn btn-success">
-                                    Checkout <span className="fa fa-play"></span>
-                                </button></td>
+                                
+                                <button type="button" className="btn btn-warning">
+                                  Proceed to Checkout <span className="fa fa-play"></span>
+                                </button>
+                                
+                                </td>
                         </tr>
                     </tbody>
                 </table>

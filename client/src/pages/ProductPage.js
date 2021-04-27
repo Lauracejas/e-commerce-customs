@@ -29,7 +29,7 @@ const ProductPage = (props) => {
     `;
 
     const [product, setProduct] = useState({});
-    
+
     useEffect(() => {
         getProduct(props.location.state.id)
             .then(product => {
@@ -42,36 +42,32 @@ const ProductPage = (props) => {
 
     const handleSubmit = () => {
         getAllProducts().then(results => setProducts(results.data))
-    
-      }
+
+    }
 
 
     return (
         <>
-        <div className="container-fluid ">
-            
-            <div className="row pt-0 mt-0">
+            <div className="container-fluid ">
 
-            <div className="col-md-4">
+                <div className="row pt-0 mt-0">
 
-            </div>
-            <div className="col-md-8 mt-4" >
-                
-                    <StyledLink>
-                        <CardEl                         
-                            product={product} />
-                    </StyledLink>
+                    <div className="col-md-4">
+
+                    </div>
+                    <div className="col-md-8 mt-4" >
+
+                        <StyledLink>
+                            <CardEl
+                                product={product} />
+                        </StyledLink>
+                    </div>
+                    <Aside open={open} setOpen={setOpen} products={product} />
+                    <Menu open={open} setOpen={setOpen} onClick={handleSubmit} />
                 </div>
-            <Aside open={open} setOpen={setOpen} products={product} />
-            <Menu open={open} setOpen={setOpen} onClick={handleSubmit}/>  
+                <Row style={{ margin: "35px" }} />
             </div>
-            <Row style={{margin: "35px"}}/>
-        </div>
-            
 
-              
-
-           
         </>
     )
 }

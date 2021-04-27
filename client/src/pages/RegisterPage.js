@@ -28,7 +28,7 @@ const CreateAccount = (props) => {
             if (response.data) {
                 console.log(response);
                 props.handleCreateAccount(response.data);
-            } else if(response.data) {
+            } else if(response.data) { 
                 alert("You now have an account")
             }
         });
