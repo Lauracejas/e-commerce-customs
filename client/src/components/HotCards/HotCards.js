@@ -11,7 +11,11 @@ const HotCards = ({product}) => {
                 height: '300px',
                 width: "200px",
                 padding: '5px',
-                backgroundColor: "#00233A"
+                backgroundColor: "#00233A",
+                backgroundImage: "url('https://images.pexels.com/photos/1903702/pexels-photo-1903702.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260')",
+                backgroundBlendMode: "exclusion",
+                borderRadius: "20px"
+
              }}
              >
                 <Card.Body>
@@ -38,7 +42,7 @@ const HotCards = ({product}) => {
                         }}>
                             <p style={{ 
                     marginTop: "10px",
-                    fontSize: "10px",
+                    fontSize: "12px",
                     maxHeight: "90px",
                     color: "white"
                     

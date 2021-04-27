@@ -8,7 +8,7 @@ const Menu = ({ open, ...props }) => {
     const isHidden = open ? true : false;
     const tabIndex = isHidden ? 0 : -1;
   return (
-    <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
+    <StyledMenu open={!open} aria-hidden={!isHidden} {...props}>
       <Link to="/" tabIndex={tabIndex}>
         <span aria-hidden="true"></span>
         Products
@@ -17,13 +17,6 @@ const Menu = ({ open, ...props }) => {
         <span aria-hidden="true"></span>
         Cart
       </Link>
-      <Link to="/profile" tabIndex={tabIndex}>
-        <span aria-hidden="true"></span>
-        Profile
-      </Link>
-      
-
-       
     </StyledMenu>
   )
 }
