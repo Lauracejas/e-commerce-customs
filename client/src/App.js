@@ -23,6 +23,7 @@ const App = () => {
   const [userLogout, setUserLogout] = useState({});
   const [products, setProducts] = useState({})
   const [cart, setCart] = useState([]);
+  const [clearStorage, setClearStorage] = useState([]);
 
   useEffect(() => {
     const cart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
@@ -33,6 +34,11 @@ const App = () => {
   useEffect(() => {
     console.log(cart);
   }, [cart]);
+
+  const clearCart =  () => {
+    localStorage.setItem('shoppingCart', []);
+    setCart([]);
+  } 
 
   const addToCart = async (id) => {
     const { data } = await getProduct(id);
@@ -92,7 +98,7 @@ const App = () => {
         <Route exact path="/profile" component={Profile} />
         <Route
           exact path="/cart"
-          render={(props) => <Cart {...props} products={cart} removeFromCart={removeFromCart} handleProduct={handleProduct}/>}
+          render={(props) => <Cart {...props} products={cart} clearCart={clearCart} removeFromCart={removeFromCart} handleProduct={handleProduct}/>}
          />         
         <Route exact path="/inventory" component={Inventory} />
         <Route 
