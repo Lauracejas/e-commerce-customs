@@ -8,7 +8,7 @@ const Banner = () => {
     
 
     return (
-        <div class="jumbotron text-center ">
+        <div className="jumbotron text-center ">
 
                      <h4>Welcome to<img  alt='' src={Logo} style={{height: "60px", margin: "15px"}}/></h4>
 
