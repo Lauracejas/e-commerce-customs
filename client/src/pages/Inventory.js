@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import Table from "react-bootstrap/Table";
 import SearchBar from "../components/SearchBar/SearchBar";
-// import TableRow from "../components/TableRow";
+import TableRow from "../components/TableRow";
 import InventoryModal from "../components/InventoryModal";
 import Button from "react-bootstrap/Button";
 import { getAllProducts, getProduct } from "../utils/API";
@@ -42,7 +42,7 @@ const Inventory = () => {
           </tr>
         </thead>
         <tbody>
-          {/* {products.map(product => <TableRow key={product._id} product={product} setProduct={setProduct} setShow={setShow}/>)} */}
+          {products.map(product => <TableRow key={product._id} product={product} setProduct={setProduct} setShow={setShow}/>)}
         </tbody>
       </Table>
 
