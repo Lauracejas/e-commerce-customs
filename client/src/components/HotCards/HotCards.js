@@ -2,36 +2,20 @@ import React from 'react';
 import "./style.css";
 import { Link } from 'react-router-dom'
 import Card from 'react-bootstrap/Card';
-// import ProductData from '../../scripts/product';
-// import productData from '../../../../scripts/products';
-// import product from '../../../../scripts/products';
-// import data from '../../data';
-
-// import White from '../../images/white.jpg';
-
-// import Red from './images/red.jpg';
-// import Black from './images/black.jpg';
-// import Orange from './images/red.jpg';
-// import Blue from './images/red.jpg';
-// import Yellow from './images/yellow.jpg';
-
-
-
-
-// import Card from 'react-bootstrap/Card';
-// import Image from '../assets/white.jpg';
 
 const HotCards = ({product}) => {
 
-  
     return (
-       
             <Card key={product._id}
              style={{ 
                 height: '300px',
                 width: "200px",
                 padding: '5px',
-                backgroundColor: "#00233A"
+                backgroundColor: "#00233A",
+                backgroundImage: "url('https://images.pexels.com/photos/1903702/pexels-photo-1903702.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260')",
+                backgroundBlendMode: "exclusion",
+                borderRadius: "20px"
+
              }}
              >
                 <Card.Body>
@@ -58,8 +42,9 @@ const HotCards = ({product}) => {
                         }}>
                             <p style={{ 
                     marginTop: "10px",
-                    fontSize: "10px",
-                    maxHeight: "90px"
+                    fontSize: "12px",
+                    maxHeight: "90px",
+                    color: "white"
                     
                     }}>{product.name}</p>
                             </Link>
@@ -70,27 +55,15 @@ const HotCards = ({product}) => {
                     marginTop: "0px",
                     fontSize: "19px",
                     textAlign: "center",
+                    borderRadius: "5px",
+                    color: "#00233A",
                     backgroundColor: "white"
                     
                     }}>${product.price}</p>
                     </Card.Text>
-                    {/* <Card.Text>
-                    {product.size}
-                    </Card.Text> */}
-                    {/* <Card.Text>
-                    {product.countInStock}
-                    </Card.Text> */}
-                    
                 </Card.Body>
             </Card>
 
-
-       
-
-
-
-                    
-       
     )
 }
 

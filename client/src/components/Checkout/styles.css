@@ -1,34 +1,39 @@
 .co{
     margin-bottom: 90px;
     margin-top: 20px;
+   
     
 }
 .thumbnail{
     margin-right: 20px;
   }
 
-  tr {
-    /* margin: 60px; */
-  }
+
     
   tr:nth-child(odd) {
+    background-color: #00233A; 
+    background-image: url('https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+     background-blend-mode: exclusion;
+    color:white;
+  }
+  tr:nth-child(even) {
     background:#00233A;
     color: white;
   }
   
       td {
         margin-top: 5px;
-          /* Behave  like a "row" */
+
           border: none;
-          /* border-bottom: 1px solid #eee; */
+
           position: relative;
           padding-left: 50%;
       }
 
       td:before {
-          /* Now like a table header */
+    
           position: absolute;
-          /* Top/left values mimic padding */
+   
           top: 0;
           left: 6px;
           width: 45%;
@@ -64,7 +69,7 @@
 		td {
 		
 			border: none;
-			/* border-bottom: 5px solid #eee; */
+	
 			position: relative;
 			padding-left: 50%;
 		}

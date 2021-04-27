@@ -12,8 +12,8 @@ export const GlobalStyles = createGlobalStyle`
   }
   body {
     
-   
-    background: ${({ theme }) => theme.primaryDark};
+   background-image: url("https://images.pexels.com/photos/1903702/pexels-photo-1903702.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=1500");
+    // background: ${({ theme }) => theme.primaryDark};
     color: ${({ theme }) => theme.primaryLight};
    
     text-rendering: optimizeLegibility;
