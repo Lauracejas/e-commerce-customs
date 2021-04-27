@@ -42,7 +42,7 @@ const HotCards = ({product}) => {
                         }}>
                             <p style={{ 
                     marginTop: "10px",
-                    fontSize: "10px",
+                    fontSize: "12px",
                     maxHeight: "90px",
                     color: "white"
                     

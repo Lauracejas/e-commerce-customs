@@ -25,7 +25,7 @@ a {
   padding: 2rem 0;
   font-weight: bold;
   letter-spacing: 0.5rem;
-  color: ${({ theme }) => theme.primaryDark};
+  color: ${({ theme }) => theme.primaryLight};
   text-decoration: none;
   transition: color 0.3s linear;
   @media (max-width: ${({ theme }) => theme.mobile}) {
@@ -40,6 +40,6 @@ a {
   }
 }
 @media only screen and (max-width: 580px) {
-  height: 150vh;
+  height: 100vh;
 }
 `;
