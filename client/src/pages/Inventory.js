@@ -5,6 +5,7 @@ import SearchBar from "../components/SearchBar/SearchBar";
 import TableRow from "../components/TableRow";
 import InventoryModal from "../components/InventoryModal";
 import Button from "react-bootstrap/Button";
+import Row from "react-bootstrap/Row";
 import { getAllProducts, getProduct } from "../utils/API";
 
 const Inventory = () => {
@@ -43,11 +44,11 @@ const Inventory = () => {
             <th>Quantity</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody style={{backgroundColor: "#1D7A8C"}}>
           {products.map(product => <TableRow key={product._id} product={product} setProduct={setProduct} setShow={setShow}/>)}
         </tbody>
       </Table>
-
+      <Row style={{margin: "25px"}}/>
     </div>
   );
 }
