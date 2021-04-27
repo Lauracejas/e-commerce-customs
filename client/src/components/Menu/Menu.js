@@ -17,13 +17,6 @@ const Menu = ({ open, ...props }) => {
         <span aria-hidden="true"></span>
         Cart
       </Link>
-      {/* <Link to="/profile" tabIndex={tabIndex}>
-        <span aria-hidden="true"></span>
-        Profile
-      </Link> */}
-      
-
-       
     </StyledMenu>
   )
 }
