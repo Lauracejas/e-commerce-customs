@@ -13,13 +13,13 @@ const TableRow = ({product, setProduct, setShow}) => {
       <td>{product.description}</td>
       <td>{product.price}</td>
       <td>{product.countInStock}</td>
-      <td><Button value={product._id} onClick={(event) => {
+      {/* <td><Button value={product._id} onClick={(event) => {
         getProduct(event.target.value)
           .then(res => setProduct(res.data))
           .catch(err => console.log(err)); 
         console.log(product);
         handleShow();
-        }}>Update</Button></td>
+        }}>Update</Button></td> */}
     </tr>
   );
 }

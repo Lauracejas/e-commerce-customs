@@ -11,10 +11,12 @@ const Inventory = () => {
   const [products, setProducts] = useState([]);
   const [product, setProduct] = useState({});
   const [showModal, setShow] = useState(false);
+  const [productCount, setProductCount] = useState();
 
   useEffect(() => {
     getAllProducts()
       .then(res => setProducts(res.data))
+      .then(setProductCount(products.length))
       .catch(err => console.log(err));
 
   }, [])
@@ -24,7 +26,7 @@ const Inventory = () => {
 
   return (
     <div className="container-fluid main-contain">
-      {showModal && <InventoryModal product={product} show={showModal} handleClose={handleClose}  />}
+      {showModal && <InventoryModal product={product} show={showModal} productCount={productCount} handleClose={handleClose}  />}
       <SearchBar />
       <Button onClick={() => {
         setProduct({})

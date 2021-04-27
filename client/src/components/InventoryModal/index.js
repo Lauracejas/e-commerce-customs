@@ -7,7 +7,8 @@ import FormControl from 'react-bootstrap/FormControl';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-const InventoryModal = ({ product, show, handleClose }) => {
+const InventoryModal = ({ product, show, productCount, handleClose }) => {
+  const [id, setID] = useState();
   const [name, setName] = useState();
   const [price, setPrice] = useState();
   const [size, setSize] = useState();
@@ -19,29 +20,49 @@ const InventoryModal = ({ product, show, handleClose }) => {
 
   useEffect(() => {
     // setProduct(product);
+    // setID(product._id ?? productCount);
     setName(product.name);
     setPrice(product.price);
     setSize(product.size);
     setColor(product.color);
     setDescription(product.description);
     setCount(product.countInStock);
+    
   });
 
   const handleSubmit = async e => {
     e.preventDefault();
-    axios.put(`/api/products/${product._id}`, {
-      name: name,
-      price: price,
-      size: size,
-      color: color,
-      description: description,
-      countInStock: count
-    })
+    console.log(product._id);
+    if (!product._id) {
+      axios.post('/api/products/', {
+        _id: productCount,
+        name: name,
+        price: price,
+        size: size,
+        color: color,
+        description: description,
+        countInStock: count
+      })
       .then(res => {
         if (res.data.message);
         console.log(res);
         handleClose();
       });
+    } else {
+      axios.put(`/api/products/${product._id}`, {
+        name: name,
+        price: price,
+        size: size,
+        color: color,
+        description: description,
+        countInStock: count
+      })
+        .then(res => {
+          if (res.data.message);
+          console.log(res);
+          handleClose();
+        });
+    }
   }
   // const handleDelete = async () => {
   //   axios.delete(`/api/products/${product._id}`);
