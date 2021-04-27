@@ -4,11 +4,13 @@ export const StyledMenu = styled.button`
 display: flex;
 flex-direction: column;
 justify-content: center;
-background: ${({ theme }) => theme.primaryLight};
+background: ${({ theme }) => theme.primaryDarkTwo};
+background-image: url('https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+     background-blend-mode: exclusion;
 transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
-height: 160vh;
+height: 100vh;
 text-align: left;
-padding: 5rem;
+padding: 3rem;
 position: absolute;
 
 top: 5;
@@ -36,5 +38,8 @@ a {
   .button {
     background: black;
   }
+}
+@media only screen and (max-width: 580px) {
+  height: 150vh;
 }
 `;

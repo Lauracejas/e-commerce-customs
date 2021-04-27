@@ -23,7 +23,7 @@ const ProductPage = (props) => {
     const StyledLink = styled(Link)`
     
     
-    max-width: 600px;
+    max-width: 500px;
     color: white;
     font-weight: bold;
     `;
