@@ -13,19 +13,20 @@
 * [Installation](#installation)
 * [Credits](#Credits)
 * [Resources](#Resources)
+* [Challenges](#Challenges)
 * [License](#License)
 * [Contributing](#contributing)
 
 ## Deployed Site
 ---
-Deployed Website: https:///
+Deployed Website: https://e-commerce-revamped.herokuapp.com/
 
 ## User Story
----
-User Story:  
+User Story: 
+- As a User, I would like to navigate to an easy to read, simple, clean Online Clothing Store. As a User, I would like to search for stylish quality Men’s / Women’s clothing brands, styles, and item descriptions. As a User, I would like to quickly add or remove items to my cart before purchasing.  
 
 ## Description
----
+reVamped is an E-Commerce clothing retail store, that allows guests to search for causal or business casual selections to update their personal wardrobe and look.
 
 
 ## Process
@@ -43,19 +44,19 @@ Profile Page
 ![Home Screenshot](./public/images/profile.JPG)
 
 ## Sources
----
-### Api
-* [Google Book API](http://books.google.com/books/content?id=gK98gXR8onwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api)
+
 
 ## Technologies
 
-- GOOGLE BOOKS API
-- BOOTSTRAP
+- React.js
+- REACT-BOOTSTRAP
 - MYSQL
 - CSS
+- Node.Js
+- Sequelize 
 - JAVA SCRIPT
 - Axios.js
-- HANDLEBARS
+- Babel
 
 ## Installation
 
@@ -69,6 +70,7 @@ See repository here: https://github.com/Lauracejas/e-commerce-customs
 - We want to thank Anthony and Max for all of their help!
 
 ## Resources
+
 - Class activities
 - [google.com](https://www.google.com/)
 - [npmjs](https://www.npmjs.com/)

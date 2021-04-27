@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from 'react-bootstrap/Card'
+
 import { bool } from 'prop-types';
 import { StyledMenu } from './MenuStyled';
 
@@ -21,10 +21,7 @@ const Menu = ({ open, ...props }) => {
         Profile
       </a>
       
-      {/* <Button className ="button" href="/" tabIndex={tabIndex}>
-        <span aria-hidden="true"></span>
-        Customize
-        </Button> */}
+
        
     </StyledMenu>
   )

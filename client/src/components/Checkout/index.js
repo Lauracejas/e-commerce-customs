@@ -23,7 +23,7 @@ const Checkout = () => {
                         <tr>
                             <td className="col-xs-8 col-xs-6 ">
                                 <div className="media">
-                                    <a className="thumbnail pull-left" href="/"> <img className="media-object" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style={{ width: "72px", height: "72px" }} alt="" /> </a>
+                                    <a className="thumbnail pull-left" href="/"> <img className="media-object" src="" style={{ width: "72px", height: "72px" }} alt="" /> </a>
                                     <div className="media-body">
                                         <h4 className="media-heading"><a href="/">Package</a></h4>
                                         <h5 className="media-heading"> by <a href="/">Brand name</a></h5>
@@ -46,7 +46,7 @@ const Checkout = () => {
                         <tr>
                             <td className="col-sm-8 col-md-6">
                                 <div className="media">
-                                    <a className="thumbnail pull-left" href="/"> <img className="media-object" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style={{ width: "72px", height: "72px" }} alt="" /> </a>
+                                    <a className="thumbnail pull-left" href="/"> <img className="media-object" src="" style={{ width: "72px", height: "72px" }} alt="" /> </a>
                                     <div className="media-body">
                                         <h4 className="media-heading"><a href="/">Package</a></h4>
                                         <h5 className="media-heading"> by <a href="/">Brand name</a></h5>
@@ -69,7 +69,7 @@ const Checkout = () => {
                         <tr>
                             <td className="col-sm-8 col-md-6">
                                 <div className="media">
-                                    <a className="thumbnail pull-left" href="/"> <img className="media-object" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style={{ width: "72px", height: "72px" }} alt="" /> </a>
+                                    <a className="thumbnail pull-left" href="/"> <img className="media-object" src="" style={{ width: "72px", height: "72px" }} alt="" /> </a>
                                     <div className="media-body">
                                         <h4 className="media-heading"><a href="/">Package</a></h4>
                                         <h5 className="media-heading"> by <a href="/">Brand name</a></h5>
