@@ -2,24 +2,25 @@ import React from 'react';
 
 import { bool } from 'prop-types';
 import { StyledMenu } from './MenuStyled';
+import { Link } from 'react-router-dom';
 
 const Menu = ({ open, ...props }) => {
     const isHidden = open ? true : false;
     const tabIndex = isHidden ? 0 : -1;
   return (
     <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
-      <a href="/" tabIndex={tabIndex}>
+      <Link to="/" tabIndex={tabIndex}>
         <span aria-hidden="true"></span>
         Products
-      </a>
-      <a href="/cart" tabIndex={tabIndex}>
+      </Link>
+      <Link to="/cart" tabIndex={tabIndex}>
         <span aria-hidden="true"></span>
         Cart
-      </a>
-      <a href="/profile" tabIndex={tabIndex}>
+      </Link>
+      <Link to="/profile" tabIndex={tabIndex}>
         <span aria-hidden="true"></span>
         Profile
-      </a>
+      </Link>
       
 
        
