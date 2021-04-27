@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import { bool, func } from 'prop-types';
 import { StyledAside } from './AsideStyled';
-import API from "../../utils/API"
+
 
 const Aside = ({ open, setOpen, ...props }) => {
     const isExpanded = open ? true : false;

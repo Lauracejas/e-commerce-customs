@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "./style.css";
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import Row from 'react-bootstrap/Row';
 import InputGroup from 'react-bootstrap/InputGroup'
 import FormControl from 'react-bootstrap/FormControl';
 import { Link, Redirect } from "react-router-dom"
@@ -27,7 +28,7 @@ const CreateAccount = (props) => {
             if (response.data) {
                 console.log(response);
                 props.handleCreateAccount(response.data);
-            } else if(response.data) {
+            } else if(response.data) { 
                 alert("You now have an account")
             }
         });
@@ -36,16 +37,18 @@ const CreateAccount = (props) => {
    
     if (props.user && props.user.email) {
         return (
-            <Redirect to="/profile"/>
+            <Redirect to="/"/>
         )
     }
 
     return (
+        <>
         <Modal.Dialog >
         <Modal.Header style={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          backgroundColor: "#00233A"
         }}>
             <Modal.Title >Create your Account</Modal.Title>
        
@@ -102,7 +105,8 @@ const CreateAccount = (props) => {
             Admin */}
         </Modal.Footer>
     </Modal.Dialog>
-    
+     <Row style={{margin: "25px"}}/>
+    </>
     )
 }
 

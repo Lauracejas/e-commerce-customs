@@ -1,18 +1,17 @@
 import React from 'react'
 import "../Checkout/styles.css"
+import {Link} from "react-router-dom"
 
-const Checkout = () => {
+const Checkout = ({setProduct}) => {
+    console.log(setProduct)
     return (
         <div className="container">
 
-
-
-            <div className="col-xs-12 col-md-10 col-md-offset-1">
+            <div className="col-xs-12 col-md-10 col-md-offset-1" onChange={setProduct}>
                 <table className="table table-responsive ">
                     <thead>
                         <tr>
-                            <th>Product</th>
-                            
+                            <th>Product</th>                            
                             <th>Quantity</th>
                             <th className="text-center">Price</th>
                             <th className="text-center">Total</th>
@@ -23,10 +22,10 @@ const Checkout = () => {
                         <tr>
                             <td className="col-xs-8 col-xs-6 ">
                                 <div className="media">
-                                    <a className="thumbnail pull-left" href="/"> <img className="media-object" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style={{ width: "72px", height: "72px" }} alt="" /> </a>
+                                    <Link className="thumbnail pull-left" to="/"> <img className="media-object" src="" style={{ width: "72px", height: "72px" }} alt="" /> </Link>
                                     <div className="media-body">
-                                        <h4 className="media-heading"><a href="/">Package</a></h4>
-                                        <h5 className="media-heading"> by <a href="/">Brand name</a></h5>
+                                        <h4 className="media-heading"><Link to="/">PLinkckage</Link></h4>
+                                        <h5 className="media-heading"> by <Link to="/">Brand name</Link></h5>
                                         <span>Status: </span><span className="text-warning"><strong>In Stock</strong></span>
                                     </div>
                                 </div>
@@ -46,10 +45,10 @@ const Checkout = () => {
                         <tr>
                             <td className="col-sm-8 col-md-6">
                                 <div className="media">
-                                    <a className="thumbnail pull-left" href="/"> <img className="media-object" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style={{ width: "72px", height: "72px" }} alt="" /> </a>
+                                    <Link className="thumbnail pull-left" to="/"> <img className="media-object" src="" style={{ width: "72px", height: "72px" }} alt="" /> </Link>
                                     <div className="media-body">
-                                        <h4 className="media-heading"><a href="/">Package</a></h4>
-                                        <h5 className="media-heading"> by <a href="/">Brand name</a></h5>
+                                        <h4 className="media-heading"><Link to="/">Package</Link></h4>
+                                        <h5 className="media-heading"> by <Link to="/">Brand name</Link></h5>
                                         <span>Status: </span><span className="text-warning"><strong>In Stock</strong></span>
                                     </div>
                                 </div>
@@ -69,10 +68,10 @@ const Checkout = () => {
                         <tr>
                             <td className="col-sm-8 col-md-6">
                                 <div className="media">
-                                    <a className="thumbnail pull-left" href="/"> <img className="media-object" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style={{ width: "72px", height: "72px" }} alt="" /> </a>
+                                    <Link className="thumbnail pull-left" to="/"> <img className="media-object" src="" style={{ width: "72px", height: "72px" }} alt="" /> </Link>
                                     <div className="media-body">
-                                        <h4 className="media-heading"><a href="/">Package</a></h4>
-                                        <h5 className="media-heading"> by <a href="/">Brand name</a></h5>
+                                        <h4 className="media-heading"><Link to="/">Package</Link></h4>
+                                        <h5 className="media-heading"> by <Link to="/">Brand name</Link></h5>
                                         <span>Status: </span><span className="text-warning"><strong>In Stock</strong></span>
                                     </div>
                                 </div>
@@ -116,13 +115,17 @@ const Checkout = () => {
                             <td>   </td>
                             <td>   </td>
                             <td>
+                            <Link to="/">
                                 <button type="button" className="btn btn-success">
                                     <span className="fa fa-shopping-cart"></span> Continue Shopping
-</button></td>
+                            </button></Link></td>
                             <td>
-                                <button type="button" className="btn btn-success">
-                                    Checkout <span className="fa fa-play"></span>
-                                </button></td>
+                                
+                                <button type="button" className="btn btn-warning">
+                                  Proceed to Checkout <span className="fa fa-play"></span>
+                                </button>
+                                
+                                </td>
                         </tr>
                     </tbody>
                 </table>
