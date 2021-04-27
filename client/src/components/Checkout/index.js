@@ -22,10 +22,10 @@ const Checkout = ({setProduct}) => {
                         <tr>
                             <td className="col-xs-8 col-xs-6 ">
                                 <div className="media">
-                                    <a className="thumbnail pull-left" href="/"> <img className="media-object" src="" style={{ width: "72px", height: "72px" }} alt="" /> </a>
+                                    <Link className="thumbnail pull-left" to="/"> <img className="media-object" src="" style={{ width: "72px", height: "72px" }} alt="" /> </Link>
                                     <div className="media-body">
-                                        <h4 className="media-heading"><a href="/">Package</a></h4>
-                                        <h5 className="media-heading"> by <a href="/">Brand name</a></h5>
+                                        <h4 className="media-heading"><Link to="/">PLinkckage</Link></h4>
+                                        <h5 className="media-heading"> by <Link to="/">Brand name</Link></h5>
                                         <span>Status: </span><span className="text-warning"><strong>In Stock</strong></span>
                                     </div>
                                 </div>
@@ -45,10 +45,10 @@ const Checkout = ({setProduct}) => {
                         <tr>
                             <td className="col-sm-8 col-md-6">
                                 <div className="media">
-                                    <a className="thumbnail pull-left" href="/"> <img className="media-object" src="" style={{ width: "72px", height: "72px" }} alt="" /> </a>
+                                    <Link className="thumbnail pull-left" to="/"> <img className="media-object" src="" style={{ width: "72px", height: "72px" }} alt="" /> </Link>
                                     <div className="media-body">
-                                        <h4 className="media-heading"><a href="/">Package</a></h4>
-                                        <h5 className="media-heading"> by <a href="/">Brand name</a></h5>
+                                        <h4 className="media-heading"><Link to="/">Package</Link></h4>
+                                        <h5 className="media-heading"> by <Link to="/">Brand name</Link></h5>
                                         <span>Status: </span><span className="text-warning"><strong>In Stock</strong></span>
                                     </div>
                                 </div>
@@ -68,10 +68,10 @@ const Checkout = ({setProduct}) => {
                         <tr>
                             <td className="col-sm-8 col-md-6">
                                 <div className="media">
-                                    <a className="thumbnail pull-left" href="/"> <img className="media-object" src="" style={{ width: "72px", height: "72px" }} alt="" /> </a>
+                                    <Link className="thumbnail pull-left" to="/"> <img className="media-object" src="" style={{ width: "72px", height: "72px" }} alt="" /> </Link>
                                     <div className="media-body">
-                                        <h4 className="media-heading"><a href="/">Package</a></h4>
-                                        <h5 className="media-heading"> by <a href="/">Brand name</a></h5>
+                                        <h4 className="media-heading"><Link to="/">Package</Link></h4>
+                                        <h5 className="media-heading"> by <Link to="/">Brand name</Link></h5>
                                         <span>Status: </span><span className="text-warning"><strong>In Stock</strong></span>
                                     </div>
                                 </div>

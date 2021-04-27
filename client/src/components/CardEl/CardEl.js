@@ -12,7 +12,7 @@ const CardEl = ({ product, cart, addToCart }) => {
   }
   return (
     <>
-      <div key={product._id} className="card" style={{ backgroundColor: "#00233A" }}>
+      <div key={product._id} className="card" style={{backgroundColor: "#00233A", width: "330px", height: "750px", fontSize: "12px"}}>
         <img src={product?.image} className="card-img-top " alt="" />
         <div className="card-body">
           <h5 className="card-title">{product.name}</h5>

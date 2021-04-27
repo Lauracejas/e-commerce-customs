@@ -8,9 +8,9 @@ import CartItem from "../components/CartItem";
 //import Checkout from "../components/Checkout/index"
 
 const Cart = (props) => {
-    const handleDelete = async (id) => {
-        props.removeFromCart(id);
-    }
+    
+
+   
 
     return (
 
@@ -42,17 +42,17 @@ const Cart = (props) => {
                                         <tr>
                                             <td>   </td>
                                             <td><h5>Subtotal</h5></td>
-                                            <td className="text-right"><h5><strong>$999.99</strong></h5></td>
+                                            <td className="text-right"><h5><strong>$ {props.products.price}</strong></h5></td>
                                         </tr>
                                         <tr>
                                             <td>   </td>
-                                            <td><h5>Estimated shipping</h5></td>
-                                            <td className="text-right"><h5><strong>$9.999.99</strong></h5></td>
+                                            <td><h5>Taxes</h5></td>
+                                            <td className="text-right"><h5><strong>$ {}</strong></h5></td>
                                         </tr>
                                         <tr>
                                             <td>   </td>
                                             <td><h3>Total</h3></td>
-                                            <td className="text-right"><h3><strong>$9.999.99</strong></h3></td>
+                                            <td className="text-right"><h3><strong>$ {}</strong></h3></td>
                                         </tr>
                                         <tr>
                                             <td>   </td>
@@ -65,8 +65,11 @@ const Cart = (props) => {
                                             </td>
                                             <td>
 
-                                                <button type="button" className="btn btn-warning">
-                                                    Proceed to Checkout <span className="fa fa-play"></span>
+                                                <button type="button" 
+                                               onClick={props.clearCart}
+                                                className="btn btn-warning"
+                                                >
+                                                    Purchase <span className="fa fa-play"></span>
                                                 </button>
 
                                             </td>
