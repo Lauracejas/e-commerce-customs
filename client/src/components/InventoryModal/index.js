@@ -164,10 +164,10 @@ const InventoryModal = ({ product, show, productCount, handleClose }) => {
           alignItems: "center",
         }}>
 
-          <Button
+          {/* <Button
             onClick={handleSubmit}
             variant="warning"
-          >Update Product</Button>
+          >Update Product</Button> */}
           {/* <Button
             onClick={handleDelete}
             variant="danger"
