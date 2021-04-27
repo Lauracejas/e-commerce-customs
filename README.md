@@ -8,11 +8,10 @@
 * [Description](#description)
 * [Process](#process)
 * [Screenshots](#screenshots)
-* [Sources](#sources)
 * [Technologies](#Technologies)
 * [Installation](#installation)
 * [Credits](#Credits)
-* [Resources](#Resources)
+* [Sources](#Sources)
 * [Challenges](#Challenges)
 * [License](#License)
 * [Contributing](#contributing)
@@ -37,11 +36,11 @@ reVamped is an E-Commerce clothing retail store, that allows guests to search fo
 ---
 Home Page
 
-![Home Screenshot](./public/images/Search.JPG)
+![Home Screenshot](./client/public/images/home.jpg)
 
 Profile Page
 
-![Home Screenshot](./public/images/profile.JPG)
+![Home Screenshot](./client/public/images/)
 
 ## Sources
 
@@ -62,14 +61,14 @@ Profile Page
 
 No need any installation for this project.
 
-See deployed site here: https://eyeread-app.herokuapp.com/login
+See deployed site here: https://e-commerce-revamped.herokuapp.com/
 
 See repository here: https://github.com/Lauracejas/e-commerce-customs
 
 ## Credits
 - We want to thank Anthony and Max for all of their help!
 
-## Resources
+## Sources
 
 - Class activities
 - [google.com](https://www.google.com/)

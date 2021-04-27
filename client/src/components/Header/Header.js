@@ -2,18 +2,14 @@ import React, { useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
 import "./style.css";
 import axios from "axios"
-import logo from "../../Assets/logo.png"
+import logo from "../../logo.png"
 import { Nav, Navbar } from "react-bootstrap";
 // import User from '../../../../models/user';
 
 const Header = (props) => {
     const location = useLocation();
-    console.log(props);
-
-
-    const [logged_in, setLogged_in] = useState({});
-
-
+    
+    const [logged_in, ] = useState({});
 
     const handleSubmit = async e => {
         console.log("coming up");
@@ -28,9 +24,7 @@ const Header = (props) => {
             console.log(logged_in);
         });
     };
-    console.log(props.user);
-
-
+   
     return (
         // 
         <Navbar collapseOnSelect expand="lg"  className="bg" >
@@ -51,17 +45,6 @@ const Header = (props) => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav " style={{backgroundColor: "#16C0F0", alignItems: "center"}}/>
             <Navbar.Collapse id="responsive-navbar-nav " >
                 <Nav className="mr-auto">
-
-                    <Nav.Link >
-                        <Link to="/profile" className={location.pathname === "/dashboard" ? "nav-link active" : "nav-link"}>
-                            {props.userLog?.user ?
-                                <p>{props.userLog?.user.name} </p> : <p>{props.user?.name}</p>
-                            }
-
-
-                        </Link>
-
-                    </Nav.Link>
 
 
                 </Nav>

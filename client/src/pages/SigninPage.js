@@ -33,7 +33,7 @@ const SigninPage = (props) => {
 
     if (props.userLog.user && props.userLog.user.password) {
         return (
-            <Redirect to="/profile"/>
+            <Redirect to="/"/>
         )
     }
 
