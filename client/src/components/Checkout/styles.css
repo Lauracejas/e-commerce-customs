@@ -1,6 +1,7 @@
 .co{
     margin-bottom: 90px;
     margin-top: 20px;
+   
     
 }
 .thumbnail{
@@ -10,6 +11,12 @@
 
     
   tr:nth-child(odd) {
+    background-color: #00233A; 
+    background-image: url('https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+     background-blend-mode: exclusion;
+    color:white;
+  }
+  tr:nth-child(even) {
     background:#00233A;
     color: white;
   }

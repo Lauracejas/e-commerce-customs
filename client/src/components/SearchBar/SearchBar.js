@@ -25,7 +25,12 @@ const SearchBar = ({searchProduct}) => {
                     <InputGroup.Append>
                     <Button 
                     onClick={(e) => searchProduct(e) }
-                    variant="warning"
+                    // variant="warning"
+                    style={{
+                        backgroundColor: "#00233A",
+                        backgroundImage: "url('https://images.pexels.com/photos/1903702/pexels-photo-1903702.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=160')",
+                        backgroundBlendMode: "exclusion"
+                    }}
                     >Search</Button>
                     </InputGroup.Append>
                 </InputGroup>
