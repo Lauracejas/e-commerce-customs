@@ -51,7 +51,7 @@ const Cart = (props) => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {props.products.map(product => <CartItem product={product} removeFromCart={props.removeFromCart} />)}
+                                {props.products.map(product => <CartItem key={product.id} product={product} removeFromCart={props.removeFromCart} />)}
                                 {!props.products.length && 
                                     <tr>
                                             <td colSpan="3">

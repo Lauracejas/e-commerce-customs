@@ -16,9 +16,6 @@ const CreateAccount = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        console.log("username is " + usernameAccount);
-        console.log("email is " + emailAccount);
-        console.log("password is " + passwordAccount);
         
         axios.post("/api/users/", {
             username: usernameAccount,
@@ -26,7 +23,6 @@ const CreateAccount = (props) => {
             password: passwordAccount,
         }).then((response) => {
             if (response.data) {
-                console.log(response);
                 props.handleCreateAccount(response.data);
             } else if(response.data) { 
                 alert("You now have an account")

@@ -21,18 +21,16 @@ const App = () => {
   const [user, setUser] = useState({});
   const [userLog, setUserLog] = useState({});
   const [userLogout, setUserLogout] = useState({});
-  const [products, setProducts] = useState({})
+  const [, setProducts] = useState({})
   const [cart, setCart] = useState([]);
-  const [clearStorage, setClearStorage] = useState([]);
 
   useEffect(() => {
     const cart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
     setCart(cart);
-    console.log(cart);
+    
   },[]);
 
   useEffect(() => {
-    console.log(cart);
   }, [cart]);
 
   const clearCart =  () => {

@@ -3,7 +3,7 @@ import "../Checkout/styles.css"
 import {Link} from "react-router-dom"
 
 const Checkout = ({setProduct}) => {
-    console.log(setProduct)
+   
     return (
         <div className="container">
 

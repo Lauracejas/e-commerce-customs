@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import { getProduct } from '../../utils/API';
+import React from 'react';
+// import Button from 'react-bootstrap/Button';
+// import { getProduct } from '../../utils/API';
 
 const TableRow = ({product, setProduct, setShow}) => {
 
-  const handleShow = () => setShow(true);
+  // const handleShow = () => setShow(true);
 
   return (
     <tr>

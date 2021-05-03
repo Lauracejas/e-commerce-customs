@@ -12,16 +12,12 @@ const Header = (props) => {
     const [logged_in, ] = useState({});
 
     const handleSubmit = async e => {
-        console.log("coming up");
         e.preventDefault();
         axios.post("/api/users/logout", {
             logged_in: logged_in,
         }).then((response) => {
             props.setUserLog({});
             props.setUser({});
-            console.log(response);
-            console.log(props);
-            console.log(logged_in);
         });
     };
    

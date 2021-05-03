@@ -11,7 +11,6 @@ import axios from "axios";
 // import SignUpModal from './SignUpModal/SignUpModal';
 
 const SigninPage = (props) => {
-    console.log(props)
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
 
@@ -25,7 +24,6 @@ const SigninPage = (props) => {
             password: password,
         }).then((response) => {
             if (response.data);
-            console.log(response);
             props.handleSignin(response.data);
         });
 
@@ -55,7 +53,7 @@ const SigninPage = (props) => {
             </Modal.Header >
 
             <Modal.Body className="text-left">
-                <p><strong>E-mail</strong></p>
+                <strong>E-mail</strong>
                 <InputGroup size={"md"} className="mb-3">
                     <FormControl
                         className="email-login"
@@ -66,7 +64,7 @@ const SigninPage = (props) => {
                         onChange={(e) => setEmail(e.target.value)}
                     />
                 </InputGroup>
-                <p><strong>Password</strong></p>
+                <strong>Password</strong>
                 <InputGroup size={"md"} className="mb-3">
                     <FormControl
                         className="password-login"
@@ -93,7 +91,7 @@ const SigninPage = (props) => {
             </Modal.Body>
 
             <Modal.Footer>
-                <p>Are you new in reVamped?</p>
+                Are you new in reVamped?
                 <Link to="/register"><Button  variant="primary">Create your account</Button></Link>
 
             </Modal.Footer>

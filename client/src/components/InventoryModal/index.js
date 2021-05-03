@@ -32,7 +32,6 @@ const InventoryModal = ({ product, show, productCount, handleClose }) => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    console.log(product._id);
     if (!product._id) {
       axios.post('/api/products/', {
         _id: productCount,
@@ -45,7 +44,6 @@ const InventoryModal = ({ product, show, productCount, handleClose }) => {
       })
       .then(res => {
         if (res.data.message);
-        console.log(res);
         handleClose();
       });
     } else {
@@ -59,7 +57,6 @@ const InventoryModal = ({ product, show, productCount, handleClose }) => {
       })
         .then(res => {
           if (res.data.message);
-          console.log(res);
           handleClose();
         });
     }
@@ -83,7 +80,7 @@ const InventoryModal = ({ product, show, productCount, handleClose }) => {
       </Modal.Header>
 
       <Modal.Body className="text-left">
-        <p><strong>Product</strong></p>
+        <strong>Product</strong>
         <InputGroup size={"md"} className="mb-3">
           <FormControl
             className="name-product"
@@ -95,7 +92,7 @@ const InventoryModal = ({ product, show, productCount, handleClose }) => {
             onChange={(e) => setName(e.target.value)}
           />
         </InputGroup>
-        <p><strong>Price</strong></p>
+        <strong>Price</strong>
         <InputGroup size={"md"} className="mb-3">
           <FormControl
             className="price-product"
@@ -107,7 +104,7 @@ const InventoryModal = ({ product, show, productCount, handleClose }) => {
             onChange={(e) => setPrice(e.target.value)}
           />
         </InputGroup>
-        <p><strong>Size</strong></p>
+        <strong>Size</strong>
         <InputGroup size={"md"} className="mb-3">
           <FormControl
             className="size-product"
@@ -119,7 +116,7 @@ const InventoryModal = ({ product, show, productCount, handleClose }) => {
             onChange={(e) => setSize(e.target.value)}
           />
         </InputGroup>
-        <p><strong>Color</strong></p>
+        <strong>Color</strong>
         <InputGroup size={"md"} className="mb-3">
           <FormControl
             className="color-product"
@@ -131,7 +128,7 @@ const InventoryModal = ({ product, show, productCount, handleClose }) => {
             onChange={(e) => setColor(e.target.value)}
           />
         </InputGroup>
-        <p><strong>Stock</strong></p>
+        <strong>Stock</strong>
         <InputGroup size={"md"} className="mb-3">
           <FormControl
             className="stock-product"
@@ -143,7 +140,7 @@ const InventoryModal = ({ product, show, productCount, handleClose }) => {
             onChange={(e) => setCount(e.target.value)}
           />
         </InputGroup>
-        <p><strong>Description</strong></p>
+        <strong>Description</strong>
         <InputGroup size={"md"} className="mb-3">
           <FormControl
             className="description-product"

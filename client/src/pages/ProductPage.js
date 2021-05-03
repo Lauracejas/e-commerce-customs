@@ -25,12 +25,11 @@ const ProductPage = (props) => {
     useEffect(() => {
         getProduct(id)
             .then(product => {
-                console.log(product.data);
                 setProduct(product.data);
             }
             )
     }, [id]);
-    console.log(product)
+  
     const handleSubmit = () => {
         getAllProducts().then(results => setProducts(results.data))
     }
