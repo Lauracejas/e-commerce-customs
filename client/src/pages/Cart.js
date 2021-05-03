@@ -37,7 +37,7 @@ const Cart = (props) => {
                             <thead>
                                 <tr>
                                     <th>Product</th>
-                                    <th>Quantity</th>
+                                    <th className="text-center">Price</th>
                                     <th> </th>
                                 </tr>
                             </thead>
@@ -55,12 +55,12 @@ const Cart = (props) => {
                                         <tr>
                                             <td>   </td>
                                             <td><h5>Subtotal</h5></td>
-                                            <td className="text-right"><h5><strong>$ {subtotal()}</strong></h5></td>
+                                            <td className="text-right"><h5><strong>$ {subtotal().toFixed(2)}</strong></h5></td>
                                         </tr>
                                         <tr>
                                             <td>   </td>
                                             <td><h5>Taxes</h5></td>
-                                            <td className="text-right"><h5><strong>$ {taxes()}</strong></h5></td>
+                                            <td className="text-right"><h5><strong>$ {taxes().toFixed(2)}</strong></h5></td>
                                         </tr>
                                         <tr>
                                             <td>   </td>
