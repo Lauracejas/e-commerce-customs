@@ -16,29 +16,19 @@
 * [Contributing](#contributing)
 
 ## Deployed Site
----
 Deployed Website: https://e-commerce-revamped.herokuapp.com/
 
 ## User Story
-User Story: 
 - As a User, I would like to navigate to an easy to read, simple, clean Online Clothing Store. As a User, I would like to search for stylish quality Men’s / Women’s clothing brands, styles, and item descriptions. As a User, I would like to quickly add or remove items to my cart before purchasing.  
 
 ## Description
 reVamped is an E-Commerce clothing retail store, that allows guests to search for causal or business casual selections to update their personal wardrobe and look.
-
-
-## Process
----
-
 
 ## Screenshots
 ---
 Home Page
 
 ![Home Screenshot](./client/public/images/home.jpg)
-
-
-## Sources
 
 
 ## Technologies
