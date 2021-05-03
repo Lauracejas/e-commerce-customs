@@ -16,6 +16,22 @@ const Cart = (props) => {
         console.log(totalPrice);
        
    }
+
+    Array.prototype.sum = function (prop) {
+        var total = 0
+        for ( var i = 0, _len = this.length; i < _len; i++ ) {
+            total += this[i][prop]
+        }
+        return total
+    }
+
+   const subtotal = () => {
+        return props.products.sum('price');
+   }
+
+   const taxes = () => {
+        return subtotal() * 0.1;
+   }
    
 
     return (
@@ -48,17 +64,17 @@ const Cart = (props) => {
                                         <tr>
                                             <td>   </td>
                                             <td><h5>Subtotal</h5></td>
-                                            <td className="text-right"><h5><strong>$ {props.products[0].price}</strong></h5></td>
+                                            <td className="text-right"><h5><strong>$ {subtotal()}</strong></h5></td>
                                         </tr>
                                         <tr>
                                             <td>   </td>
                                             <td><h5>Taxes</h5></td>
-                                            <td className="text-right"><h5><strong>$ {}</strong></h5></td>
+                                            <td className="text-right"><h5><strong>$ {taxes()}</strong></h5></td>
                                         </tr>
                                         <tr>
                                             <td>   </td>
                                             <td><h3>Total</h3></td>
-                                            <td className="text-right"><h3><strong>$ {}</strong></h3></td>
+                                            <td className="text-right"><h3><strong>$ {subtotal() + taxes()}</strong></h3></td>
                                         </tr>
                                         <tr>
                                             <td>   </td>
