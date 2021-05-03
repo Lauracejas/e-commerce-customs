@@ -6,7 +6,6 @@
 * [Deployed Site](#deployed-site)
 * [User Story](#user-story)
 * [Description](#description)
-* [Process](#process)
 * [Screenshots](#screenshots)
 * [Technologies](#Technologies)
 * [Installation](#installation)
@@ -38,9 +37,6 @@ Home Page
 
 ![Home Screenshot](./client/public/images/home.jpg)
 
-Profile Page
-
-![Home Screenshot](./client/public/images/)
 
 ## Sources
 
