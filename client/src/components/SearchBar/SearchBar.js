@@ -31,7 +31,7 @@ const SearchBar = ({searchProduct}) => {
                         backgroundImage: "url('https://images.pexels.com/photos/1903702/pexels-photo-1903702.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=160')",
                         backgroundBlendMode: "exclusion"
                     }}
-                    >Search</Button>
+                    >X</Button>
                     </InputGroup.Append>
                 </InputGroup>
             </Col>

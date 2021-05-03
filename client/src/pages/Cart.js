@@ -1,15 +1,21 @@
-import { getProduct } from "../utils/API";
+//import { getProduct } from "../utils/API";
 import { Link } from "react-router-dom"
 import Row from "react-bootstrap/Row"
 import "./style.css"
-import axios from 'axios'
+//import axios from 'axios'
 import CartItem from "../components/CartItem";
 
 //import Checkout from "../components/Checkout/index"
 
 const Cart = (props) => {
-    
-
+    console.log(props.products[0]?.price)
+    for (let i = 0; i < props.products.length; i++) {
+        const priceItem = props.products[i].price;
+        const taxes = priceItem * 0.1;
+        const totalPrice = priceItem + taxes;
+        console.log(totalPrice);
+       
+   }
    
 
     return (
@@ -42,7 +48,7 @@ const Cart = (props) => {
                                         <tr>
                                             <td>   </td>
                                             <td><h5>Subtotal</h5></td>
-                                            <td className="text-right"><h5><strong>$ {props.products.price}</strong></h5></td>
+                                            <td className="text-right"><h5><strong>$ {props.products[0].price}</strong></h5></td>
                                         </tr>
                                         <tr>
                                             <td>   </td>
