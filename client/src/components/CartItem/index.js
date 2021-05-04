@@ -10,8 +10,8 @@ const CartItem = ({ product, removeFromCart }) => {
                 <div className="media">
                     <Link className="thumbnail pull-left" to={`/product/${product._id}`}> <img className="media-object" src={product.image} style={{ width: "72px", height: "72px" }} alt="" /> </Link>
                     <div className="media-body">
-                        <h4 className="media-heading "><Link to={`/product/${product._id}`}>{product.name}</Link></h4>
-                        <span>Status: </span><span className="text-warning"><strong>{product.countInStock} In Stock</strong></span>
+                        <h4 className="media-heading col-sm-4"><Link to={`/product/${product._id}`}>{product.name}</Link></h4>
+                        <span className="text-warning"><strong>{product.countInStock} In Stock</strong></span>
                     </div>
                 </div>
             </td>
