@@ -4,25 +4,32 @@
 ## Table of Contents
 
 * [Deployed Site](#deployed-site)
-* [User Story](#user-story)
 * [Description](#description)
+* [User Story](#user-story)
 * [Screenshots](#screenshots)
 * [Technologies](#Technologies)
 * [Installation](#installation)
 * [Credits](#Credits)
-* [Sources](#Sources)
 * [Challenges](#Challenges)
+* [Successes](#Successes)
+* [Sources](#Sources)
 * [License](#License)
 * [Contributing](#contributing)
 
 ## Deployed Site
 Deployed Website: https://e-commerce-revamped.herokuapp.com/
 
+## Description
+reVamped is an E-Commerce clothing retail store, that allows guests to search for causal or business casual selections to update their personal wardrobe and look.
+
 ## User Story
 - As a User, I would like to navigate to an easy to read, simple, clean Online Clothing Store. As a User, I would like to search for stylish quality Men’s / Women’s clothing brands, styles, and item descriptions. As a User, I would like to quickly add or remove items to my cart before purchasing.  
 
-## Description
-reVamped is an E-Commerce clothing retail store, that allows guests to search for causal or business casual selections to update their personal wardrobe and look.
+## Motivation for Development: 
+We at reVamped, are motivated to bring ease and efficiency to our guests. Our easy to use User Interface and speedy checkout allows our guests to find what they need effortlessly.  As seasons change so should your wardrobe! Goodbye Quarantine, Hello Quality!
+
+## Breakdown of tasks and roles: 
+Laura was our Git Master and worked in the Back-End. She was responsible for Routing and Functionality. Andrew took care of our Items Admin and Inventory. Carlos and Nelson were responsible for the Front-End. Carlos created our sites style components and Logo. Nelson populated the site’s images/descriptions and powerpoint. 
 
 ## Screenshots
 ---
@@ -53,6 +60,22 @@ See repository here: https://github.com/Lauracejas/e-commerce-customs
 
 ## Credits
 - We want to thank Anthony and Max for all of their help!
+
+## Challenges
+As a group we had many challenges with React. Populating images and maintaining our folder structure was a struggle. We had to redesign our wireframe a few times as well. Overall, we found ourselves teaching each other and doubling down on research to get functionality.
+
+## Successes
+ Although at times we felt extremely frustrated, we kept pushing to better develop our concept, while learning along the way. 
+
+ ## Future Development
+ 
+- Process payment.
+- reVamped can sell other items besides Apparel.
+- An Elite subscription membership that gives guests cheaper prices and better deals.
+- Free delivery for Elite subscription members. 
+- Guests can save searched items to a wishlist.
+- Guests can see Item suggestions based on previous purchases or searched items. 
+
 
 ## Sources
 
