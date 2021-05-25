@@ -1,6 +1,5 @@
 const User = require('./user');
 const Product = require('./product');
-const Order = require('./orderModel');
 
 User.hasMany(Product, {
   foreignKey: 'user_id',
@@ -10,4 +9,4 @@ User.hasMany(Product, {
 Product.belongsTo(User, {
   foreignKey: 'user_id'
 });
-module.exports = { User, Product, Order };
+module.exports = { User, Product };
