@@ -1,6 +1,6 @@
 import { getProduct } from "../utils/API";
 import { getAllProducts } from "../utils/API";
-import { Aside, Menu } from '../components';
+// import {  Menu } from '../components';
 import CardEl from "../components/CardEl/CardEl"
 import React, { useEffect, useState } from "react"
 import Row from "react-bootstrap/Row"
@@ -8,7 +8,7 @@ import "./style.css";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
 const ProductPage = (props) => {
-    const [open, setOpen] = useState(false);
+    // const [open, setOpen] = useState(false);
     const [, setProducts] = useState([]);
     const [product, setProduct] = useState({});
     const { id } = useParams();
@@ -18,7 +18,7 @@ const ProductPage = (props) => {
         </div>
     );
     const StyledLink = styled(Link)`
-    max-width: 500px;
+    max-width: 600px;
     color: white;
     font-weight: bold;
     `;
@@ -39,7 +39,7 @@ const ProductPage = (props) => {
                 <div className="row pt-0 mt-0">
                     <div className="col-md-4">
                     </div>
-                    <div className="col-md-8 mt-4" >
+                    <div className="col-md-8 cards mt-4" >
                         <StyledLink>
                             <CardEl
                                 addToCart={props.addToCart}
@@ -47,8 +47,8 @@ const ProductPage = (props) => {
                                 product={product} />
                         </StyledLink>
                     </div>
-                    <Aside open={open} setOpen={setOpen} products={product} />
-                    <Menu open={open} setOpen={setOpen} onClick={handleSubmit} />
+                    {/* <Aside open={open} setOpen={setOpen} products={product} / */}
+                    {/* <Menu open={open} setOpen={setOpen} onClick={handleSubmit} /> */}
                 </div>
                 <Row style={{ margin: "35px" }} />
             </div>

@@ -9,6 +9,13 @@
     row-gap:20px;
 }
 
+.card-body {
+    max-height: fit-content;
+}
+
+.cards {
+    margin-bottom: 30px;
+}
 
 /***************************************************/
 .co{
@@ -24,6 +31,7 @@
 tr {
 background:#00233A;
 color: white;
+height: fit-content;
 }
 
 td {
