@@ -37,10 +37,10 @@ User.init({
      },
     },  
   isAdmin: { 
-    type: BOOLEAN,  
+    type: DataTypes.BOOLEAN,  
     primaryKey: true, 
      default: false 
-    }
+    },
 },
 {
   hooks: {
